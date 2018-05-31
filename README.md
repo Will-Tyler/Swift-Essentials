@@ -8,4 +8,4 @@ Swift is missing many of the useful features that other languages have. This fra
 
 ## License
 
-A short snippet describing the license (MIT, Apache, etc.)
+This project uses an MIT license.
