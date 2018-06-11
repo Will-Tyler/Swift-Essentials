@@ -8,6 +8,12 @@
 
 import Foundation
 
+precedencegroup ExponentialPrecedence {
+	lowerThan: BitwiseShiftPrecedence
+	higherThan: MultiplicationPrecedence
+}
+infix operator **: ExponentialPrecedence
+
 public extension BinaryInteger {
 
 	public static postfix func ++(number: inout Self) -> Self {
@@ -36,6 +42,25 @@ public extension BinaryInteger {
 		number -= 1
 
 		return number
+	}
+
+	public static func **(base: Self, power: Self) -> Self {
+		precondition(power >= 0)
+
+		switch power {
+		case 0: return Self(1)
+		case 1: return base
+		default: break
+		}
+
+		let baseInt = Int(base)
+
+		var result = 1
+		for _ in 1...UInt(power) {
+			result *= baseInt
+		}
+
+		return Self(result)
 	}
 
 }

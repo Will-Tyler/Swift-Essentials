@@ -164,6 +164,26 @@ class BinaryIntegerExtTests: XCTestCase {
 		XCTAssertEqual(number, 42)
 	}
 
+	func testExponentOperator() {
+		XCTAssertEqual(0 ** 0, 1)
+
+		XCTAssertEqual(5 ** 3, 125)
+
+		XCTAssertEqual(3 ** 5, 243)
+
+		XCTAssertEqual(3**3, 27)
+
+		XCTAssertEqual(2375923949 ** 1, 2375923949)
+
+		XCTAssertEqual(4**3 * 5, 5 * 4**3)
+
+		XCTAssertEqual(-1 ** 149800, 1)
+
+		XCTAssertEqual(-1 ** 149801, -1)
+
+		XCTAssertEqual(-2 ** 5, -32)
+	}
+
 }
 
 

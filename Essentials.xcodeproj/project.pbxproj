@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C15B73020CF09CD0082851A /* BinaryIntegerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFB9D5420C048D40048BB16 /* BinaryIntegerExt.swift */; };
+		4C15B73120CF09D20082851A /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFB9D5220C048D40048BB16 /* Random.swift */; };
+		4C15B73220CF09D50082851A /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFB9D5320C048D40048BB16 /* Stack.swift */; };
+		4C15B73320CF09D90082851A /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFB9D5520C048D40048BB16 /* StringExt.swift */; };
 		4CFB9D5E20C0490F0048BB16 /* EssentialsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFB9D5D20C0490F0048BB16 /* EssentialsTests.swift */; };
 		4CFB9D6720C0491D0048BB16 /* StackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFB9D6320C0491D0048BB16 /* StackTests.swift */; };
 		4CFB9D6820C0491D0048BB16 /* BinaryIntegerExtTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFB9D6420C0491D0048BB16 /* BinaryIntegerExtTests.swift */; };
@@ -401,8 +405,12 @@
 				4CFB9D6A20C0491D0048BB16 /* RandomTests.swift in Sources */,
 				4CFB9D6720C0491D0048BB16 /* StackTests.swift in Sources */,
 				4CFB9D6820C0491D0048BB16 /* BinaryIntegerExtTests.swift in Sources */,
+				4C15B73020CF09CD0082851A /* BinaryIntegerExt.swift in Sources */,
+				4C15B73320CF09D90082851A /* StringExt.swift in Sources */,
+				4C15B73220CF09D50082851A /* Stack.swift in Sources */,
 				4CFB9D6920C0491D0048BB16 /* StringExtTests.swift in Sources */,
 				4CFB9D5E20C0490F0048BB16 /* EssentialsTests.swift in Sources */,
+				4C15B73120CF09D20082851A /* Random.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
