@@ -12,6 +12,7 @@ class Stack<Element> {
 
 	private var elements: [Element] = [Element]()
 	private var height: Int = 0
+	private var isFlipped = false
 
 	private let max: Int?
 
@@ -29,18 +30,37 @@ class Stack<Element> {
 		precondition(maxCount >= 0, "Cannot create Stack with negative maxCount.")
 		self.max = maxCount
 	}
+	init(with elements: Element..., maxCount: Int? = nil) {
+		self.max = maxCount
+
+		for element in elements {
+			self.push(element)
+		}
+	}
 
 	//MARK: Access
 	public func push(_ new: Element...) {
 		for element in new {
-			if max != nil && height == max {
-				elements.removeFirst()
+			if max != nil, height == max {
+				if isFlipped {
+					elements.removeLast()
+				}
+				else {
+					elements.removeFirst()
+				}
 			}
 			else {
-				height += 1
+				defer {
+					height += 1
+				}
 			}
 
-			elements.append(element)
+			if isFlipped {
+				elements.insert(element, at: 0)
+			}
+			else {
+				elements.append(element)
+			}
 		}
 	}
 
@@ -49,7 +69,12 @@ class Stack<Element> {
 			height -= 1
 		}
 
-		return elements.remove(at: index)
+		if !isFlipped {
+			return elements.remove(at: index)
+		}
+		else {
+			return elements.remove(at: count-1 - index)
+		}
 	}
 
 	public func pop() -> Element {
@@ -57,16 +82,25 @@ class Stack<Element> {
 			height -= 1
 		}
 
-		return elements.removeLast()
+		if !isFlipped {
+			return elements.removeLast()
+		}
+		else {
+			return elements.removeFirst()
+		}
+	}
+
+	public func flip() {
+		isFlipped.toggle()
 	}
 
 	public func peek() -> Element {
-		return elements.last!
+		return isFlipped ? elements.first! : elements.last!
 	}
 
 	public subscript(index: Int) -> Element {
 		get {
-			return elements[index]
+			return !isFlipped ? elements[index] : elements[count-1 - index]
 		}
 	}
 

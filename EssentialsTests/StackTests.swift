@@ -95,4 +95,156 @@ class StackTests: XCTestCase {
 		XCTAssertEqual(stack.count, 8)
 	}
 
+	func testInitWith() {
+		let stack = Stack<Int>(with: 1, 2, 3, 4, 5)
+
+		XCTAssertEqual(stack.count, 5)
+
+		XCTAssertEqual(stack.pop(), 5)
+		XCTAssertEqual(stack.pop(), 4)
+		XCTAssertEqual(stack.pop(), 3)
+		XCTAssertEqual(stack.pop(), 2)
+		XCTAssertEqual(stack.pop(), 1)
+
+		XCTAssertEqual(stack.count, 0)
+	}
+
+	func testFlip() {
+		let stack = Stack<Int>(with: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+
+		XCTAssertEqual(stack.count, 10)
+
+		stack.flip()
+
+		XCTAssertEqual(stack.pop(), 1)
+		XCTAssertEqual(stack.pop(), 2)
+		XCTAssertEqual(stack.pop(), 3)
+
+		XCTAssertEqual(stack.count, 7)
+
+		stack.flip()
+
+		XCTAssertEqual(stack.pop(), 10)
+		XCTAssertEqual(stack.pop(), 9)
+		XCTAssertEqual(stack.pop(), 8)
+
+		XCTAssertEqual(stack.count, 4)
+
+		stack.flip()
+
+		XCTAssertEqual(stack.peek(), 4)
+
+		stack.push(3)
+
+		XCTAssertEqual(stack.peek(), 3)
+
+		stack.flip()
+
+		XCTAssertEqual(stack.peek(), 7)
+
+		stack.push(8, 9)
+
+		XCTAssertEqual(stack.peek(), 9)
+
+		stack.flip()
+
+		XCTAssertEqual(stack.pop(), 3)
+		XCTAssertEqual(stack.pop(), 4)
+		XCTAssertEqual(stack.pop(), 5)
+		XCTAssertEqual(stack.pop(), 6)
+		XCTAssertEqual(stack.pop(), 7)
+		XCTAssertEqual(stack.pop(), 8)
+		XCTAssertEqual(stack.pop(), 9)
+
+		XCTAssertEqual(stack.count, 0)
+	}
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
