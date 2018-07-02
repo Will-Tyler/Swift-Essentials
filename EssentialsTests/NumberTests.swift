@@ -19,14 +19,87 @@ class NumberTests: XCTestCase {
         super.tearDown()
     }
 
+	func testInit() {
+		XCTAssertEqual(Number().value, "0")
+	}
+
 	func testInitWithInt() {
-		var mynumber = Number(integerLiteral: Int.max)
+		var mynumber = Number(with: Int.max)
 
 		XCTAssertEqual(mynumber.value, "\(Int.max)")
 
-		mynumber = Number(integerLiteral: -5)
+		mynumber = Number(with: -5)
 
 		XCTAssertEqual(mynumber.value, "-5")
 	}
 
+	func testInitFromString() {
+		XCTAssertNil(Number(from: "-"))
+		XCTAssertNil(Number(from: ""))
+
+		let hugeNumber = "\(Int.max)0"
+
+		XCTAssertEqual(Number(from: hugeNumber)?.value, hugeNumber)
+
+		let hugeNegative = "\(Int.min)0"
+
+		XCTAssertEqual(Number(from: hugeNegative)?.value, hugeNegative)
+	}
+
+	func testMagnitude() {
+		let number = Number(from: "\(Int.min+1)")!
+
+		XCTAssertEqual(number.magnitude.value, "\(Int.max)")
+	}
+
+	func testComparable() {
+		var numbers = (first: Number(with: -123), second: Number(with: 123))
+
+		XCTAssertLessThan(numbers.first, numbers.second)
+		XCTAssertGreaterThan(numbers.second, numbers.first)
+
+		XCTAssertNotEqual(numbers.first, numbers.second)
+		XCTAssertEqual(numbers.first.magnitude, numbers.second)
+
+		numbers = (first: Number(with: -563), second: Number(with: -562))
+
+		XCTAssertLessThan(numbers.first, numbers.second)
+		XCTAssertGreaterThan(numbers.second, numbers.first)
+
+		XCTAssertNotEqual(numbers.first, numbers.second)
+
+		numbers = (first: Number(with: 1934895), second: Number(with: 1934896))
+
+		XCTAssertLessThan(numbers.first, numbers.second)
+		XCTAssertGreaterThan(numbers.second, numbers.first)
+
+		XCTAssertNotEqual(numbers.first, numbers.second)
+
+		numbers = (first: Number(), second: Number())
+
+		XCTAssertEqual(numbers.first, numbers.second)
+	}
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
