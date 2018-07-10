@@ -11,13 +11,17 @@ import Foundation
 public struct Number: Comparable {
 
 	private var data: String
-	private var sign: Sign
+	private var isPositive: Bool
+	private var isNegative: Bool {
+		get { return !isPositive }
+		set { isPositive = !newValue }
+	}
 
 	public var value: String {
 		get {
 			var result = data
 
-			if sign == .negative {
+			if isNegative {
 				result.insert("-", at: result.startIndex)
 			}
 
@@ -25,15 +29,13 @@ public struct Number: Comparable {
 		}
 	}
 	public var magnitude: Number {
-		get {
-			return Number(from: data)!
-		}
+		get { return Number(from: data)! }
 	}
 
 	//MARK: Initializers
 	public init() {
 		data = "0"
-		sign = .positive
+		isPositive = true
 	}
 	public init<Type: BinaryInteger>(with value: Type) {
 		self.init(from: "\(value)")!
@@ -43,20 +45,18 @@ public struct Number: Comparable {
 
 		if string.isEmpty { return nil }
 
-		if string[0] == "-" {
-			sign = .negative
+		if string.first! == "-" {
+			isPositive = false
 			string.removeFirst()
 			if string.isEmpty { return nil }
 		}
 		else {
-			sign = .positive
+			isPositive = true
 		}
 
 		let digits: Set<Character> = Set("1234567890")
 		for char in string {
-			if !digits.contains(char) {
-				return nil
-			}
+			if !digits.contains(char) { return nil }
 		}
 
 		data = string
@@ -64,10 +64,9 @@ public struct Number: Comparable {
 
 	//MARK: Comparable
 	public static func <(left: Number, right: Number) -> Bool {
-		if left.sign != right.sign { return left.sign == .negative }
+		if left.isPositive != right.isPositive { return left.isNegative }
 
-		switch left.sign { // signs are equal
-		case .positive:
+		if left.isPositive { // signs are equal
 			if left.data.count != right.data.count { return left.data.count < right.data.count }
 
 			for (offset, char) in left.data.enumerated() {
@@ -75,8 +74,8 @@ public struct Number: Comparable {
 			}
 
 			return false // should be equal at this point
-
-		case .negative:
+		}
+		else {
 			if left.data.count != right.data.count { return left.data.count < right.data.count }
 
 			for (offset, char) in left.data.enumerated() {
@@ -93,8 +92,8 @@ public struct Number: Comparable {
 	static func +(left: Number, right: Number) -> Number {
 		var newNumber = Number()
 
-		if left.sign == right.sign {
-			newNumber.sign = left.sign
+		if left.isPositive == right.isPositive {
+			newNumber.isPositive = left.isPositive
 			newNumber.data = {
 				var newDataReversed = left.data.reversed()
 
@@ -106,7 +105,7 @@ public struct Number: Comparable {
 			}()
 		}
 		else {
-			return left.sign == .positive ? left - right : right - left
+			return left.isPositive ? left - right : right - left
 		}
 
 		return newNumber
@@ -117,9 +116,4 @@ public struct Number: Comparable {
 	}
 	static func -=(left: inout Number, right: Number) {}
 
-}
-
-fileprivate enum Sign {
-	case positive
-	case negative
 }
