@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4C15B73020CF09CD0082851A /* BinaryIntegerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFB9D5420C048D40048BB16 /* BinaryIntegerExt.swift */; };
+		4C15B73020CF09CD0082851A /* BinaryInteger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFB9D5420C048D40048BB16 /* BinaryInteger.swift */; };
 		4C15B73120CF09D20082851A /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFB9D5220C048D40048BB16 /* Random.swift */; };
 		4C15B73220CF09D50082851A /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFB9D5320C048D40048BB16 /* Stack.swift */; };
-		4C15B73320CF09D90082851A /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFB9D5520C048D40048BB16 /* StringExt.swift */; };
+		4C15B73320CF09D90082851A /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFB9D5520C048D40048BB16 /* String.swift */; };
 		4C530C5B20EAA24B000636FB /* NumberTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C530C5A20EAA24B000636FB /* NumberTests.swift */; };
 		4C74BE6D20DD406700F765C8 /* Bool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C74BE6C20DD406700F765C8 /* Bool.swift */; };
 		4C74BE6E20DD409900F765C8 /* Bool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C74BE6C20DD406700F765C8 /* Bool.swift */; };
@@ -21,8 +21,8 @@
 		4CDBB74820E8941300728A50 /* Number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDBB74520E8941300728A50 /* Number.swift */; };
 		4CFB9D5E20C0490F0048BB16 /* EssentialsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFB9D5D20C0490F0048BB16 /* EssentialsTests.swift */; };
 		4CFB9D6720C0491D0048BB16 /* StackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFB9D6320C0491D0048BB16 /* StackTests.swift */; };
-		4CFB9D6820C0491D0048BB16 /* BinaryIntegerExtTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFB9D6420C0491D0048BB16 /* BinaryIntegerExtTests.swift */; };
-		4CFB9D6920C0491D0048BB16 /* StringExtTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFB9D6520C0491D0048BB16 /* StringExtTests.swift */; };
+		4CFB9D6820C0491D0048BB16 /* BinaryIntegerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFB9D6420C0491D0048BB16 /* BinaryIntegerTests.swift */; };
+		4CFB9D6920C0491D0048BB16 /* StringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFB9D6520C0491D0048BB16 /* StringTests.swift */; };
 		4CFB9D6A20C0491D0048BB16 /* RandomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFB9D6620C0491D0048BB16 /* RandomTests.swift */; };
 		4CFB9D7D20C049810048BB16 /* EssentialsMacOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CFB9D7420C049800048BB16 /* EssentialsMacOS.framework */; };
 		4CFB9D8220C049810048BB16 /* EssentialsMacOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFB9D8120C049810048BB16 /* EssentialsMacOSTests.swift */; };
@@ -30,13 +30,13 @@
 		4CFB9D9920C0499F0048BB16 /* EssentialsiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CFB9D9020C0499F0048BB16 /* EssentialsiOS.framework */; };
 		4CFB9D9E20C0499F0048BB16 /* EssentialsiOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFB9D9D20C0499F0048BB16 /* EssentialsiOSTests.swift */; };
 		4CFB9DA020C0499F0048BB16 /* EssentialsiOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CFB9D9220C0499F0048BB16 /* EssentialsiOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4CFB9DFD20C062F50048BB16 /* BinaryIntegerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFB9D5420C048D40048BB16 /* BinaryIntegerExt.swift */; };
+		4CFB9DFD20C062F50048BB16 /* BinaryInteger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFB9D5420C048D40048BB16 /* BinaryInteger.swift */; };
 		4CFB9DFE20C062F80048BB16 /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFB9D5220C048D40048BB16 /* Random.swift */; };
 		4CFB9DFF20C062FB0048BB16 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFB9D5320C048D40048BB16 /* Stack.swift */; };
 		4CFB9E0020C062FF0048BB16 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFB9D5320C048D40048BB16 /* Stack.swift */; };
-		4CFB9E0120C063030048BB16 /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFB9D5520C048D40048BB16 /* StringExt.swift */; };
-		4CFB9E0220C063050048BB16 /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFB9D5520C048D40048BB16 /* StringExt.swift */; };
-		4CFB9E0320C063090048BB16 /* BinaryIntegerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFB9D5420C048D40048BB16 /* BinaryIntegerExt.swift */; };
+		4CFB9E0120C063030048BB16 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFB9D5520C048D40048BB16 /* String.swift */; };
+		4CFB9E0220C063050048BB16 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFB9D5520C048D40048BB16 /* String.swift */; };
+		4CFB9E0320C063090048BB16 /* BinaryInteger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFB9D5420C048D40048BB16 /* BinaryInteger.swift */; };
 		4CFB9E0420C0630C0048BB16 /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFB9D5220C048D40048BB16 /* Random.swift */; };
 /* End PBXBuildFile section */
 
@@ -64,14 +64,14 @@
 		4CDBB74520E8941300728A50 /* Number.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Number.swift; sourceTree = "<group>"; };
 		4CFB9D5220C048D40048BB16 /* Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Random.swift; sourceTree = "<group>"; };
 		4CFB9D5320C048D40048BB16 /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
-		4CFB9D5420C048D40048BB16 /* BinaryIntegerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryIntegerExt.swift; sourceTree = "<group>"; };
-		4CFB9D5520C048D40048BB16 /* StringExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExt.swift; sourceTree = "<group>"; };
+		4CFB9D5420C048D40048BB16 /* BinaryInteger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryInteger.swift; sourceTree = "<group>"; };
+		4CFB9D5520C048D40048BB16 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		4CFB9D5A20C0490F0048BB16 /* EssentialsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CFB9D5D20C0490F0048BB16 /* EssentialsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentialsTests.swift; sourceTree = "<group>"; };
 		4CFB9D5F20C0490F0048BB16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4CFB9D6320C0491D0048BB16 /* StackTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackTests.swift; sourceTree = "<group>"; };
-		4CFB9D6420C0491D0048BB16 /* BinaryIntegerExtTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinaryIntegerExtTests.swift; sourceTree = "<group>"; };
-		4CFB9D6520C0491D0048BB16 /* StringExtTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtTests.swift; sourceTree = "<group>"; };
+		4CFB9D6420C0491D0048BB16 /* BinaryIntegerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinaryIntegerTests.swift; sourceTree = "<group>"; };
+		4CFB9D6520C0491D0048BB16 /* StringTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringTests.swift; sourceTree = "<group>"; };
 		4CFB9D6620C0491D0048BB16 /* RandomTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomTests.swift; sourceTree = "<group>"; };
 		4CFB9D7420C049800048BB16 /* EssentialsMacOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EssentialsMacOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CFB9D7620C049810048BB16 /* EssentialsMacOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EssentialsMacOS.h; sourceTree = "<group>"; };
@@ -144,12 +144,12 @@
 		4CFB9D5120C048BD0048BB16 /* Essentials */ = {
 			isa = PBXGroup;
 			children = (
-				4CFB9D5420C048D40048BB16 /* BinaryIntegerExt.swift */,
+				4CFB9D5420C048D40048BB16 /* BinaryInteger.swift */,
 				4C74BE6C20DD406700F765C8 /* Bool.swift */,
 				4CDBB74520E8941300728A50 /* Number.swift */,
 				4CFB9D5220C048D40048BB16 /* Random.swift */,
 				4CFB9D5320C048D40048BB16 /* Stack.swift */,
-				4CFB9D5520C048D40048BB16 /* StringExt.swift */,
+				4CFB9D5520C048D40048BB16 /* String.swift */,
 			);
 			path = Essentials;
 			sourceTree = "<group>";
@@ -170,12 +170,12 @@
 			isa = PBXGroup;
 			children = (
 				4CFB9D5D20C0490F0048BB16 /* EssentialsTests.swift */,
-				4CFB9D6420C0491D0048BB16 /* BinaryIntegerExtTests.swift */,
+				4CFB9D6420C0491D0048BB16 /* BinaryIntegerTests.swift */,
 				4C74BE7020DD411800F765C8 /* BoolTests.swift */,
 				4C530C5A20EAA24B000636FB /* NumberTests.swift */,
 				4CFB9D6620C0491D0048BB16 /* RandomTests.swift */,
 				4CFB9D6320C0491D0048BB16 /* StackTests.swift */,
-				4CFB9D6520C0491D0048BB16 /* StringExtTests.swift */,
+				4CFB9D6520C0491D0048BB16 /* StringTests.swift */,
 				4CFB9D5F20C0490F0048BB16 /* Info.plist */,
 			);
 			path = EssentialsTests;
@@ -421,14 +421,14 @@
 				4CFB9D6A20C0491D0048BB16 /* RandomTests.swift in Sources */,
 				4CFB9D6720C0491D0048BB16 /* StackTests.swift in Sources */,
 				4C530C5B20EAA24B000636FB /* NumberTests.swift in Sources */,
-				4CFB9D6820C0491D0048BB16 /* BinaryIntegerExtTests.swift in Sources */,
+				4CFB9D6820C0491D0048BB16 /* BinaryIntegerTests.swift in Sources */,
 				4C74BE6D20DD406700F765C8 /* Bool.swift in Sources */,
 				4C74BE7120DD411800F765C8 /* BoolTests.swift in Sources */,
-				4C15B73020CF09CD0082851A /* BinaryIntegerExt.swift in Sources */,
-				4C15B73320CF09D90082851A /* StringExt.swift in Sources */,
+				4C15B73020CF09CD0082851A /* BinaryInteger.swift in Sources */,
+				4C15B73320CF09D90082851A /* String.swift in Sources */,
 				4C15B73220CF09D50082851A /* Stack.swift in Sources */,
 				4CDBB74620E8941300728A50 /* Number.swift in Sources */,
-				4CFB9D6920C0491D0048BB16 /* StringExtTests.swift in Sources */,
+				4CFB9D6920C0491D0048BB16 /* StringTests.swift in Sources */,
 				4CFB9D5E20C0490F0048BB16 /* EssentialsTests.swift in Sources */,
 				4C15B73120CF09D20082851A /* Random.swift in Sources */,
 			);
@@ -441,8 +441,8 @@
 				4CFB9DFE20C062F80048BB16 /* Random.swift in Sources */,
 				4CFB9DFF20C062FB0048BB16 /* Stack.swift in Sources */,
 				4CDBB74720E8941300728A50 /* Number.swift in Sources */,
-				4CFB9E0120C063030048BB16 /* StringExt.swift in Sources */,
-				4CFB9DFD20C062F50048BB16 /* BinaryIntegerExt.swift in Sources */,
+				4CFB9E0120C063030048BB16 /* String.swift in Sources */,
+				4CFB9DFD20C062F50048BB16 /* BinaryInteger.swift in Sources */,
 				4C74BE6E20DD409900F765C8 /* Bool.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -462,8 +462,8 @@
 				4CFB9E0420C0630C0048BB16 /* Random.swift in Sources */,
 				4CFB9E0020C062FF0048BB16 /* Stack.swift in Sources */,
 				4CDBB74820E8941300728A50 /* Number.swift in Sources */,
-				4CFB9E0320C063090048BB16 /* BinaryIntegerExt.swift in Sources */,
-				4CFB9E0220C063050048BB16 /* StringExt.swift in Sources */,
+				4CFB9E0320C063090048BB16 /* BinaryInteger.swift in Sources */,
+				4CFB9E0220C063050048BB16 /* String.swift in Sources */,
 				4C74BE6F20DD409A00F765C8 /* Bool.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
