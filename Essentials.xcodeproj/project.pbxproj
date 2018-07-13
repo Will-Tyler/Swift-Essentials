@@ -11,6 +11,8 @@
 		4C15B73120CF09D20082851A /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFB9D5220C048D40048BB16 /* Random.swift */; };
 		4C15B73220CF09D50082851A /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFB9D5320C048D40048BB16 /* Stack.swift */; };
 		4C15B73320CF09D90082851A /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFB9D5520C048D40048BB16 /* String.swift */; };
+		4C334D3220F8DE1100DC48E9 /* NSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C334D3120F8DE1100DC48E9 /* NSView.swift */; };
+		4C334D3320F8DE1100DC48E9 /* NSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C334D3120F8DE1100DC48E9 /* NSView.swift */; };
 		4C530C5B20EAA24B000636FB /* NumberTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C530C5A20EAA24B000636FB /* NumberTests.swift */; };
 		4C74BE6D20DD406700F765C8 /* Bool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C74BE6C20DD406700F765C8 /* Bool.swift */; };
 		4C74BE6E20DD409900F765C8 /* Bool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C74BE6C20DD406700F765C8 /* Bool.swift */; };
@@ -58,6 +60,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4C334D3120F8DE1100DC48E9 /* NSView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSView.swift; sourceTree = "<group>"; };
 		4C530C5A20EAA24B000636FB /* NumberTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberTests.swift; sourceTree = "<group>"; };
 		4C74BE6C20DD406700F765C8 /* Bool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bool.swift; sourceTree = "<group>"; };
 		4C74BE7020DD411800F765C8 /* BoolTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoolTests.swift; sourceTree = "<group>"; };
@@ -185,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				4CFB9D7620C049810048BB16 /* EssentialsMacOS.h */,
+				4C334D3120F8DE1100DC48E9 /* NSView.swift */,
 				4CFB9D7720C049810048BB16 /* Info.plist */,
 			);
 			path = EssentialsMacOS;
@@ -438,6 +442,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C334D3220F8DE1100DC48E9 /* NSView.swift in Sources */,
 				4CFB9DFE20C062F80048BB16 /* Random.swift in Sources */,
 				4CFB9DFF20C062FB0048BB16 /* Stack.swift in Sources */,
 				4CDBB74720E8941300728A50 /* Number.swift in Sources */,
@@ -452,6 +457,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CFB9D8220C049810048BB16 /* EssentialsMacOSTests.swift in Sources */,
+				4C334D3320F8DE1100DC48E9 /* NSView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
