@@ -9,14 +9,11 @@
 import Cocoa
 
 
-extension NSView {
+public extension NSView {
 
-	var backColor: CGColor? {
+	public var backColor: CGColor? {
 		get {
-			if wantsLayer {
-				return layer?.backgroundColor
-			}
-			else { return nil }
+			return layer?.backgroundColor
 		}
 		set {
 			guard let newColor = newValue else { return }
@@ -26,7 +23,7 @@ extension NSView {
 		}
 	}
 
-	func removeSubviews() {
+	public func removeSubviews() {
 		subviews.forEach({ $0.removeFromSuperview() })
 	}
 	

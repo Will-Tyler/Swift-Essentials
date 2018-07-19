@@ -18,6 +18,7 @@
 		4C74BE6E20DD409900F765C8 /* Bool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C74BE6C20DD406700F765C8 /* Bool.swift */; };
 		4C74BE6F20DD409A00F765C8 /* Bool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C74BE6C20DD406700F765C8 /* Bool.swift */; };
 		4C74BE7120DD411800F765C8 /* BoolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C74BE7020DD411800F765C8 /* BoolTests.swift */; };
+		4C8736A721013513007BAADF /* NSScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8736A621013513007BAADF /* NSScreen.swift */; };
 		4CDBB74620E8941300728A50 /* Number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDBB74520E8941300728A50 /* Number.swift */; };
 		4CDBB74720E8941300728A50 /* Number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDBB74520E8941300728A50 /* Number.swift */; };
 		4CDBB74820E8941300728A50 /* Number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDBB74520E8941300728A50 /* Number.swift */; };
@@ -64,6 +65,7 @@
 		4C530C5A20EAA24B000636FB /* NumberTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberTests.swift; sourceTree = "<group>"; };
 		4C74BE6C20DD406700F765C8 /* Bool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bool.swift; sourceTree = "<group>"; };
 		4C74BE7020DD411800F765C8 /* BoolTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoolTests.swift; sourceTree = "<group>"; };
+		4C8736A621013513007BAADF /* NSScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSScreen.swift; sourceTree = "<group>"; };
 		4CDBB74520E8941300728A50 /* Number.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Number.swift; sourceTree = "<group>"; };
 		4CFB9D5220C048D40048BB16 /* Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Random.swift; sourceTree = "<group>"; };
 		4CFB9D5320C048D40048BB16 /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				4CFB9D7620C049810048BB16 /* EssentialsMacOS.h */,
+				4C8736A621013513007BAADF /* NSScreen.swift */,
 				4C334D3120F8DE1100DC48E9 /* NSView.swift */,
 				4CFB9D7720C049810048BB16 /* Info.plist */,
 			);
@@ -444,6 +447,7 @@
 			files = (
 				4C334D3220F8DE1100DC48E9 /* NSView.swift in Sources */,
 				4CFB9DFE20C062F80048BB16 /* Random.swift in Sources */,
+				4C8736A721013513007BAADF /* NSScreen.swift in Sources */,
 				4CFB9DFF20C062FB0048BB16 /* Stack.swift in Sources */,
 				4CDBB74720E8941300728A50 /* Number.swift in Sources */,
 				4CFB9E0120C063030048BB16 /* String.swift in Sources */,
