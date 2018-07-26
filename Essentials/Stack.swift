@@ -8,6 +8,7 @@
 
 import Foundation
 
+
 class Stack<Element> {
 
 	private var elements: [Element] = [Element]()

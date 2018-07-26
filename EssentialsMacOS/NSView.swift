@@ -13,7 +13,10 @@ public extension NSView {
 
 	public var backColor: CGColor? {
 		get {
-			return layer?.backgroundColor
+			if wantsLayer {
+				return layer?.backgroundColor
+			}
+			else { return nil }
 		}
 		set {
 			guard let newColor = newValue else { return }
@@ -26,5 +29,16 @@ public extension NSView {
 	public func removeSubviews() {
 		subviews.forEach({ $0.removeFromSuperview() })
 	}
-	
+
+	public func removeConstraints() {
+		removeConstraints(constraints)
+	}
+
+	@available(OSXApplicationExtension 10.10, *)
+	public func deactivateAndRemoveConstraints() {
+		constraints.forEach({ $0.isActive = false })
+
+		removeConstraints()
+	}
+
 }

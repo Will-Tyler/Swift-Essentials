@@ -8,11 +8,13 @@
 
 import Foundation
 
+
 precedencegroup ExponentialPrecedence {
 	lowerThan: BitwiseShiftPrecedence
 	higherThan: MultiplicationPrecedence
 }
 infix operator **: ExponentialPrecedence
+
 
 public extension BinaryInteger {
 

@@ -9,10 +9,12 @@
 import Cocoa
 
 
-extension NSScreen {
-	var size: NSSize {
+public extension NSScreen {
+
+	public var size: NSSize {
 		get {
 			return NSSize(width: frame.width, height: frame.height)
 		}
 	}
+
 }

@@ -8,6 +8,7 @@
 
 import Foundation
 
+
 public class Random {
 
 	private static func randomFor<T: ExpressibleByIntegerLiteral>(type: T.Type) -> T {
