@@ -10,13 +10,9 @@ import Foundation
 
 public extension Bool {
 
+	/// Invert the value of this boolean.
 	public mutating func toggle() {
-		if self {
-			self = false
-		}
-		else {
-			self = true
-		}
+		self = !self
 	}
 	
 }
