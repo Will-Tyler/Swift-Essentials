@@ -40,6 +40,7 @@ class Stack<Element> {
 	}
 
 	//MARK: Access
+	/// Add an element to the top of the stack.
 	public func push(_ new: Element...) {
 		for element in new {
 			if max != nil, height == max {
@@ -65,6 +66,7 @@ class Stack<Element> {
 		}
 	}
 
+	/// Remove and return the element from the stack at the specified index.
 	public func pull(from index: Int) -> Element {
 		defer {
 			height -= 1
@@ -78,6 +80,7 @@ class Stack<Element> {
 		}
 	}
 
+	/// Remove and return the element at the top of the stack.
 	public func pop() -> Element {
 		defer {
 			height -= 1
@@ -91,14 +94,17 @@ class Stack<Element> {
 		}
 	}
 
+	/// Reverse the order of the stack.
 	public func flip() {
 		isFlipped.toggle()
 	}
 
+	/// Return the member at the top of the stack.
 	public func peek() -> Element {
 		return isFlipped ? elements.first! : elements.last!
 	}
 
+	/// Return the member at the specified index.
 	public subscript(index: Int) -> Element {
 		get {
 			return !isFlipped ? elements[index] : elements[count-1 - index]

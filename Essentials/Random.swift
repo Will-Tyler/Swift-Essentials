@@ -88,29 +88,33 @@ public class Random {
 		}
 	}
 
+	/// Returns a Bool with a random value.
 	public static var bool: Bool {
 		get {
 			return arc4random_uniform(2) == 1
 		}
 	}
 
+	/// Returns an Int with a random value.
 	public static var int: Int {
 		get {
 			return randomFor(type: Int.self)
 		}
 	}
 
+	/// Returns a UInt with a random value.
 	public static var uint: UInt {
 		get {
 			return randomFor(type: UInt.self)
 		}
 	}
 
+	/// Return a random member from the collection.
 	public static func from<CollectionType: Collection>(_ collection: CollectionType) -> CollectionType.Element {
 		precondition(!collection.isEmpty, "Collection cannot be empty.")
 
 		guard collection.count != 1 else {
-			return collection[collection.startIndex]
+			return collection.first!
 		}
 
 		let offset = int(lower: 0, upper: collection.count-1)

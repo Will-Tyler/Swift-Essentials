@@ -11,6 +11,7 @@ import Foundation
 
 public extension String {
 
+	/// Return the character at the specified index.
 	public subscript(i: Int) -> Character {
 		return self[index(startIndex, offsetBy: i)]
 	}

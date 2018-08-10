@@ -86,6 +86,11 @@ public struct Number: Comparable {
 		}
 	}
 
+	private func addDecimalStrings(left: String, right: String) {
+		var leftArray: [Character] = Array(left)
+		var rightArray: [Character] = Array(right)
+	}
+
 	//MARK: Operations
 	static func *(left: Number, right: Number) {}
 	static func *=(left: inout Number, right: Number) {}
