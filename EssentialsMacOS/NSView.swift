@@ -17,10 +17,11 @@ public extension NSView {
 			return layer?.backgroundColor
 		}
 		set {
-			guard let newColor = newValue else { return }
+			if !wantsLayer {
+				wantsLayer = true
+			}
 
-			wantsLayer = true
-			layer!.backgroundColor = newColor
+			layer!.backgroundColor = newValue
 		}
 	}
 
@@ -34,7 +35,7 @@ public extension NSView {
 		removeConstraints(constraints)
 	}
 
-	/// Deactivate and remove all subviews from this view.
+	/// Deactivate and remove all constraints from this view.
 	@available(OSX 10.10, *)
 	@available(OSXApplicationExtension 10.10, *)
 	public func deactivateAndRemoveConstraints() {

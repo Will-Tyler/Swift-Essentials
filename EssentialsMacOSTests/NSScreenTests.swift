@@ -7,7 +7,6 @@
 //
 
 import XCTest
-//import Cocoa
 
 
 class NSScreenTests: XCTestCase {
