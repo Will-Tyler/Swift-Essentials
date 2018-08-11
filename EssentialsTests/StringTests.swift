@@ -8,6 +8,7 @@
 
 import XCTest
 
+
 class StringExtTests: XCTestCase {
 
     override func setUp() {

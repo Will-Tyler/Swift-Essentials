@@ -7,6 +7,7 @@
 
 import XCTest
 
+
 class BoolTests: XCTestCase {
 
 	override func setUp() {

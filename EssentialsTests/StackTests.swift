@@ -8,6 +8,7 @@
 
 import XCTest
 
+
 class StackTests: XCTestCase {
 
     override func setUp() {

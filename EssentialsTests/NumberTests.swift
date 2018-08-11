@@ -7,6 +7,7 @@
 
 import XCTest
 
+
 class NumberTests: XCTestCase {
 
     override func setUp() {

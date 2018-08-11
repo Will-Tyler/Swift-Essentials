@@ -41,6 +41,9 @@
 		4CFB9E0220C063050048BB16 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFB9D5520C048D40048BB16 /* String.swift */; };
 		4CFB9E0320C063090048BB16 /* BinaryInteger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFB9D5420C048D40048BB16 /* BinaryInteger.swift */; };
 		4CFB9E0420C0630C0048BB16 /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFB9D5220C048D40048BB16 /* Random.swift */; };
+		9732A087A53C903D7A6C8E8B /* NSScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9732A5D806E07A503969CCA6 /* NSScreenTests.swift */; };
+		9732A42B05C35DC10733E815 /* NSScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8736A621013513007BAADF /* NSScreen.swift */; };
+		9732ADD1FF48DD13D8FE03FF /* NSScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9732A5D806E07A503969CCA6 /* NSScreenTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +93,7 @@
 		4CFB9D9820C0499F0048BB16 /* EssentialsiOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialsiOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CFB9D9D20C0499F0048BB16 /* EssentialsiOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentialsiOSTests.swift; sourceTree = "<group>"; };
 		4CFB9D9F20C0499F0048BB16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9732A5D806E07A503969CCA6 /* NSScreenTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSScreenTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				4CFB9D8120C049810048BB16 /* EssentialsMacOSTests.swift */,
+				9732A5D806E07A503969CCA6 /* NSScreenTests.swift */,
 				4CFB9D8320C049810048BB16 /* Info.plist */,
 			);
 			path = EssentialsMacOSTests;
@@ -438,6 +443,7 @@
 				4CFB9D6920C0491D0048BB16 /* StringTests.swift in Sources */,
 				4CFB9D5E20C0490F0048BB16 /* EssentialsTests.swift in Sources */,
 				4C15B73120CF09D20082851A /* Random.swift in Sources */,
+				9732ADD1FF48DD13D8FE03FF /* NSScreenTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,6 +468,8 @@
 			files = (
 				4CFB9D8220C049810048BB16 /* EssentialsMacOSTests.swift in Sources */,
 				4C334D3320F8DE1100DC48E9 /* NSView.swift in Sources */,
+				9732A087A53C903D7A6C8E8B /* NSScreenTests.swift in Sources */,
+				9732A42B05C35DC10733E815 /* NSScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

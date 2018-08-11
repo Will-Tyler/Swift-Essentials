@@ -8,6 +8,7 @@
 
 import XCTest
 
+
 class RandomTests: XCTestCase {
 
     override func setUp() {
