@@ -35,8 +35,14 @@ class NumberTests: XCTestCase {
 	}
 
 	func testInitFromString() {
-		XCTAssertNil(Number(from: "-"))
-		XCTAssertNil(Number(from: ""))
+		let emptyNegative = Number(from: "-")
+
+		XCTAssertNil(emptyNegative)
+
+		let zero = Number(from: "")
+
+		XCTAssertNotNil(zero)
+		XCTAssertEqual(zero?.value, "0")
 
 		let hugeNumber = "\(Int.max)0"
 
@@ -81,26 +87,20 @@ class NumberTests: XCTestCase {
 		XCTAssertEqual(numbers.first, numbers.second)
 	}
 
+	func testPlus() {
+		var left = Number(from: "111")!
+		var right = Number(from: "111")!
+
+		var sum = left + right
+
+		XCTAssertEqual(sum.value, "222")
+
+		left = Number(from: "11111")!
+		right = Number(from: "222")!
+
+		sum = left + right
+
+		XCTAssertEqual(sum.value, "11333")
+	}
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
