@@ -41,6 +41,11 @@ public struct Number: Comparable {
 		data = "0"
 		isPositive = true
 	}
+	/// Initialize a Number from another number.
+	private init(from number: Number) {
+		data = number.data
+		isPositive = number.isPositive
+	}
 	/// Initialize a Number from a BinaryInteger.
 	public init<Type: BinaryInteger>(with value: Type) {
 		self.init(from: "\(value)")!
@@ -167,9 +172,63 @@ public struct Number: Comparable {
 
 		return String(sums.reversed())
 	}
+	private static func subtractDigits(left: Character, right: Character) -> Character {
+		precondition(left.isDigit && right.isDigit)
+
+		let diff = "\(Int8(String(left))! - Int8(String(right))!)"
+
+		return diff.last!
+	}
+	private static func subtractDecimalStrings(left: String, right: String) -> String {
+		precondition(left.isPositiveDecimalNumber && right.isDecimalNumber)
+
+		let leftReversed = left.reversed()
+		let rightReversed = right.reversed()
+
+		let longer: ReversedCollection<String>
+		let shorter: ReversedCollection<String>
+
+		if leftReversed.count >= rightReversed.count {
+			longer = leftReversed
+			shorter = rightReversed
+		}
+		else {
+			longer = rightReversed
+			shorter = leftReversed
+		}
+
+		let top: [Character] = Array(longer)
+		let bottom: [Character] = {
+			var array = Array(shorter)
+
+			while (array.count < top.count) {
+				array.append("0")
+			}
+
+			return array
+		}()
+		var diffs = [Character]()
+
+		for index in 0..<top.count {
+			diffs.append(subtractDigits(left: top[index], right: bottom[index]))
+		}
+
+		return String(diffs.reversed())
+	}
+
+	//MARK: Negation
+	public static prefix func -(number: Number) -> Number {
+		var newNumber = Number(from: number)
+
+		newNumber.isPositive.toggle()
+
+		return newNumber
+	}
 
 	//MARK: Operations
-	public static func *(left: Number, right: Number) {}
+	public static func *(left: Number, right: Number) -> Number {
+		return Number()
+	}
 	public static func *=(left: inout Number, right: Number) {}
 	public static func +(left: Number, right: Number) -> Number {
 		var newNumber = Number()
@@ -184,10 +243,29 @@ public struct Number: Comparable {
 
 		return newNumber
 	}
-	public static func +=(left: inout Number, right: Number) {}
-	public static func -(left: Number, right: Number) -> Number {
-		return Number()
+	public static func +=(left: inout Number, right: Number) {
+		left = left + right
 	}
-	public static func -=(left: inout Number, right: Number) {}
+	public static func -(left: Number, right: Number) -> Number {
+		if left.isPositive != right.isPositive {
+			return left + (-right)
+		}
+		if left == right {
+			return Number()
+		}
+		if left.isNegative {
+			return right.magnitude - left.magnitude
+		}
+
+		var newNumber = Number()
+
+		newNumber.isPositive = left.magnitude >= right.magnitude
+		newNumber.data = subtractDecimalStrings(left: left.data, right: right.data)
+
+		return newNumber
+	}
+	public static func -=(left: inout Number, right: Number) {
+		left = left - right
+	}
 
 }

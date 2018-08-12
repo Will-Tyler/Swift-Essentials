@@ -111,17 +111,6 @@ class NumberTests: XCTestCase {
 		}
 	}
 
-	private func testAdditionFromStrings(left: String, right: String, expecting result: String) {
-		let leftNumber = Number(from: left)!
-		let rightNumber = Number(from: right)!
-		let sum = leftNumber + rightNumber
-
-		XCTAssertEqual(sum.value, result)
-	}
-	func testPositiveAdditionHugeNumbers() {
-		testAdditionFromStrings(left: "\(UInt.max)0", right: "1234567890987654321234567890", expecting: "1234568075455095058330084040")
-	}
-
 	private func testAdditionWithInts(left: Int, right: Int) {
 		let leftNumber = Number(with: left)
 		let rightNumber = Number(with: right)
@@ -144,6 +133,68 @@ class NumberTests: XCTestCase {
 
 			testAdditionWithInts(left: left, right: right)
 		}
+	}
+
+	private func testAdditionFromStrings(left: String, right: String, expecting result: String) {
+		let leftNumber = Number(from: left)!
+		let rightNumber = Number(from: right)!
+		let sum = leftNumber + rightNumber
+
+		XCTAssertEqual(sum.value, result)
+	}
+	func testPositiveAdditionHugeNumbers() {
+		testAdditionFromStrings(left: "\(UInt.max)0", right: "1234567890987654321234567890", expecting: "1234568075455095058330084040")
+	}
+
+	func testNegativeAdditionHugeNumbers() {
+		testAdditionFromStrings(left: "-\(UInt.max)0", right: "-1234567890987654321234567890", expecting: "-1234568075455095058330084040")
+	}
+
+	func testAdditionAndAssignment() {
+		var myNumber = Number()
+
+		myNumber += Number(with: 5)
+
+		XCTAssertEqual(myNumber.value, "5")
+
+		myNumber += Number(with: 14)
+
+		XCTAssertEqual(myNumber.value, "19")
+
+		myNumber += Number(with: 199)
+
+		XCTAssertEqual(myNumber.value, "\(199 + 19)")
+
+		myNumber += Number(from: "1234567890987654321")!
+
+		XCTAssertEqual(myNumber.value, "1234567890987654539")
+	}
+
+	func testNegation() {
+		let myPositive = Number(with: 5)
+
+		XCTAssertEqual((-myPositive).value, "-5")
+
+		let myNegative = Number(with: -5)
+
+		XCTAssertEqual((-myNegative).value, "5")
+	}
+
+	private func testSubtractionWithInts(left: Int, right: Int) {
+		let leftNumber = Number(with: left)
+		let rightNumber = Number(with: right)
+		let difference = leftNumber - rightNumber
+
+		XCTAssertEqual(difference.value, "\(left - right)")
+	}
+	func testSubtraction() {
+		testSubtractionWithInts(left: 9, right: 6)
+		testSubtractionWithInts(left: 8888, right: 3581)
+		testSubtractionWithInts(left: 9, right: 9)
+		testSubtractionWithInts(left: 8, right: 9)
+		testSubtractionWithInts(left: 8, right: 18)
+		testSubtractionWithInts(left: -6, right: -7)
+		testSubtractionWithInts(left: 176, right: 87)
 	}
 
 }

@@ -26,28 +26,28 @@
 			<key>orderHint</key>
 			<integer>3</integer>
 		</dict>
-		<key>NumberTests.testPlus.xcscheme</key>
+		<key>NumberTests.testNegativeAddition.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
 			<integer>4</integer>
 		</dict>
-		<key>NumberTests.testPositiveAddition.xcscheme</key>
+		<key>NumberTests.testAdditionAndAssignment.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
 			<integer>5</integer>
 		</dict>
-		<key>NumberTests.testPositiveAdditionHugeNumbers.xcscheme</key>
+		<key>NumberTests.testNegation.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
 			<integer>6</integer>
 		</dict>
-		<key>NumberTests.testNegativeAddition.xcscheme</key>
+		<key>NumberTests.testSubtraction.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
