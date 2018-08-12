@@ -8,13 +8,48 @@
 import Foundation
 
 
+fileprivate enum Sign {
+
+	case positive
+	case zero
+	case negative
+
+	mutating func toggle() {
+		switch self {
+		case .positive:
+			self = .negative
+		case .negative:
+			self = .positive
+		case.zero:
+			break
+		}
+	}
+
+}
+
 public struct Number: Comparable {
 
 	private var data: String
-	private var isPositive: Bool
+	private var sign: Sign
+	private var isPositive: Bool {
+		get { return sign == .positive }
+//		set {
+//			if data == "0" {
+//				sign = .zero
+//			}
+//			else if newValue {
+//				sign = .positive
+//			}
+//			else {
+//				sign = .negative
+//			}
+//		}
+	}
 	private var isNegative: Bool {
-		get { return !isPositive }
-		set { isPositive = !newValue }
+		get { return sign == .negative }
+	}
+	private var isZero: Bool {
+		get { return sign == .zero }
 	}
 	private var radix: UInt = 10
 
@@ -39,12 +74,12 @@ public struct Number: Comparable {
 	/// Initialize a Number with a value of 0.
 	public init() {
 		data = "0"
-		isPositive = true
+		sign = .zero
 	}
 	/// Initialize a Number from another number.
 	private init(from number: Number) {
 		data = number.data
-		isPositive = number.isPositive
+		sign = number.sign
 	}
 	/// Initialize a Number from a BinaryInteger.
 	public init<Type: BinaryInteger>(with value: Type) {
@@ -56,10 +91,10 @@ public struct Number: Comparable {
 
 		if copy.isEmpty {
 			copy = "0"
-			isPositive = true
+			sign = .zero
 		}
 		else if copy.first! == "-" {
-			isPositive = false
+			sign = .negative
 			copy.removeFirst()
 
 			if copy.isEmpty {
@@ -67,12 +102,13 @@ public struct Number: Comparable {
 			}
 		}
 		else {
-			isPositive = true
+			sign = copy == "0" ? .zero : .positive
 		}
 
 		assert(!copy.isEmpty)
 
 		let digits: Set<Character> = Set("1234567890")
+
 		for char in copy {
 			if !digits.contains(char) { return nil }
 		}
@@ -220,7 +256,7 @@ public struct Number: Comparable {
 	public static prefix func -(number: Number) -> Number {
 		var newNumber = Number(from: number)
 
-		newNumber.isPositive.toggle()
+		newNumber.sign.toggle()
 
 		return newNumber
 	}
@@ -231,10 +267,17 @@ public struct Number: Comparable {
 	}
 	public static func *=(left: inout Number, right: Number) {}
 	public static func +(left: Number, right: Number) -> Number {
+		if left.isZero {
+			return right
+		}
+		else if right.isZero {
+			return left
+		}
+
 		var newNumber = Number()
 
-		if left.isPositive == right.isPositive {
-			newNumber.isPositive = left.isPositive
+		if left.sign == right.sign {
+			newNumber.sign = left.sign
 			newNumber.data = addPositiveDecimalStrings(left: left.data, right: right.data)
 		}
 		else {
@@ -259,7 +302,7 @@ public struct Number: Comparable {
 
 		var newNumber = Number()
 
-		newNumber.isPositive = left.magnitude >= right.magnitude
+		newNumber.sign = left.magnitude >= right.magnitude ? .positive : .negative
 		newNumber.data = subtractDecimalStrings(left: left.data, right: right.data)
 
 		return newNumber

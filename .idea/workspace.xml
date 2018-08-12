@@ -7,7 +7,6 @@
       <change beforePath="$PROJECT_DIR$/Essentials.xcodeproj/xcuserdata/willtyler.xcuserdatad/xcschemes/xcschememanagement.plist" beforeDir="false" afterPath="$PROJECT_DIR$/Essentials.xcodeproj/xcuserdata/willtyler.xcuserdatad/xcschemes/xcschememanagement.plist" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Essentials/Number.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Essentials/Number.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EssentialsMacOSTests/NSScreenTests.swift" beforeDir="false" afterPath="$PROJECT_DIR$/EssentialsMacOSTests/NSScreenTests.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EssentialsTests/NumberTests.swift" beforeDir="false" afterPath="$PROJECT_DIR$/EssentialsTests/NumberTests.swift" afterDir="false" />
     </list>
     <ignored path="$USER_HOME$/Library/Developer/Xcode/DerivedData/Essentials-asfeucrtyzpozzgdcidrhhvyvccz/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -42,24 +41,24 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="swift" value="8212" />
-          <entry key="txt" value="291" />
+          <entry key="swift" value="8847" />
+          <entry key="txt" value="382" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="291" />
-          <entry key="Swift" value="8212" />
+          <entry key="PLAIN_TEXT" value="382" />
+          <entry key="Swift" value="8847" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.appcode.build">
         <counts>
-          <entry key="buildservice" value="99" />
+          <entry key="buildservice" value="120" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.cidr.testingFrameworks.usages">
         <counts>
-          <entry key="XCTest" value="78" />
+          <entry key="XCTest" value="99" />
         </counts>
       </usages-collector>
     </session>
@@ -71,8 +70,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Essentials/Number.swift">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="697">
-                  <caret line="254" column="9" lean-forward="true" selection-start-line="254" selection-start-column="9" selection-end-line="254" selection-end-column="9" />
+                <state relative-caret-position="4018">
+                  <caret line="275" selection-start-line="275" selection-end-line="275" />
                 </state>
               </provider>
             </entry>
@@ -84,8 +83,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/EssentialsTests/NumberTests.swift">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="424">
-                  <caret line="196" column="52" selection-start-line="196" selection-start-column="52" selection-end-line="196" selection-end-column="52" />
+                <state relative-caret-position="346">
+                  <caret line="197" column="5" lean-forward="true" selection-start-line="197" selection-start-column="5" selection-end-line="197" selection-end-column="5" />
                 </state>
               </provider>
             </entry>
@@ -192,7 +191,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="XCTest.NumberTests.testSubtraction">
+  <component name="RunManager" selected="XCTest.All in NumberTests.swift">
     <configuration name="EssentialsMacOS" type="AppleRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Essentials" TARGET_NAME="EssentialsMacOS" CONFIG_NAME="Debug" SCHEME_NAME="EssentialsMacOS" IS_LOCATION_SIMULATION_ALLOWED="true" MAKE_ACTIVE="TRUE">
       <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
         <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
@@ -209,7 +208,7 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NumberTests" type="OCUnitRunConfiguration" factoryName="XCTest/Kiwi" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Essentials" TARGET_NAME="EssentialsTests" CONFIG_NAME="Debug" SCHEME_NAME="NumberTests" IS_LOCATION_SIMULATION_ALLOWED="true" TEST_CLASS="NumberTests" TEST_MODE="SUITE_TEST">
+    <configuration name="All in NumberTests.swift" type="OCUnitRunConfiguration" factoryName="XCTest/Kiwi" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Essentials" TARGET_NAME="EssentialsTests" CONFIG_NAME="Debug" SCHEME_NAME="All in NumberTests.swift" IS_LOCATION_SIMULATION_ALLOWED="true" TEST_PATTERN="NumberTests" TEST_MODE="PATTERN">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -224,7 +223,7 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NumberTests.testNegativeAddition" type="OCUnitRunConfiguration" factoryName="XCTest/Kiwi" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Essentials" TARGET_NAME="EssentialsTests" CONFIG_NAME="Debug" SCHEME_NAME="NumberTests.testNegativeAddition" IS_LOCATION_SIMULATION_ALLOWED="true" TEST_CLASS="NumberTests" TEST_METHOD="testNegativeAddition" TEST_MODE="SUITE_TEST">
+    <configuration name="NumberTests.testNegativeAdditionHugeNumbers" type="OCUnitRunConfiguration" factoryName="XCTest/Kiwi" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Essentials" TARGET_NAME="EssentialsTests" CONFIG_NAME="Debug" SCHEME_NAME="NumberTests.testNegativeAdditionHugeNumbers" IS_LOCATION_SIMULATION_ALLOWED="true" TEST_CLASS="NumberTests" TEST_METHOD="testNegativeAdditionHugeNumbers" TEST_MODE="SUITE_TEST">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -237,19 +236,19 @@
     <list>
       <item itemvalue="Application.EssentialsiOS" />
       <item itemvalue="Application.EssentialsMacOS" />
-      <item itemvalue="XCTest.NumberTests" />
-      <item itemvalue="XCTest.NumberTests.testNegativeAddition" />
+      <item itemvalue="XCTest.NumberTests.testNegativeAdditionHugeNumbers" />
       <item itemvalue="XCTest.NumberTests.testAdditionAndAssignment" />
       <item itemvalue="XCTest.NumberTests.testNegation" />
       <item itemvalue="XCTest.NumberTests.testSubtraction" />
+      <item itemvalue="XCTest.All in NumberTests.swift" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="XCTest.All in NumberTests.swift" />
         <item itemvalue="XCTest.NumberTests.testSubtraction" />
-        <item itemvalue="XCTest.NumberTests" />
         <item itemvalue="XCTest.NumberTests.testNegation" />
         <item itemvalue="XCTest.NumberTests.testAdditionAndAssignment" />
-        <item itemvalue="XCTest.NumberTests.testNegativeAddition" />
+        <item itemvalue="XCTest.NumberTests.testNegativeAdditionHugeNumbers" />
       </list>
     </recent_temporary>
   </component>
@@ -266,7 +265,7 @@
       <workItem from="1533910364018" duration="1701000" />
       <workItem from="1534023357227" duration="1673000" />
       <workItem from="1534025655045" duration="79000" />
-      <workItem from="1534079599483" duration="17967000" />
+      <workItem from="1534079599483" duration="20032000" />
     </task>
     <task id="LOCAL-00001" summary="Setup AppCode project, and improved source code docs">
       <created>1533911191790</created>
@@ -303,43 +302,50 @@
       <option name="project" value="LOCAL" />
       <updated>1534100660264</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Add convenience init to create a copy of Number, begin implementing subtraction">
+      <created>1534108314515</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1534108314515</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="NumberTests_testNegation - 2018.08.12 at 15h 37m 46s.xml">
+    <history-entry file="NumberTests_testPositiveAddition - 2018.08.12 at 17h 39m 10s.xml">
+      <configuration name="NumberTests.testPositiveAddition" configurationId="OCUnitRunConfiguration" />
+    </history-entry>
+    <history-entry file="NumberTests_testPositiveAddition - 2018.08.12 at 17h 42m 46s.xml">
+      <configuration name="NumberTests.testPositiveAddition" configurationId="OCUnitRunConfiguration" />
+    </history-entry>
+    <history-entry file="NumberTests_testNegativeAddition - 2018.08.12 at 17h 43m 03s.xml">
+      <configuration name="NumberTests.testNegativeAddition" configurationId="OCUnitRunConfiguration" />
+    </history-entry>
+    <history-entry file="NumberTests_testPositiveAdditionHugeNumbers - 2018.08.12 at 17h 43m 11s.xml">
+      <configuration name="NumberTests.testPositiveAdditionHugeNumbers" configurationId="OCUnitRunConfiguration" />
+    </history-entry>
+    <history-entry file="NumberTests_testNegativeAdditionHugeNumbers - 2018.08.12 at 17h 43m 14s.xml">
+      <configuration name="NumberTests.testNegativeAdditionHugeNumbers" configurationId="OCUnitRunConfiguration" />
+    </history-entry>
+    <history-entry file="NumberTests_testAdditionAndAssignment - 2018.08.12 at 17h 43m 17s.xml">
+      <configuration name="NumberTests.testAdditionAndAssignment" configurationId="OCUnitRunConfiguration" />
+    </history-entry>
+    <history-entry file="NumberTests_testNegation - 2018.08.12 at 17h 43m 21s.xml">
       <configuration name="NumberTests.testNegation" configurationId="OCUnitRunConfiguration" />
     </history-entry>
-    <history-entry file="NumberTests - 2018.08.12 at 15h 49m 12s.xml">
-      <configuration name="NumberTests" configurationId="OCUnitRunConfiguration" />
-    </history-entry>
-    <history-entry file="NumberTests_testSubtraction - 2018.08.12 at 16h 42m 56s.xml">
+    <history-entry file="NumberTests_testSubtraction - 2018.08.12 at 17h 43m 24s.xml">
       <configuration name="NumberTests.testSubtraction" configurationId="OCUnitRunConfiguration" />
     </history-entry>
-    <history-entry file="NumberTests_testSubtraction - 2018.08.12 at 17h 02m 38s.xml">
-      <configuration name="NumberTests.testSubtraction" configurationId="OCUnitRunConfiguration" />
+    <history-entry file="All_in_NumberTests_swift - 2018.08.12 at 17h 43m 37s.xml">
+      <configuration name="All in NumberTests.swift" configurationId="OCUnitRunConfiguration" />
     </history-entry>
-    <history-entry file="NumberTests_testSubtraction - 2018.08.12 at 17h 03m 20s.xml">
-      <configuration name="NumberTests.testSubtraction" configurationId="OCUnitRunConfiguration" />
-    </history-entry>
-    <history-entry file="NumberTests - 2018.08.12 at 17h 03m 26s.xml">
-      <configuration name="NumberTests" configurationId="OCUnitRunConfiguration" />
-    </history-entry>
-    <history-entry file="NumberTests_testSubtraction - 2018.08.12 at 17h 04m 26s.xml">
-      <configuration name="NumberTests.testSubtraction" configurationId="OCUnitRunConfiguration" />
-    </history-entry>
-    <history-entry file="NumberTests_testSubtraction - 2018.08.12 at 17h 04m 53s.xml">
-      <configuration name="NumberTests.testSubtraction" configurationId="OCUnitRunConfiguration" />
-    </history-entry>
-    <history-entry file="NumberTests_testSubtraction - 2018.08.12 at 17h 05m 33s.xml">
-      <configuration name="NumberTests.testSubtraction" configurationId="OCUnitRunConfiguration" />
-    </history-entry>
-    <history-entry file="NumberTests_testSubtraction - 2018.08.12 at 17h 07m 01s.xml">
-      <configuration name="NumberTests.testSubtraction" configurationId="OCUnitRunConfiguration" />
+    <history-entry file="All_in_NumberTests_swift - 2018.08.12 at 17h 43m 54s.xml">
+      <configuration name="All in NumberTests.swift" configurationId="OCUnitRunConfiguration" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21420000" />
+    <option name="totallyTimeSpent" value="23485000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1440" y="-158" width="1920" height="1058" extended-state="6" />
@@ -381,7 +387,8 @@
     <MESSAGE value="Implement addition without carryover, improve tests" />
     <MESSAGE value="Number addition seems to mostly be working, will improve testing to verify" />
     <MESSAGE value="Add more tests for Number addition" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add more tests for Number addition" />
+    <MESSAGE value="Add convenience init to create a copy of Number, begin implementing subtraction" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add convenience init to create a copy of Number, begin implementing subtraction" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="editorHistoryManager">
@@ -501,15 +508,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Essentials/Number.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="254" column="9" lean-forward="true" selection-start-line="254" selection-start-column="9" selection-end-line="254" selection-end-column="9" />
+        <state relative-caret-position="4018">
+          <caret line="275" selection-start-line="275" selection-end-line="275" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/EssentialsTests/NumberTests.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="196" column="52" selection-start-line="196" selection-start-column="52" selection-end-line="196" selection-end-column="52" />
+        <state relative-caret-position="346">
+          <caret line="197" column="5" lean-forward="true" selection-start-line="197" selection-start-column="5" selection-end-line="197" selection-end-column="5" />
         </state>
       </provider>
     </entry>
