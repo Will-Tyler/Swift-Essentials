@@ -2,8 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="683eb49d-fa8c-4edf-9321-b314d5346946" name="Default Changelist" comment="Setup AppCode project, and improved source code docs">
+      <change afterPath="$PROJECT_DIR$/Essentials/Character.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Essentials/UnsafePointer.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Essentials.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/Essentials.xcodeproj/project.pbxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Essentials.xcodeproj/xcuserdata/willtyler.xcuserdatad/xcschemes/xcschememanagement.plist" beforeDir="false" afterPath="$PROJECT_DIR$/Essentials.xcodeproj/xcuserdata/willtyler.xcuserdatad/xcschemes/xcschememanagement.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Essentials/Number.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Essentials/Number.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Essentials/String.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Essentials/String.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EssentialsMacOSTests/NSScreenTests.swift" beforeDir="false" afterPath="$PROJECT_DIR$/EssentialsMacOSTests/NSScreenTests.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EssentialsTests/StringTests.swift" beforeDir="false" afterPath="$PROJECT_DIR$/EssentialsTests/StringTests.swift" afterDir="false" />
     </list>
     <ignored path="$USER_HOME$/Library/Developer/Xcode/DerivedData/Essentials-asfeucrtyzpozzgdcidrhhvyvccz/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,58 +27,93 @@
           <entry key="project.closed" value="3" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.6" value="1" />
-          <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.open.time.8" value="2" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="Project Settings" value="1" />
-          <entry key="swift" value="23" />
+          <entry key="swift" value="31" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Swift" value="23" />
+          <entry key="Swift" value="31" />
           <entry key="XcodeWorkspace" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="swift" value="1165" />
+          <entry key="swift" value="2547" />
           <entry key="txt" value="52" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="52" />
-          <entry key="Swift" value="1165" />
+          <entry key="Swift" value="2547" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.appcode.build">
         <counts>
-          <entry key="buildservice" value="21" />
+          <entry key="buildservice" value="29" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.cidr.testingFrameworks.usages">
         <counts>
-          <entry key="XCTest" value="10" />
+          <entry key="XCTest" value="17" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/EssentialsMacOSTests/NSScreenTests.swift">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/Essentials/Number.swift">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="410">
+                  <caret line="98" selection-start-line="98" selection-end-line="98" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/Essentials/Character.swift">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="225">
+                  <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/EssentialsTests/StringTests.swift">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="345">
+                  <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/EssentialsTests/CharacterTests.swift">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="160">
+                  <caret line="11" column="34" lean-forward="true" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -81,7 +123,6 @@
       <list>
         <option value="$PROJECT_DIR$/Essentials/Random.swift" />
         <option value="$PROJECT_DIR$/Essentials/Stack.swift" />
-        <option value="$PROJECT_DIR$/Essentials/String.swift" />
         <option value="$PROJECT_DIR$/EssentialsMacOS/NSScreen.swift" />
         <option value="$PROJECT_DIR$/EssentialsMacOS/NSView.swift" />
         <option value="$PROJECT_DIR$/EssentialsTests/RandomTests.swift" />
@@ -90,8 +131,11 @@
         <option value="$PROJECT_DIR$/EssentialsTests/BoolTests.swift" />
         <option value="$PROJECT_DIR$/EssentialsTests/NumberTests.swift" />
         <option value="$PROJECT_DIR$/EssentialsTests/StackTests.swift" />
-        <option value="$PROJECT_DIR$/EssentialsTests/StringTests.swift" />
         <option value="$PROJECT_DIR$/EssentialsMacOSTests/NSScreenTests.swift" />
+        <option value="$PROJECT_DIR$/Essentials/String.swift" />
+        <option value="$PROJECT_DIR$/Essentials/Character.swift" />
+        <option value="$PROJECT_DIR$/EssentialsTests/StringTests.swift" />
+        <option value="$PROJECT_DIR$/EssentialsTests/CharacterTests.swift" />
       </list>
     </option>
   </component>
@@ -101,10 +145,11 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="y" value="22" />
-    <option name="width" value="1440" />
-    <option name="height" value="821" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1440" />
+    <option name="y" value="-158" />
+    <option name="width" value="1920" />
+    <option name="height" value="1058" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -115,7 +160,6 @@
     </navigator>
     <panes>
       <pane id="Cidr.FilesView" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -126,30 +170,26 @@
             <path>
               <item name="" type="efc3779f:XcodeRootNode" />
               <item name="Essentials" type="1d218c8b:XcodeProjectNode" />
+              <item name="Essentials" type="fcab9f18:XcodeViewNode" />
+            </path>
+            <path>
+              <item name="" type="efc3779f:XcodeRootNode" />
+              <item name="Essentials" type="1d218c8b:XcodeProjectNode" />
               <item name="EssentialsTests" type="fcab9f18:XcodeViewNode" />
-            </path>
-            <path>
-              <item name="" type="efc3779f:XcodeRootNode" />
-              <item name="Essentials" type="1d218c8b:XcodeProjectNode" />
-              <item name="EssentialsMacOS" type="fcab9f18:XcodeViewNode" />
-            </path>
-            <path>
-              <item name="" type="efc3779f:XcodeRootNode" />
-              <item name="Essentials" type="1d218c8b:XcodeProjectNode" />
-              <item name="EssentialsMacOSTests" type="fcab9f18:XcodeViewNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="OBJC.PRESERVED_TARGET_SELECTION" value="EssentialsMacOS,,,EssentialsMacOSTests" />
+    <property name="OBJC.PRESERVED_TARGET_SELECTION" value="EssentialsTests" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.notifications" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -163,7 +203,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="XCTest.NSScreenTests">
+  <component name="RunManager" selected="XCTest.CharacterTests">
     <configuration name="EssentialsMacOS" type="AppleRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Essentials" TARGET_NAME="EssentialsMacOS" CONFIG_NAME="Debug" SCHEME_NAME="EssentialsMacOS" IS_LOCATION_SIMULATION_ALLOWED="true" MAKE_ACTIVE="TRUE">
       <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
         <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
@@ -180,22 +220,12 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CharacterTests" type="OCUnitRunConfiguration" factoryName="XCTest/Kiwi" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Essentials" TARGET_NAME="EssentialsTests" CONFIG_NAME="Debug" SCHEME_NAME="CharacterTests" IS_LOCATION_SIMULATION_ALLOWED="true" TEST_CLASS="CharacterTests" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="NSScreenTests" type="OCUnitRunConfiguration" factoryName="XCTest/Kiwi" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Essentials" TARGET_NAME="EssentialsTests" CONFIG_NAME="Debug" SCHEME_NAME="NSScreenTests" IS_LOCATION_SIMULATION_ALLOWED="true" TEST_CLASS="NSScreenTests" TEST_MODE="SUITE_TEST">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="NumberTests" type="OCUnitRunConfiguration" factoryName="XCTest/Kiwi" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Essentials" TARGET_NAME="EssentialsTests" CONFIG_NAME="Debug" SCHEME_NAME="NumberTests" IS_LOCATION_SIMULATION_ALLOWED="true" TEST_CLASS="NumberTests" TEST_MODE="SUITE_TEST">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RandomTests" type="OCUnitRunConfiguration" factoryName="XCTest/Kiwi" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Essentials" TARGET_NAME="EssentialsTests" CONFIG_NAME="Debug" SCHEME_NAME="RandomTests" IS_LOCATION_SIMULATION_ALLOWED="true" TEST_CLASS="RandomTests" TEST_MODE="SUITE_TEST">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="StackTests" type="OCUnitRunConfiguration" factoryName="XCTest/Kiwi" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Essentials" TARGET_NAME="EssentialsTests" CONFIG_NAME="Debug" SCHEME_NAME="StackTests" IS_LOCATION_SIMULATION_ALLOWED="true" TEST_CLASS="StackTests" TEST_MODE="SUITE_TEST">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -205,22 +235,32 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration name="StringExtTests.testIsDecimalNumber" type="OCUnitRunConfiguration" factoryName="XCTest/Kiwi" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Essentials" TARGET_NAME="EssentialsTests" CONFIG_NAME="Debug" SCHEME_NAME="StringExtTests.testIsDecimalNumber" IS_LOCATION_SIMULATION_ALLOWED="true" TEST_CLASS="StringExtTests" TEST_METHOD="testIsDecimalNumber" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StringTests" type="OCUnitRunConfiguration" factoryName="XCTest/Kiwi" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Essentials" TARGET_NAME="EssentialsTests" CONFIG_NAME="Debug" SCHEME_NAME="StringTests" IS_LOCATION_SIMULATION_ALLOWED="true" TEST_CLASS="StringTests" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.EssentialsiOS" />
       <item itemvalue="Application.EssentialsMacOS" />
-      <item itemvalue="XCTest.NumberTests" />
-      <item itemvalue="XCTest.RandomTests" />
-      <item itemvalue="XCTest.StackTests" />
       <item itemvalue="XCTest.StringExtTests" />
       <item itemvalue="XCTest.NSScreenTests" />
+      <item itemvalue="XCTest.StringExtTests.testIsDecimalNumber" />
+      <item itemvalue="XCTest.StringTests" />
+      <item itemvalue="XCTest.CharacterTests" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="XCTest.NSScreenTests" />
+        <item itemvalue="XCTest.CharacterTests" />
+        <item itemvalue="XCTest.StringTests" />
         <item itemvalue="XCTest.StringExtTests" />
-        <item itemvalue="XCTest.StackTests" />
-        <item itemvalue="XCTest.RandomTests" />
-        <item itemvalue="XCTest.NumberTests" />
+        <item itemvalue="XCTest.StringExtTests.testIsDecimalNumber" />
+        <item itemvalue="XCTest.NSScreenTests" />
       </list>
     </recent_temporary>
   </component>
@@ -237,6 +277,7 @@
       <workItem from="1533910364018" duration="1701000" />
       <workItem from="1534023357227" duration="1673000" />
       <workItem from="1534025655045" duration="79000" />
+      <workItem from="1534079599483" duration="2606000" />
     </task>
     <task id="LOCAL-00001" summary="Setup AppCode project, and improved source code docs">
       <created>1533911191790</created>
@@ -249,27 +290,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="RandomTests - 2018.08.10 at 10h 33m 29s.xml">
-      <configuration name="RandomTests" configurationId="OCUnitRunConfiguration" />
-    </history-entry>
-    <history-entry file="StackTests - 2018.08.10 at 10h 33m 44s.xml">
-      <configuration name="StackTests" configurationId="OCUnitRunConfiguration" />
-    </history-entry>
-    <history-entry file="StackTests_testStackPushPopWithMax - 2018.08.10 at 10h 33m 52s.xml">
-      <configuration name="StackTests.testStackPushPopWithMax" configurationId="OCUnitRunConfiguration" />
-    </history-entry>
-    <history-entry file="NSScreenTests - 2018.08.10 at 10h 35m 54s.xml">
-      <configuration name="NSScreenTests" configurationId="OCUnitRunConfiguration" />
-    </history-entry>
-    <history-entry file="BinaryIntegerExtTests - 2018.08.11 at 17h 58m 51s.xml">
-      <configuration name="BinaryIntegerExtTests" configurationId="OCUnitRunConfiguration" />
-    </history-entry>
-    <history-entry file="BoolTests - 2018.08.11 at 17h 58m 56s.xml">
-      <configuration name="BoolTests" configurationId="OCUnitRunConfiguration" />
-    </history-entry>
-    <history-entry file="NumberTests - 2018.08.11 at 17h 59m 07s.xml">
-      <configuration name="NumberTests" configurationId="OCUnitRunConfiguration" />
-    </history-entry>
     <history-entry file="RandomTests - 2018.08.11 at 17h 59m 13s.xml">
       <configuration name="RandomTests" configurationId="OCUnitRunConfiguration" />
     </history-entry>
@@ -279,21 +299,42 @@
     <history-entry file="StringExtTests - 2018.08.11 at 17h 59m 28s.xml">
       <configuration name="StringExtTests" configurationId="OCUnitRunConfiguration" />
     </history-entry>
+    <history-entry file="StringExtTests_testIsDecimalNumber - 2018.08.12 at 09h 34m 51s.xml">
+      <configuration name="StringExtTests.testIsDecimalNumber" configurationId="OCUnitRunConfiguration" />
+    </history-entry>
+    <history-entry file="StringExtTests - 2018.08.12 at 09h 37m 09s.xml">
+      <configuration name="StringExtTests" configurationId="OCUnitRunConfiguration" />
+    </history-entry>
+    <history-entry file="StringExtTests - 2018.08.12 at 09h 44m 09s.xml">
+      <configuration name="StringExtTests" configurationId="OCUnitRunConfiguration" />
+    </history-entry>
+    <history-entry file="StringTests - 2018.08.12 at 09h 44m 36s.xml">
+      <configuration name="StringTests" configurationId="OCUnitRunConfiguration" />
+    </history-entry>
+    <history-entry file="CharacterTests - 2018.08.12 at 09h 45m 40s.xml">
+      <configuration name="CharacterTests" configurationId="OCUnitRunConfiguration" />
+    </history-entry>
+    <history-entry file="CharacterTests - 2018.08.12 at 09h 47m 28s.xml">
+      <configuration name="CharacterTests" configurationId="OCUnitRunConfiguration" />
+    </history-entry>
+    <history-entry file="CharacterTests - 2018.08.12 at 09h 52m 05s.xml">
+      <configuration name="CharacterTests" configurationId="OCUnitRunConfiguration" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3453000" />
+    <option name="totallyTimeSpent" value="6059000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1440" height="821" extended-state="0" />
+    <frame x="1440" y="-158" width="1920" height="1058" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16380544" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12353568" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32921812" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32919255" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -302,7 +343,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5007153" side_tool="true" weight="0.32921812" />
-      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49928468" weight="0.32921812" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49928468" weight="0.32919255" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -324,9 +365,6 @@
     <entry file="file://$PROJECT_DIR$/Essentials/Bool.swift">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Essentials/Number.swift">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Essentials/Random.swift">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-34">
@@ -345,13 +383,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="486">
           <caret line="106" column="49" selection-start-line="106" selection-start-column="49" selection-end-line="106" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Essentials/String.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -417,17 +448,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/EssentialsTests/StringTests.swift">
+    <entry file="file://$PROJECT_DIR$/EssentialsMacOSTests/NSScreenTests.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="35" lean-forward="true" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="35" />
+        <state relative-caret-position="150">
+          <caret line="27" column="8" selection-start-line="27" selection-start-column="8" selection-end-line="32" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/EssentialsMacOSTests/NSScreenTests.swift">
+    <entry file="file://$PROJECT_DIR$/Essentials/Number.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="410">
+          <caret line="98" selection-start-line="98" selection-end-line="98" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Essentials/String.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EssentialsTests/StringTests.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Essentials/Character.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EssentialsTests/CharacterTests.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="11" column="34" lean-forward="true" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
         </state>
       </provider>
     </entry>

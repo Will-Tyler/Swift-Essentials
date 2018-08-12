@@ -9,7 +9,7 @@
 import XCTest
 
 
-class StringExtTests: XCTestCase {
+class StringTests: XCTestCase {
 
     override func setUp() {
         super.setUp()
@@ -47,6 +47,40 @@ class StringExtTests: XCTestCase {
 		XCTAssertEqual(myString[myIndex--], "‡")
 		XCTAssertEqual(myString[myIndex--], "ﬁ")
 		XCTAssertEqual(myString[myIndex--], "›")
+	}
+
+	func testIsDecimalNumber() {
+		XCTAssert("123".isDecimalNumber)
+
+		XCTAssertFalse("1234283920288a".isDecimalNumber)
+
+		XCTAssertFalse("4893892a9829924".isDecimalNumber)
+
+		XCTAssertFalse("a428981983".isDecimalNumber)
+
+		XCTAssert("-2937238728748279378947287319937".isDecimalNumber)
+
+		XCTAssert("0".isDecimalNumber)
+
+		XCTAssertFalse("".isDecimalNumber)
+
+		XCTAssertFalse("Hello".isDecimalNumber)
+	}
+
+	func testIsPositiveDecimalNumber() {
+		XCTAssert("123".isPositiveDecimalNumber)
+
+		XCTAssert("928394829".isPositiveDecimalNumber)
+
+		XCTAssertFalse("".isPositiveDecimalNumber)
+
+		XCTAssertFalse("-2408".isPositiveDecimalNumber)
+
+		XCTAssertFalse("492894 283492".isPositiveDecimalNumber)
+
+		XCTAssertFalse("a29834992".isPositiveDecimalNumber)
+
+		XCTAssertFalse("49842948928 ".isPositiveDecimalNumber)
 	}
 
 }

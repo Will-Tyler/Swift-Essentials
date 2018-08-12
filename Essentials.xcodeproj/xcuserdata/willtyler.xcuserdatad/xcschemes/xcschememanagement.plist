@@ -19,35 +19,35 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
-		<key>NumberTests.xcscheme</key>
+		<key>StringExtTests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
 			<integer>3</integer>
 		</dict>
-		<key>RandomTests.xcscheme</key>
+		<key>NSScreenTests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
 			<integer>4</integer>
 		</dict>
-		<key>StackTests.xcscheme</key>
+		<key>StringExtTests.testIsDecimalNumber.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
 			<integer>5</integer>
 		</dict>
-		<key>StringExtTests.xcscheme</key>
+		<key>StringTests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
 			<integer>6</integer>
 		</dict>
-		<key>NSScreenTests.xcscheme</key>
+		<key>CharacterTests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />

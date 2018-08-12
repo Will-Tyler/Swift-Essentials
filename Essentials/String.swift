@@ -16,4 +16,44 @@ public extension String {
 		return self[index(startIndex, offsetBy: i)]
 	}
 
+	var isDecimalNumber: Bool {
+		get {
+			var copy = self
+
+			if copy.isEmpty {
+				return false
+			}
+			else if copy.first == "-" {
+				copy.removeFirst()
+
+				if copy.isEmpty {
+					return false
+				}
+			}
+
+			for char in copy {
+				if !char.isDigit {
+					return false
+				}
+			}
+
+			return true
+		}
+	}
+	var isPositiveDecimalNumber: Bool {
+		get {
+			if isEmpty {
+				return false
+			}
+
+			for char in self {
+				if !char.isDigit {
+					return false
+				}
+			}
+
+			return true
+		}
+	}
+
 }
