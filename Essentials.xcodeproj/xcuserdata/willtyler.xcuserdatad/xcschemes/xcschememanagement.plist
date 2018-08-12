@@ -19,35 +19,35 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
-		<key>StringExtTests.xcscheme</key>
+		<key>NumberTests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
 			<integer>3</integer>
 		</dict>
-		<key>StringTests.xcscheme</key>
+		<key>NumberTests.testPlus.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
 			<integer>4</integer>
 		</dict>
-		<key>CharacterTests.xcscheme</key>
+		<key>NumberTests.testPositiveAddition.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
 			<integer>5</integer>
 		</dict>
-		<key>NumberTests.xcscheme</key>
+		<key>NumberTests.testPositiveAdditionHugeNumbers.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
 			<integer>6</integer>
 		</dict>
-		<key>NumberTests.testPlus.xcscheme</key>
+		<key>NumberTests.testNegativeAddition.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />

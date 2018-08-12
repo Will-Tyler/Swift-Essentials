@@ -87,52 +87,63 @@ class NumberTests: XCTestCase {
 		XCTAssertEqual(numbers.first, numbers.second)
 	}
 
-	func testPlus() {
-		var left = Number(from: "111")!
-		var right = Number(from: "111")!
+	private func testAdditionWithUInts(left: UInt, right: UInt) {
+		let leftNumber = Number(with: left)
+		let rightNumber = Number(with: right)
+		let sum = leftNumber + rightNumber
 
-		var sum = left + right
+		XCTAssertEqual(sum.value, "\(left + right)")
+	}
+	func testPositiveAddition() {
+		testAdditionWithUInts(left: 111, right: 111)
+		testAdditionWithUInts(left: 11111, right: 222)
+		testAdditionWithUInts(left: 9, right: 9)
+		testAdditionWithUInts(left: 999, right: 999)
+		testAdditionWithUInts(left: 999, right: 1)
+		testAdditionWithUInts(left: 0, right: 1)
+		testAdditionWithUInts(left: 0, right: 0)
 
-		XCTAssertEqual(sum.value, "222")
+		for _ in 0..<100 {
+			let left = UInt(Random.from(0..<Int.max))
+			let right = Random.from(0...(UInt(Int.max) - left))
 
-		left = Number(from: "11111")!
-		right = Number(from: "222")!
+			testAdditionWithUInts(left: left, right: right)
+		}
+	}
 
-		sum = left + right
+	private func testAdditionFromStrings(left: String, right: String, expecting result: String) {
+		let leftNumber = Number(from: left)!
+		let rightNumber = Number(from: right)!
+		let sum = leftNumber + rightNumber
 
-		XCTAssertEqual(sum.value, "11333")
+		XCTAssertEqual(sum.value, result)
+	}
+	func testPositiveAdditionHugeNumbers() {
+		testAdditionFromStrings(left: "\(UInt.max)0", right: "1234567890987654321234567890", expecting: "1234568075455095058330084040")
+	}
 
-		left = Number(with: 9)
-		right = Number(with: 9)
+	private func testAdditionWithInts(left: Int, right: Int) {
+		let leftNumber = Number(with: left)
+		let rightNumber = Number(with: right)
+		let sum = leftNumber + rightNumber
 
-		sum = left + right
-		
-		XCTAssertEqual(sum.value, "18")
+		XCTAssertEqual(sum.value, "\(left + right)")
+	}
+	func testNegativeAddition() {
+		testAdditionWithInts(left: -111, right: -111)
+		testAdditionWithInts(left: -11111, right: -222)
+		testAdditionWithInts(left: -9, right: -9)
+		testAdditionWithInts(left: -999, right: -999)
+		testAdditionWithInts(left: -999, right: -1)
 
-		left = Number(with: 999)
-		right = Number(with: 999)
+		for _ in 0..<100 {
+			let left = Random.from((Int.min + 2)...0)
+			let right = Random.from((Int.min+2 - left)...0)
 
-		sum = left + right
+			assert(left < 0 && right < 0)
 
-		XCTAssertEqual(sum.value, "\(999 + 999)")
-
-		left = Number(with: 999)
-		right = Number(with: 1)
-
-		sum = left + right
-
-		XCTAssertEqual(sum.value, "1000")
-
-		let max = Int.max / 2
-		let upper = Random.from(0..<max)
-		let lower = Random.from(0..<max)
-
-		left = Number(with: upper)
-		right = Number(with: lower)
-
-		sum = left + right
-
-		XCTAssertEqual(sum.value, "\(upper + lower)")
+			testAdditionWithInts(left: left, right: right)
+		}
 	}
 
 }
