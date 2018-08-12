@@ -101,6 +101,38 @@ class NumberTests: XCTestCase {
 		sum = left + right
 
 		XCTAssertEqual(sum.value, "11333")
+
+		left = Number(with: 9)
+		right = Number(with: 9)
+
+		sum = left + right
+		
+		XCTAssertEqual(sum.value, "18")
+
+		left = Number(with: 999)
+		right = Number(with: 999)
+
+		sum = left + right
+
+		XCTAssertEqual(sum.value, "\(999 + 999)")
+
+		left = Number(with: 999)
+		right = Number(with: 1)
+
+		sum = left + right
+
+		XCTAssertEqual(sum.value, "1000")
+
+		let max = Int.max / 2
+		let upper = Random.from(0..<max)
+		let lower = Random.from(0..<max)
+
+		left = Number(with: upper)
+		right = Number(with: lower)
+
+		sum = left + right
+
+		XCTAssertEqual(sum.value, "\(upper + lower)")
 	}
 
 }

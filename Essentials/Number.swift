@@ -115,31 +115,54 @@ public struct Number: Comparable {
 	private static func addPositiveDecimalStrings(left: String, right: String) -> String {
 		precondition(left.isPositiveDecimalNumber && right.isPositiveDecimalNumber, "Left and right must be positive, decimal, numeric values.")
 
-		let longer: String
-		let shorter: String
+		let leftReversed = left.reversed()
+		let rightReversed = right.reversed()
 
-		if left.count >= right.count {
-			longer = left
-			shorter = right
+		let longer: ReversedCollection<String>
+		let shorter: ReversedCollection<String>
+
+		if leftReversed.count >= rightReversed.count {
+			longer = leftReversed
+			shorter = rightReversed
 		}
 		else {
-			longer = right
-			shorter = left
+			longer = rightReversed
+			shorter = leftReversed
 		}
 
-		let longerArray: [Character] = Array(longer).reversed()
-		let shorterArray: [Character] = Array(shorter).reversed()
+		let top: [Character] = Array(longer)
+		let bottom: [Character] = {
+			var array = Array(shorter)
+
+			while (array.count < top.count) {
+				array.append("0")
+			}
+
+			return array
+		}()
 		var sums = [Character]()
 
-		for index in 0..<shorterArray.count {
-			let leftChar = longerArray[index]
-			let rightChar = shorterArray[index]
+		for index in 0..<top.count {
+			let leftChar = top[index]
+			let rightChar = bottom[index]
 			let result = addDigits(left: leftChar, right: rightChar)
 
-			sums.append(result.sum)
-		}
-		for index in shorterArray.count..<longerArray.count {
-			sums.append(longerArray[index])
+			if index < sums.count {
+				let newResult = addDigits(left: sums[index], right: result.sum)
+
+				sums[index] = newResult.sum
+
+				if let remainder = newResult.carryOver {
+					sums.append(remainder)
+				}
+			}
+			else if index == sums.count {
+				sums.append(result.sum)
+			}
+
+			if let remainder = result.carryOver {
+				sums.append(remainder)
+			}
 		}
 
 		return String(sums.reversed())
