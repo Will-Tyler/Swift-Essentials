@@ -1,4 +1,4 @@
-## Swift Essentials
+# Swift Essentials
 
 This project is a Swift framework that includes very useful tools to increase development speed, ease of use, and other helping additions on top of the Swift language. This framework strives to include tests for most of the features it offers.
 
