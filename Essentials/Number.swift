@@ -33,17 +33,6 @@ public struct Number: Comparable {
 	private var sign: Sign
 	private var isPositive: Bool {
 		get { return sign == .positive }
-//		set {
-//			if data == "0" {
-//				sign = .zero
-//			}
-//			else if newValue {
-//				sign = .positive
-//			}
-//			else {
-//				sign = .negative
-//			}
-//		}
 	}
 	private var isNegative: Bool {
 		get { return sign == .negative }
@@ -181,39 +170,67 @@ public struct Number: Comparable {
 
 			return array
 		}()
-		var sums = [Character]()
 
+		assert(top.count == bottom.count)
+
+		var sums = [Character]()
+		var carryOver = 0
 		for index in 0..<top.count {
 			let leftChar = top[index]
 			let rightChar = bottom[index]
-			let result = addDigits(left: leftChar, right: rightChar)
+			let result = Int(String(leftChar))! + Int(String(rightChar))! + carryOver
 
-			if index < sums.count {
-				let newResult = addDigits(left: sums[index], right: result.sum)
+			sums.append(String(result).last!)
 
-				sums[index] = newResult.sum
-
-				if let remainder = newResult.carryOver {
-					sums.append(remainder)
-				}
+			if (result < 10) { // TODO: Handle radix
+				carryOver = 0
 			}
-			else if index == sums.count {
-				sums.append(result.sum)
-			}
-
-			if let remainder = result.carryOver {
-				sums.append(remainder)
+			else {
+				carryOver = 1
 			}
 		}
+		if carryOver > 0 {
+			sums.append(String(carryOver).last!)
+		}
+
+//		for index in 0..<top.count {
+//			let leftChar = top[index]
+//			let rightChar = bottom[index]
+//			let result = addDigits(left: leftChar, right: rightChar)
+//
+//			if index < sums.count {
+//				let newResult = addDigits(left: sums[index], right: result.sum)
+//
+//				sums[index] = newResult.sum
+//
+//				if let remainder = newResult.carryOver {
+//					sums.append(remainder)
+//				}
+//			}
+//			else if index == sums.count {
+//				sums.append(result.sum)
+//			}
+//
+//			if let remainder = result.carryOver {
+//				sums.append(remainder)
+//			}
+//		}
 
 		return String(sums.reversed())
 	}
-	private static func subtractDigits(left: Character, right: Character) -> Character {
+
+	private typealias DigitDiffResult = (diff: Character, sign: Sign)
+	private static func subtractDigits(left: Character, right: Character) -> DigitDiffResult {
 		precondition(left.isDigit && right.isDigit)
 
+		if left == right {
+			return ("0", .zero)
+		}
+
+		let sign: Sign = left > right ? .positive : .negative
 		let diff = "\(Int8(String(left))! - Int8(String(right))!)"
 
-		return diff.last!
+		return (diff.last!, sign)
 	}
 	private static func subtractDecimalStrings(left: String, right: String) -> String {
 		precondition(left.isPositiveDecimalNumber && right.isDecimalNumber)
@@ -233,8 +250,8 @@ public struct Number: Comparable {
 			shorter = leftReversed
 		}
 
-		let top: [Character] = Array(longer)
-		let bottom: [Character] = {
+		var top: [Character] = Array(longer)
+		var bottom: [Character] = {
 			var array = Array(shorter)
 
 			while (array.count < top.count) {
@@ -243,10 +260,25 @@ public struct Number: Comparable {
 
 			return array
 		}()
+
+		assert(top.count == bottom.count)
+
 		var diffs = [Character]()
 
 		for index in 0..<top.count {
-			diffs.append(subtractDigits(left: top[index], right: bottom[index]))
+			let result = subtractDigits(left: top[index], right: bottom[index])
+
+			if result.sign == .negative {
+				var i = index
+				while top[i] == "0" {
+					top[i++] = "9"
+				}
+				top[i] = subtractDigits(left: top[i], right: "1").diff
+				bottom[i] = subtractDigits(left: bottom[i], right: "1").diff
+			}
+			else {
+				diffs.append(result.diff)
+			}
 		}
 
 		return String(diffs.reversed())
