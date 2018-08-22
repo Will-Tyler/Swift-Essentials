@@ -47,6 +47,11 @@ public struct Number: Comparable {
 		get {
 			var result = data
 
+			// Remove leading zeroes if any
+			while result.count > 1, result.first! == "0" {
+				result.removeFirst()
+			}
+
 			if isNegative {
 				result.insert("-", at: result.startIndex)
 			}
@@ -129,22 +134,7 @@ public struct Number: Comparable {
 		}
 	}
 
-	private typealias DigitResult = (sum: Character, carryOver: Character?)
-	private static func addDigits(left: Character, right: Character) -> DigitResult {
-		precondition(left.isDigit && right.isDigit, "Make sure that left and right are digits.")
-
-		let result = "\(Int8(String(left))! + Int8(String(right))!)"
-
-		assert(result.count >= 1 && result.count <= 2, "Got a result that was too big.")
-
-		let sum = result.last!
-		let leftOver: Character? = result.count == 2 ? result.first! : nil
-
-		return (sum, leftOver)
-	}
-	private static func addPositiveDecimalStrings(left: String, right: String) -> String {
-		precondition(left.isPositiveDecimalNumber && right.isPositiveDecimalNumber, "Left and right must be positive, decimal, numeric values.")
-
+	private static func prepareStringsForArithmetic(_ left: String, _ right: String) -> (left: [Character], right: [Character]) {
 		let leftReversed = left.reversed()
 		let rightReversed = right.reversed()
 
@@ -173,12 +163,20 @@ public struct Number: Comparable {
 
 		assert(top.count == bottom.count)
 
+		return (top, bottom)
+	}
+	private static func addPositiveDecimalStrings(left: String, right: String) -> String {
+		precondition(left.isPositiveDecimalNumber && right.isPositiveDecimalNumber, "Left and right must be positive, decimal, numeric values.")
+		let preparedNumbers = prepareStringsForArithmetic(left, right)
+		let top = preparedNumbers.left
+		let bottom = preparedNumbers.right
+
 		var sums = [Character]()
-		var carryOver = 0
+		var carryOver: UInt = 0
 		for index in 0..<top.count {
 			let leftChar = top[index]
 			let rightChar = bottom[index]
-			let result = Int(String(leftChar))! + Int(String(rightChar))! + carryOver
+			let result = UInt(String(leftChar))! + UInt(String(rightChar))! + carryOver
 
 			sums.append(String(result).last!)
 
@@ -192,29 +190,6 @@ public struct Number: Comparable {
 		if carryOver > 0 {
 			sums.append(String(carryOver).last!)
 		}
-
-//		for index in 0..<top.count {
-//			let leftChar = top[index]
-//			let rightChar = bottom[index]
-//			let result = addDigits(left: leftChar, right: rightChar)
-//
-//			if index < sums.count {
-//				let newResult = addDigits(left: sums[index], right: result.sum)
-//
-//				sums[index] = newResult.sum
-//
-//				if let remainder = newResult.carryOver {
-//					sums.append(remainder)
-//				}
-//			}
-//			else if index == sums.count {
-//				sums.append(result.sum)
-//			}
-//
-//			if let remainder = result.carryOver {
-//				sums.append(remainder)
-//			}
-//		}
 
 		return String(sums.reversed())
 	}
@@ -235,33 +210,9 @@ public struct Number: Comparable {
 	private static func subtractDecimalStrings(left: String, right: String) -> String {
 		precondition(left.isPositiveDecimalNumber && right.isDecimalNumber)
 
-		let leftReversed = left.reversed()
-		let rightReversed = right.reversed()
-
-		let longer: ReversedCollection<String>
-		let shorter: ReversedCollection<String>
-
-		if leftReversed.count >= rightReversed.count {
-			longer = leftReversed
-			shorter = rightReversed
-		}
-		else {
-			longer = rightReversed
-			shorter = leftReversed
-		}
-
-		var top: [Character] = Array(longer)
-		var bottom: [Character] = {
-			var array = Array(shorter)
-
-			while (array.count < top.count) {
-				array.append("0")
-			}
-
-			return array
-		}()
-
-		assert(top.count == bottom.count)
+		let preparedNumbers = prepareStringsForArithmetic(left, right)
+		var top = preparedNumbers.left
+		var bottom = preparedNumbers.right
 
 		var diffs = [Character]()
 
@@ -282,6 +233,11 @@ public struct Number: Comparable {
 		}
 
 		return String(diffs.reversed())
+	}
+	private static func multiplyDecimalStrings(left: String, right: String) -> String {
+		precondition(left.isPositiveDecimalNumber && right.isPositiveDecimalNumber)
+
+		return ""
 	}
 
 	//MARK: Negation

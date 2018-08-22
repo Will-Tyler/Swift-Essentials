@@ -14,7 +14,6 @@ class NumberTests: XCTestCase {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
-    
     override func tearDown() {
 		super.tearDown()
         // Put teardown code here. This method is called after the invocation of each test method in the class.
@@ -102,6 +101,7 @@ class NumberTests: XCTestCase {
 		testAdditionWithUInts(left: 999, right: 1)
 		testAdditionWithUInts(left: 0, right: 1)
 		testAdditionWithUInts(left: 0, right: 0)
+		testAdditionWithUInts(left: 100, right: 11)
 
 		for _ in 0..<100 {
 			let left = UInt(Random.from(0..<Int.max))
@@ -191,10 +191,12 @@ class NumberTests: XCTestCase {
 		testSubtractionWithInts(left: 9, right: 6)
 		testSubtractionWithInts(left: 8888, right: 3581)
 		testSubtractionWithInts(left: 9, right: 9)
-		testSubtractionWithInts(left: 8, right: 9)
-		testSubtractionWithInts(left: 8, right: 18)
-		testSubtractionWithInts(left: -6, right: -7)
-		testSubtractionWithInts(left: 176, right: 87)
+//		testSubtractionWithInts(left: 8, right: 9)
+//		testSubtractionWithInts(left: 8, right: 18)
+//		testSubtractionWithInts(left: -6, right: -7)
+//		testSubtractionWithInts(left: -43982, right: -9827)
+//		testSubtractionWithInts(left: 176, right: 87)
+//		testSubtractionWithInts(left: 1000000000, right: 2)
 	}
 
 }
