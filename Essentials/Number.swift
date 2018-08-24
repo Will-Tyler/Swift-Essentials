@@ -27,7 +27,7 @@ fileprivate enum Sign {
 
 }
 
-public struct Number: Comparable {
+public struct Number: Comparable, Strideable, SignedNumeric {
 
 	private var data: String
 	private var sign: Sign
@@ -63,6 +63,11 @@ public struct Number: Comparable {
 	public var magnitude: Number {
 		get { return Number(from: data)! }
 	}
+	private static var zero: Number {
+		get {
+			return Number()
+		}
+	}
 
 	//MARK: Initializers
 	/// Initialize a Number with a value of 0.
@@ -76,7 +81,7 @@ public struct Number: Comparable {
 		sign = number.sign
 	}
 	/// Initialize a Number from a BinaryInteger.
-	public init<Type: BinaryInteger>(with value: Type) {
+	public init<Type: BinaryInteger>(exactly value: Type) {
 		self.init(from: "\(value)")!
 	}
 	/// Initialize a Number from a String.
@@ -110,15 +115,43 @@ public struct Number: Comparable {
 		data = copy
 	}
 
+	// MARK: ExpressibleByIntegerLiteral
+	public typealias IntegerLiteralType = Int
+	public init(integerLiteral value: IntegerLiteralType) {
+		self.init(exactly: value)
+	}
+
+	// Change the radix that this Number is stored as.
+	public func changeRadix(to newBase: UInt) {
+		let lowerLimit: UInt = 2; let upperLimit: UInt = 25
+		precondition((lowerLimit...upperLimit).contains(newBase), "The radix is limited to values between \(lowerLimit) and \(upperLimit) inclusive.")
+
+		if radix != 10 {
+			var decimalData = Number.zero
+
+			for char in data.reversed() {
+				let value = Int(String(char))
+			}
+
+			// TODO: Implement multiplication
+		}
+	}
+
 	//MARK: Comparable
 	public static func <(left: Number, right: Number) -> Bool {
-		if left.isPositive != right.isPositive { return left.isNegative }
+		if left.isPositive != right.isPositive {
+			return left.isNegative
+		}
 
 		if left.isPositive { // signs are equal
-			if left.data.count != right.data.count { return left.data.count < right.data.count }
+			if left.data.count != right.data.count {
+				return left.data.count < right.data.count
+			}
 
 			for (offset, char) in left.data.enumerated() {
-				if char != right.data[offset] { return char < right.data[offset] }
+				if char != right.data[offset] {
+					return char < right.data[offset]
+				}
 			}
 
 			return false // should be equal at this point
@@ -132,6 +165,15 @@ public struct Number: Comparable {
 
 			return false // equal
 		}
+	}
+
+	// MARK: Strideable
+	public typealias Stride = Number
+	public func distance(to other: Number) -> Stride {
+		return self - other
+	}
+	public func advanced(by number: Stride) -> Number {
+		return self + number
 	}
 
 	private static func prepareStringsForArithmetic(_ left: String, _ right: String) -> (left: [Character], right: [Character]) {
@@ -237,7 +279,25 @@ public struct Number: Comparable {
 	private static func multiplyDecimalStrings(left: String, right: String) -> String {
 		precondition(left.isPositiveDecimalNumber && right.isPositiveDecimalNumber)
 
-		return ""
+		let preparedStrings = prepareStringsForArithmetic(left, right)
+		let top = preparedStrings.left
+		let bottom = preparedStrings.right
+		let totalCount = top.count + bottom.count
+
+		var products = [Character](repeating: "0" as Character, count: totalCount)
+		// Cannot use multiplication algorithm from CS 251 yet because modulus is not defined. Quick solution is to use addition.
+//		var carry = 0
+//		for i in 0..<top.count {
+//			carry = 0
+//
+//			for j in 0..<bottom.count {
+//				let result = Int(String(top[i])) * Int(String(bottom[j])) + Int(String(products[i+j])) + carry
+//
+//				products[i+j] = result
+//			}
+//		}
+
+		return String(products.reversed())
 	}
 
 	//MARK: Negation
@@ -251,9 +311,23 @@ public struct Number: Comparable {
 
 	//MARK: Operations
 	public static func *(left: Number, right: Number) -> Number {
-		return Number()
+		if left.isZero || right.isZero {
+			return Number.zero
+		}
+		assert(left.sign != .zero && right.sign != .zero)
+
+		var newNumber = Number.zero
+
+		newNumber.sign = left.sign == right.sign ? .positive : .negative
+		for _ in stride(from: Number(exactly: 1), through: right, by: Number(exactly: 1) as Stride) {
+			newNumber += left
+		}
+
+		return newNumber
 	}
-	public static func *=(left: inout Number, right: Number) {}
+	public static func *=(left: inout Number, right: Number) {
+		left = left * right
+	}
 	public static func +(left: Number, right: Number) -> Number {
 		if left.isZero {
 			return right
@@ -262,7 +336,7 @@ public struct Number: Comparable {
 			return left
 		}
 
-		var newNumber = Number()
+		var newNumber = Number.zero
 
 		if left.sign == right.sign {
 			newNumber.sign = left.sign
@@ -282,13 +356,13 @@ public struct Number: Comparable {
 			return left + (-right)
 		}
 		if left == right {
-			return Number()
+			return Number.zero
 		}
 		if left.isNegative {
 			return right.magnitude - left.magnitude
 		}
 
-		var newNumber = Number()
+		var newNumber = Number.zero
 
 		newNumber.sign = left.magnitude >= right.magnitude ? .positive : .negative
 		newNumber.data = subtractDecimalStrings(left: left.data, right: right.data)
@@ -297,6 +371,9 @@ public struct Number: Comparable {
 	}
 	public static func -=(left: inout Number, right: Number) {
 		left = left - right
+	}
+	public static func %(left: Number, right: Number) -> Number {
+		return Number.zero
 	}
 
 }
