@@ -3,11 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="683eb49d-fa8c-4edf-9321-b314d5346946" name="Default Changelist" comment="Setup AppCode project, and improved source code docs">
       <change afterPath="$PROJECT_DIR$/Essentials/UnsafePointer.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EssentialsiOS/UIView.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Essentials.xcodeproj/xcuserdata/willtyler.xcuserdatad/xcschemes/xcschememanagement.plist" beforeDir="false" afterPath="$PROJECT_DIR$/Essentials.xcodeproj/xcuserdata/willtyler.xcuserdatad/xcschemes/xcschememanagement.plist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Essentials/Number.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Essentials/Number.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Essentials.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/Essentials.xcodeproj/project.pbxproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EssentialsMacOSTests/NSScreenTests.swift" beforeDir="false" afterPath="$PROJECT_DIR$/EssentialsMacOSTests/NSScreenTests.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EssentialsTests/NumberTests.swift" beforeDir="false" afterPath="$PROJECT_DIR$/EssentialsTests/NumberTests.swift" afterDir="false" />
     </list>
     <ignored path="$USER_HOME$/Library/Developer/Xcode/DerivedData/Essentials-asfeucrtyzpozzgdcidrhhvyvccz/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,39 +20,40 @@
     <session id="-115133408">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="8" />
+          <entry key="project.closed" value="10" />
           <entry key="project.open.time.10" value="2" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.8" value="2" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="9" />
+          <entry key="project.opened" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="Project Settings" value="2" />
-          <entry key="swift" value="43" />
+          <entry key="swift" value="44" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Swift" value="43" />
+          <entry key="Swift" value="44" />
           <entry key="XcodeWorkspace" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="swift" value="13084" />
-          <entry key="txt" value="671" />
+          <entry key="swift" value="13172" />
+          <entry key="txt" value="781" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="671" />
-          <entry key="Swift" value="13084" />
+          <entry key="PLAIN_TEXT" value="781" />
+          <entry key="Swift" value="13172" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.appcode.build">
@@ -70,11 +70,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Essentials/Number.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
-              <caret line="316" column="18" selection-start-line="316" selection-start-column="18" selection-end-line="316" selection-end-column="18" />
+            <state relative-caret-position="307">
+              <caret line="319" selection-start-line="319" selection-end-line="319" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/EssentialsiOS/UIView.swift">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -82,7 +91,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/EssentialsTests/NumberTests.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
+            <state relative-caret-position="3060">
               <caret line="204" selection-start-line="204" selection-end-line="204" />
             </state>
           </provider>
@@ -117,6 +126,7 @@
         <option value="$PROJECT_DIR$/Essentials/Random.swift" />
         <option value="$PROJECT_DIR$/EssentialsTests/NumberTests.swift" />
         <option value="$PROJECT_DIR$/Essentials/Number.swift" />
+        <option value="$PROJECT_DIR$/EssentialsiOS/UIView.swift" />
       </list>
     </option>
   </component>
@@ -126,11 +136,10 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="960" />
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="22" />
-    <option name="width" value="960" />
-    <option name="height" value="1000" />
+    <option name="width" value="1440" />
+    <option name="height" value="821" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -140,6 +149,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Cidr.FilesView" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -158,15 +168,19 @@
               <item name="Essentials" type="1d218c8b:XcodeProjectNode" />
               <item name="EssentialsTests" type="fcab9f18:XcodeViewNode" />
             </path>
+            <path>
+              <item name="" type="efc3779f:XcodeRootNode" />
+              <item name="Essentials" type="1d218c8b:XcodeProjectNode" />
+              <item name="EssentialsiOS" type="fcab9f18:XcodeViewNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Cidr.FilesView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="OBJC.PRESERVED_TARGET_SELECTION" value="EssentialsTests" />
+    <property name="OBJC.PRESERVED_TARGET_SELECTION" value="EssentialsiOS,,,EssentialsiOSTests" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -263,7 +277,8 @@
       <workItem from="1534892168715" duration="3330000" />
       <workItem from="1534950836028" duration="295000" />
       <workItem from="1535029584230" duration="2068000" />
-      <workItem from="1535065227437" duration="3455000" />
+      <workItem from="1535065227437" duration="3707000" />
+      <workItem from="1535121918124" duration="161000" />
     </task>
     <task id="LOCAL-00001" summary="Setup AppCode project, and improved source code docs">
       <created>1533911191790</created>
@@ -328,7 +343,14 @@
       <option name="project" value="LOCAL" />
       <updated>1534897092881</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Add Strideable, SignedNumeric conformance, some multiplication tests, bug with multiplicaion and stride">
+      <created>1535070061845</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1535070061845</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -364,20 +386,20 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39484000" />
+    <option name="totallyTimeSpent" value="39897000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="960" y="22" width="960" height="1000" extended-state="0" />
+    <frame x="0" y="22" width="1440" height="821" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.12745099" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14592275" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49893504" weight="0.3270925" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.39867842" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39867842" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -410,7 +432,8 @@
     <MESSAGE value="Implement Sign enum, and sign stored property in Number, useful for when the Number is zero." />
     <MESSAGE value="Improve Number addition algorithm" />
     <MESSAGE value="Remove leading zeroes while calculating value, create method for preparing strings for arithmetic, remove commented code" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove leading zeroes while calculating value, create method for preparing strings for arithmetic, remove commented code" />
+    <MESSAGE value="Add Strideable, SignedNumeric conformance, some multiplication tests, bug with multiplicaion and stride" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Strideable, SignedNumeric conformance, some multiplication tests, bug with multiplicaion and stride" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -556,17 +579,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Essentials/Number.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="319" selection-start-line="319" selection-end-line="319" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/EssentialsTests/NumberTests.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
+        <state relative-caret-position="3060">
           <caret line="204" selection-start-line="204" selection-end-line="204" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Essentials/Number.swift">
+    <entry file="file://$PROJECT_DIR$/EssentialsiOS/UIView.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="316" column="18" selection-start-line="316" selection-start-column="18" selection-end-line="316" selection-end-column="18" />
+        <state relative-caret-position="105">
+          <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
         </state>
       </provider>
     </entry>
