@@ -22,12 +22,9 @@ class CharacterTests: XCTestCase {
 	}
 
 	func testIsDigit() {
-		XCTAssert(("1" as Character).isDigit)
-		XCTAssert(("2" as Character).isDigit)
-		XCTAssert(("3" as Character).isDigit)
-		XCTAssert(("8" as Character).isDigit)
-		XCTAssert(("9" as Character).isDigit)
-		XCTAssert(("0" as Character).isDigit)
+		for i in 0...9 {
+			XCTAssert(("\(i)" as! Character).isDigit)
+		}
 
 		XCTAssertFalse((" " as Character).isDigit)
 		XCTAssertFalse(("a" as Character).isDigit)

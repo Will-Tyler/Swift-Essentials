@@ -3,10 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="683eb49d-fa8c-4edf-9321-b314d5346946" name="Default Changelist" comment="Setup AppCode project, and improved source code docs">
       <change afterPath="$PROJECT_DIR$/Essentials/UnsafePointer.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EssentialsiOS/UIView.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Essentials.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/Essentials.xcodeproj/project.pbxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Essentials/Number.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Essentials/Number.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EssentialsMacOSTests/NSScreenTests.swift" beforeDir="false" afterPath="$PROJECT_DIR$/EssentialsMacOSTests/NSScreenTests.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EssentialsTests/CharacterTests.swift" beforeDir="false" afterPath="$PROJECT_DIR$/EssentialsTests/CharacterTests.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EssentialsTests/NumberTests.swift" beforeDir="false" afterPath="$PROJECT_DIR$/EssentialsTests/NumberTests.swift" afterDir="false" />
     </list>
     <ignored path="$USER_HOME$/Library/Developer/Xcode/DerivedData/Essentials-asfeucrtyzpozzgdcidrhhvyvccz/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,84 +22,83 @@
     <session id="-115133408">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="10" />
+          <entry key="project.closed" value="11" />
           <entry key="project.open.time.10" value="2" />
-          <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.11" value="2" />
           <entry key="project.open.time.14" value="1" />
-          <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.2" value="2" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.8" value="2" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="10" />
+          <entry key="project.opened" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="Project Settings" value="2" />
-          <entry key="swift" value="44" />
+          <entry key="swift" value="46" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Swift" value="44" />
+          <entry key="Swift" value="46" />
           <entry key="XcodeWorkspace" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="swift" value="13172" />
-          <entry key="txt" value="781" />
+          <entry key="swift" value="14325" />
+          <entry key="txt" value="829" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="781" />
-          <entry key="Swift" value="13172" />
+          <entry key="PLAIN_TEXT" value="829" />
+          <entry key="Swift" value="14325" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.appcode.build">
         <counts>
-          <entry key="buildservice" value="160" />
+          <entry key="buildservice" value="167" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.cidr.testingFrameworks.usages">
         <counts>
-          <entry key="XCTest" value="128" />
+          <entry key="XCTest" value="135" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Essentials/Number.swift">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="307">
-              <caret line="319" selection-start-line="319" selection-end-line="319" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/EssentialsiOS/UIView.swift">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/EssentialsTests/NumberTests.swift">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3060">
-              <caret line="204" selection-start-line="204" selection-end-line="204" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/Essentials/Number.swift">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="325">
+                  <caret line="316" column="7" selection-start-line="316" selection-start-column="7" selection-end-line="316" selection-end-column="7" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/EssentialsTests/NumberTests.swift">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="2910">
+                  <caret line="199" column="56" selection-start-line="199" selection-start-column="56" selection-end-line="199" selection-end-column="56" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -124,9 +125,10 @@
         <option value="$PROJECT_DIR$/EssentialsTests/StringTests.swift" />
         <option value="$PROJECT_DIR$/EssentialsTests/CharacterTests.swift" />
         <option value="$PROJECT_DIR$/Essentials/Random.swift" />
+        <option value="$PROJECT_DIR$/EssentialsiOS/UIView.swift" />
+        <option value="$PROJECT_DIR$/EssentialsiOS/UIViewController.swift" />
         <option value="$PROJECT_DIR$/EssentialsTests/NumberTests.swift" />
         <option value="$PROJECT_DIR$/Essentials/Number.swift" />
-        <option value="$PROJECT_DIR$/EssentialsiOS/UIView.swift" />
       </list>
     </option>
   </component>
@@ -150,7 +152,6 @@
     </navigator>
     <panes>
       <pane id="Cidr.FilesView" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -177,6 +178,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -198,7 +200,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="XCTest.NumberTests.testMultiplication">
+  <component name="RunManager" selected="XCTest.NumberTests">
     <configuration name="EssentialsMacOS" type="AppleRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Essentials" TARGET_NAME="EssentialsMacOS" CONFIG_NAME="Debug" SCHEME_NAME="EssentialsMacOS" IS_LOCATION_SIMULATION_ALLOWED="true" MAKE_ACTIVE="TRUE">
       <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
         <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
@@ -251,11 +253,11 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="XCTest.NumberTests.testMultiplication" />
         <item itemvalue="XCTest.NumberTests" />
+        <item itemvalue="XCTest.NumberTests.testNegation" />
+        <item itemvalue="XCTest.NumberTests.testMultiplication" />
         <item itemvalue="XCTest.NumberTests.testSubtraction" />
         <item itemvalue="XCTest.All in NumberTests.swift" />
-        <item itemvalue="XCTest.NumberTests.testNegation" />
       </list>
     </recent_temporary>
   </component>
@@ -279,6 +281,8 @@
       <workItem from="1535029584230" duration="2068000" />
       <workItem from="1535065227437" duration="3707000" />
       <workItem from="1535121918124" duration="161000" />
+      <workItem from="1535297545693" duration="125000" />
+      <workItem from="1535304211627" duration="2739000" />
     </task>
     <task id="LOCAL-00001" summary="Setup AppCode project, and improved source code docs">
       <created>1533911191790</created>
@@ -350,31 +354,17 @@
       <option name="project" value="LOCAL" />
       <updated>1535070061845</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Add essentials for UIView and UIViewController">
+      <created>1535297661261</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1535297661261</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="NumberTests - 2018.08.21 at 19h 52m 55s.xml">
-      <configuration name="NumberTests" configurationId="OCUnitRunConfiguration" />
-    </history-entry>
-    <history-entry file="NumberTests - 2018.08.21 at 19h 58m 13s.xml">
-      <configuration name="NumberTests" configurationId="OCUnitRunConfiguration" />
-    </history-entry>
-    <history-entry file="NumberTests - 2018.08.21 at 20h 14m 13s.xml">
-      <configuration name="NumberTests" configurationId="OCUnitRunConfiguration" />
-    </history-entry>
-    <history-entry file="NumberTests - 2018.08.21 at 20h 15m 30s.xml">
-      <configuration name="NumberTests" configurationId="OCUnitRunConfiguration" />
-    </history-entry>
-    <history-entry file="NumberTests_testMultiplication - 2018.08.23 at 20h 02m 50s.xml">
-      <configuration name="NumberTests.testMultiplication" configurationId="OCUnitRunConfiguration" />
-    </history-entry>
-    <history-entry file="NumberTests_testMultiplication - 2018.08.23 at 20h 06m 25s.xml">
-      <configuration name="NumberTests.testMultiplication" configurationId="OCUnitRunConfiguration" />
-    </history-entry>
-    <history-entry file="NumberTests_testMultiplication - 2018.08.23 at 20h 10m 46s.xml">
-      <configuration name="NumberTests.testMultiplication" configurationId="OCUnitRunConfiguration" />
-    </history-entry>
     <history-entry file="NumberTests_testMultiplication - 2018.08.23 at 20h 11m 41s.xml">
       <configuration name="NumberTests.testMultiplication" configurationId="OCUnitRunConfiguration" />
     </history-entry>
@@ -384,21 +374,42 @@
     <history-entry file="NumberTests_testMultiplication - 2018.08.23 at 20h 16m 02s.xml">
       <configuration name="NumberTests.testMultiplication" configurationId="OCUnitRunConfiguration" />
     </history-entry>
+    <history-entry file="NumberTests_testMultiplication - 2018.08.26 at 13h 24m 45s.xml">
+      <configuration name="NumberTests.testMultiplication" configurationId="OCUnitRunConfiguration" />
+    </history-entry>
+    <history-entry file="NumberTests_testMultiplication - 2018.08.26 at 13h 25m 23s.xml">
+      <configuration name="NumberTests.testMultiplication" configurationId="OCUnitRunConfiguration" />
+    </history-entry>
+    <history-entry file="NumberTests_testMultiplication - 2018.08.26 at 13h 27m 03s.xml">
+      <configuration name="NumberTests.testMultiplication" configurationId="OCUnitRunConfiguration" />
+    </history-entry>
+    <history-entry file="NumberTests_testMultiplication - 2018.08.26 at 13h 27m 23s.xml">
+      <configuration name="NumberTests.testMultiplication" configurationId="OCUnitRunConfiguration" />
+    </history-entry>
+    <history-entry file="NumberTests_testNegation - 2018.08.26 at 13h 30m 39s.xml">
+      <configuration name="NumberTests.testNegation" configurationId="OCUnitRunConfiguration" />
+    </history-entry>
+    <history-entry file="NumberTests - 2018.08.26 at 14h 09m 42s.xml">
+      <configuration name="NumberTests" configurationId="OCUnitRunConfiguration" />
+    </history-entry>
+    <history-entry file="NumberTests - 2018.08.26 at 14h 09m 55s.xml">
+      <configuration name="NumberTests" configurationId="OCUnitRunConfiguration" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39897000" />
+    <option name="totallyTimeSpent" value="42761000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="821" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14592275" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.1502146" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49893504" weight="0.3270925" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49893504" visible="true" weight="0.32647464" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39867842" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -407,7 +418,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50106496" side_tool="true" weight="0.32919255" />
-      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49928468" weight="0.32819384" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49928468" weight="0.32784638" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -433,24 +444,11 @@
     <MESSAGE value="Improve Number addition algorithm" />
     <MESSAGE value="Remove leading zeroes while calculating value, create method for preparing strings for arithmetic, remove commented code" />
     <MESSAGE value="Add Strideable, SignedNumeric conformance, some multiplication tests, bug with multiplicaion and stride" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Strideable, SignedNumeric conformance, some multiplication tests, bug with multiplicaion and stride" />
+    <MESSAGE value="Add essentials for UIView and UIViewController" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add essentials for UIView and UIViewController" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/EssentialsTests/NumberTests.swift</url>
-          <line>212</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/EssentialsTests/NumberTests.swift</url>
-          <line>204</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="OCUnitRunConfiguration">
         <watch expression="self" />
@@ -579,24 +577,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Essentials/Number.swift">
+    <entry file="file://$PROJECT_DIR$/EssentialsiOS/UIView.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="319" selection-start-line="319" selection-end-line="319" />
+        <state relative-caret-position="195">
+          <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EssentialsiOS/UIViewController.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/EssentialsTests/NumberTests.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3060">
-          <caret line="204" selection-start-line="204" selection-end-line="204" />
+        <state relative-caret-position="2910">
+          <caret line="199" column="56" selection-start-line="199" selection-start-column="56" selection-end-line="199" selection-end-column="56" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/EssentialsiOS/UIView.swift">
+    <entry file="file://$PROJECT_DIR$/Essentials/Number.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+        <state relative-caret-position="325">
+          <caret line="316" column="7" selection-start-line="316" selection-start-column="7" selection-end-line="316" selection-end-column="7" />
         </state>
       </provider>
     </entry>

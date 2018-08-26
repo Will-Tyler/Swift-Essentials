@@ -63,7 +63,8 @@ public struct Number: Comparable, Strideable, SignedNumeric {
 	public var magnitude: Number {
 		get { return Number(from: data)! }
 	}
-	private static var zero: Number {
+	/// Returns a Number with the value of zero.
+	public static var zero: Number {
 		get {
 			return Number()
 		}
@@ -123,11 +124,15 @@ public struct Number: Comparable, Strideable, SignedNumeric {
 
 	// Change the radix that this Number is stored as.
 	public func changeRadix(to newBase: UInt) {
+		guard radix != newBase else {
+			return
+		}
+
 		let lowerLimit: UInt = 2; let upperLimit: UInt = 25
 		precondition((lowerLimit...upperLimit).contains(newBase), "The radix is limited to values between \(lowerLimit) and \(upperLimit) inclusive.")
 
 		if radix != 10 {
-			var decimalData = Number.zero
+			var baseTen = Number.zero
 
 			for char in data.reversed() {
 				let value = Int(String(char))
@@ -300,7 +305,7 @@ public struct Number: Comparable, Strideable, SignedNumeric {
 		return String(products.reversed())
 	}
 
-	//MARK: Negation
+	// MARK: Negation
 	public static prefix func -(number: Number) -> Number {
 		var newNumber = Number(from: number)
 
@@ -309,7 +314,7 @@ public struct Number: Comparable, Strideable, SignedNumeric {
 		return newNumber
 	}
 
-	//MARK: Operations
+	// MARK: Operations
 	public static func *(left: Number, right: Number) -> Number {
 		if left.isZero || right.isZero {
 			return Number.zero
@@ -352,19 +357,31 @@ public struct Number: Comparable, Strideable, SignedNumeric {
 		left = left + right
 	}
 	public static func -(left: Number, right: Number) -> Number {
-		if left.isPositive != right.isPositive {
-			return left + (-right)
-		}
-		if left == right {
+		guard left != right else {
 			return Number.zero
 		}
-		if left.isNegative {
-			return right.magnitude - left.magnitude
+		guard !left.isZero else {
+			return -right
 		}
+		guard !right.isZero else {
+			return left
+		}
+
+		assert(left.sign != .zero && right.sign != .zero)
+
+		// We want the form a - b, where a, b > 0.
+		// If a - -b, return a + b.
+		// If -a - b, return -a + -b (negative addition).
+		if left.sign != right.sign {
+			return left + -right
+		}
+
+		// We should have a - b, where a, b > 0, now.
+		assert(left.isPositive && right.isPositive)
 
 		var newNumber = Number.zero
 
-		newNumber.sign = left.magnitude >= right.magnitude ? .positive : .negative
+		newNumber.sign = left > right ? .positive : .negative
 		newNumber.data = subtractDecimalStrings(left: left.data, right: right.data)
 
 		return newNumber
