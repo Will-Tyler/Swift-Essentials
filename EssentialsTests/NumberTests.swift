@@ -136,6 +136,26 @@ class NumberTests: XCTestCase {
 		}
 	}
 
+	func testMixedAddition() {
+		testAdditionWithInts(left: -1, right: 2)
+		testAdditionWithInts(left: 2, right: -1)
+		testAdditionWithInts(left: -2, right: 1)
+		testAdditionWithInts(left: 1, right: -2)
+		testAdditionWithInts(left: -10, right: 20)
+		testAdditionWithInts(left: 20, right: -10)
+		testAdditionWithInts(left: 298420984, right: -49279)
+		testAdditionWithInts(left: 4785, right: -3287478374)
+		testAdditionWithInts(left: -4287827874, right: 239834)
+
+		for _ in 0..<100 {
+			let left = Int(Random.from(Int16.min...0))
+			let right = Int(Random.from(0...Int16.max))
+
+			testAdditionWithInts(left: left, right: right)
+			testAdditionWithInts(left: right, right: left)
+		}
+	}
+
 	private func testAdditionFromStrings(left: String, right: String, expecting result: String) {
 		let leftNumber = Number(from: left)!
 		let rightNumber = Number(from: right)!
@@ -273,6 +293,15 @@ class NumberTests: XCTestCase {
 		testSubtractionWithStrings("3892485972934582039840298023398534928739482938471928748716387648728", minus: "3892485972934582039840298023398534928739482938471928748716387648728", shouldEqual: "0")
 		testSubtractionWithStrings("058429875982704509284098502974087208014892365498", minus: "10", shouldEqual: "58429875982704509284098502974087208014892365488")
 		testSubtractionWithStrings("10", minus: "058429875982704509284098502974087208014892365498", shouldEqual: "-58429875982704509284098502974087208014892365488")
+	}
+
+	func testStrideable() {
+		let high = Number(exactly: 10)
+		let low = Number(exactly: -10)
+		let diff = high - low // should be 20
+
+		XCTAssertEqual(low.distance(to: high), diff)
+		XCTAssertEqual(low.advanced(by: diff), high)
 	}
 
 	private func testMultiplicationWithInts(left: Int, right: Int) {

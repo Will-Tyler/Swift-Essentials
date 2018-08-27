@@ -83,4 +83,35 @@ class StringTests: XCTestCase {
 		XCTAssertFalse("49842948928 ".isPositiveDecimalNumber)
 	}
 
+	func testRemoveLeadingZeroes() {
+		var string = ""
+
+		string.removeLeadingZeroes()
+		XCTAssertEqual(string, "")
+
+		string = "-"
+		string.removeLeadingZeroes()
+		XCTAssertEqual(string, "-")
+
+		string = "-0"
+		string.removeLeadingZeroes()
+		XCTAssertEqual(string, "-0")
+
+		string = "-01"
+		string.removeLeadingZeroes()
+		XCTAssertEqual(string, "-1")
+
+		string = "01"
+		string.removeLeadingZeroes()
+		XCTAssertEqual(string, "1")
+
+		string = "-0000000024900000"
+		string.removeLeadingZeroes()
+		XCTAssertEqual(string, "-24900000")
+
+		string = "02839844982139830"
+		string.removeLeadingZeroes()
+		XCTAssertEqual(string, "2839844982139830")
+	}
+
 }

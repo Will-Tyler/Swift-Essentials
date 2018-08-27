@@ -29,7 +29,11 @@ fileprivate enum Sign {
 
 public struct Number: Comparable, /*Strideable,*/ SignedNumeric {
 
-	private var data: String
+	private var data: String {
+		didSet {
+			data.removeLeadingZeroes()
+		}
+	}
 	private var sign: Sign
 	private var isPositive: Bool {
 		get { return sign == .positive }
@@ -173,13 +177,13 @@ public struct Number: Comparable, /*Strideable,*/ SignedNumeric {
 	}
 
 	// MARK: Strideable
-//	public typealias Stride = Number
-//	public func distance(to other: Number) -> Stride {
-//		return self - other
-//	}
-//	public func advanced(by number: Stride) -> Number {
-//		return self + number
-//	}
+	public typealias Stride = Number
+	public func distance(to other: Number) -> Stride {
+		return other - self
+	}
+	public func advanced(by number: Stride) -> Number {
+		return self + number
+	}
 
 	private static func prepareStringsForArithmetic(_ left: String, _ right: String) -> (greater: [Character], lesser: [Character]) {
 		let greater = left > right ? left : right
@@ -335,7 +339,12 @@ public struct Number: Comparable, /*Strideable,*/ SignedNumeric {
 
 		// Looking for the form a + b or -a + -b, where a, b > 0.
 		guard left.sign == right.sign else {
-			return left.isPositive ? left - right : right - left
+			if left.isPositive { // a + -b == a - b
+				return left - -right
+			}
+			else { // -a + b == b - a
+				return right - -left
+			}
 		}
 
 		var newNumber = Number.zero
