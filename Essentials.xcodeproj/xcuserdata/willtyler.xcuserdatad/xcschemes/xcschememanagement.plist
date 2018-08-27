@@ -19,35 +19,35 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
-		<key>NumberTests.testNegation.xcscheme</key>
+		<key>NumberTests.testNegativeAddition.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
 			<integer>3</integer>
 		</dict>
-		<key>NumberTests.testSubtraction.xcscheme</key>
+		<key>NumberTests.testSubtractionWithZeros.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
 			<integer>4</integer>
 		</dict>
-		<key>All in NumberTests.swift.xcscheme</key>
+		<key>NumberTests.testPositiveLeftSubtraction.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
 			<integer>5</integer>
 		</dict>
-		<key>NumberTests.xcscheme</key>
+		<key>NumberTests.testSubtractionEqual.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
 			<integer>6</integer>
 		</dict>
-		<key>NumberTests.testMultiplication.xcscheme</key>
+		<key>NumberTests.testPositiveRightSubtraction.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />

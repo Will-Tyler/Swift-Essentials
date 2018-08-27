@@ -27,7 +27,7 @@ fileprivate enum Sign {
 
 }
 
-public struct Number: Comparable, Strideable, SignedNumeric {
+public struct Number: Comparable, /*Strideable,*/ SignedNumeric {
 
 	private var data: String
 	private var sign: Sign
@@ -70,7 +70,7 @@ public struct Number: Comparable, Strideable, SignedNumeric {
 		}
 	}
 
-	//MARK: Initializers
+	// MARK: Initializers
 	/// Initialize a Number with a value of 0.
 	public init() {
 		data = "0"
@@ -123,24 +123,24 @@ public struct Number: Comparable, Strideable, SignedNumeric {
 	}
 
 	// Change the radix that this Number is stored as.
-	public func changeRadix(to newBase: UInt) {
-		guard radix != newBase else {
-			return
-		}
-
-		let lowerLimit: UInt = 2; let upperLimit: UInt = 25
-		precondition((lowerLimit...upperLimit).contains(newBase), "The radix is limited to values between \(lowerLimit) and \(upperLimit) inclusive.")
-
-		if radix != 10 {
-			var baseTen = Number.zero
-
-			for char in data.reversed() {
-				let value = Int(String(char))
-			}
-
-			// TODO: Implement multiplication
-		}
-	}
+//	public func changeRadix(to newBase: UInt) {
+//		guard radix != newBase else {
+//			return
+//		}
+//
+//		let lowerLimit: UInt = 2; let upperLimit: UInt = 25
+//		precondition((lowerLimit...upperLimit).contains(newBase), "The radix is limited to values between \(lowerLimit) and \(upperLimit) inclusive.")
+//
+//		if radix != 10 {
+//			var baseTen = Number.zero
+//
+//			for char in data.reversed() {
+//				let value = Int(String(char))
+//			}
+//
+//			// TODO: Implement multiplication
+//		}
+//	}
 
 	//MARK: Comparable
 	public static func <(left: Number, right: Number) -> Bool {
@@ -173,28 +173,31 @@ public struct Number: Comparable, Strideable, SignedNumeric {
 	}
 
 	// MARK: Strideable
-	public typealias Stride = Number
-	public func distance(to other: Number) -> Stride {
-		return self - other
-	}
-	public func advanced(by number: Stride) -> Number {
-		return self + number
-	}
+//	public typealias Stride = Number
+//	public func distance(to other: Number) -> Stride {
+//		return self - other
+//	}
+//	public func advanced(by number: Stride) -> Number {
+//		return self + number
+//	}
 
-	private static func prepareStringsForArithmetic(_ left: String, _ right: String) -> (left: [Character], right: [Character]) {
-		let leftReversed = left.reversed()
-		let rightReversed = right.reversed()
+	private static func prepareStringsForArithmetic(_ left: String, _ right: String) -> (greater: [Character], lesser: [Character]) {
+		let greater = left > right ? left : right
+		let lesser = greater == left ? right : left
+
+		let greaterReversed = greater.reversed()
+		let lesserReversed = lesser.reversed()
 
 		let longer: ReversedCollection<String>
 		let shorter: ReversedCollection<String>
 
-		if leftReversed.count >= rightReversed.count {
-			longer = leftReversed
-			shorter = rightReversed
+		if greaterReversed.count >= lesserReversed.count {
+			longer = greaterReversed
+			shorter = lesserReversed
 		}
 		else {
-			longer = rightReversed
-			shorter = leftReversed
+			longer = lesserReversed
+			shorter = greaterReversed
 		}
 
 		let top: [Character] = Array(longer)
@@ -215,8 +218,8 @@ public struct Number: Comparable, Strideable, SignedNumeric {
 	private static func addPositiveDecimalStrings(left: String, right: String) -> String {
 		precondition(left.isPositiveDecimalNumber && right.isPositiveDecimalNumber, "Left and right must be positive, decimal, numeric values.")
 		let preparedNumbers = prepareStringsForArithmetic(left, right)
-		let top = preparedNumbers.left
-		let bottom = preparedNumbers.right
+		let top = preparedNumbers.greater
+		let bottom = preparedNumbers.lesser
 
 		var sums = [Character]()
 		var carryOver: UInt = 0
@@ -241,42 +244,32 @@ public struct Number: Comparable, Strideable, SignedNumeric {
 		return String(sums.reversed())
 	}
 
-	private typealias DigitDiffResult = (diff: Character, sign: Sign)
-	private static func subtractDigits(left: Character, right: Character) -> DigitDiffResult {
-		precondition(left.isDigit && right.isDigit)
-
-		if left == right {
-			return ("0", .zero)
-		}
-
-		let sign: Sign = left > right ? .positive : .negative
-		let diff = "\(Int8(String(left))! - Int8(String(right))!)"
-
-		return (diff.last!, sign)
-	}
-	private static func subtractDecimalStrings(left: String, right: String) -> String {
-		precondition(left.isPositiveDecimalNumber && right.isDecimalNumber)
+	// TODO: Subtraction desperately needed
+	private static func subtractPositiveDecimalStrings(left: String, right: String) -> String {
+		precondition(left.isPositiveDecimalNumber && right.isPositiveDecimalNumber)
 
 		let preparedNumbers = prepareStringsForArithmetic(left, right)
-		var top = preparedNumbers.left
-		var bottom = preparedNumbers.right
+		let top = preparedNumbers.greater
+		let bottom = preparedNumbers.lesser
+
+		assert(top.count == bottom.count)
 
 		var diffs = [Character]()
-
+		var carryUnder = 0
 		for index in 0..<top.count {
-			let result = subtractDigits(left: top[index], right: bottom[index])
+			let leftChar = top[index]
+			let rightChar = bottom[index]
+			var result = Int(String(leftChar))! - (Int(String(rightChar))! + carryUnder)
 
-			if result.sign == .negative {
-				var i = index
-				while top[i] == "0" {
-					top[i++] = "9"
-				}
-				top[i] = subtractDigits(left: top[i], right: "1").diff
-				bottom[i] = subtractDigits(left: bottom[i], right: "1").diff
+			if result >= 0 {
+				carryUnder = 0
 			}
 			else {
-				diffs.append(result.diff)
+				result += 10 // TODO: Handle radix
+				carryUnder = 1
 			}
+
+			diffs.append(String(result).last!)
 		}
 
 		return String(diffs.reversed())
@@ -285,8 +278,8 @@ public struct Number: Comparable, Strideable, SignedNumeric {
 		precondition(left.isPositiveDecimalNumber && right.isPositiveDecimalNumber)
 
 		let preparedStrings = prepareStringsForArithmetic(left, right)
-		let top = preparedStrings.left
-		let bottom = preparedStrings.right
+		let top = preparedStrings.greater
+		let bottom = preparedStrings.lesser
 		let totalCount = top.count + bottom.count
 
 		var products = [Character](repeating: "0" as Character, count: totalCount)
@@ -324,9 +317,9 @@ public struct Number: Comparable, Strideable, SignedNumeric {
 		var newNumber = Number.zero
 
 		newNumber.sign = left.sign == right.sign ? .positive : .negative
-		for _ in stride(from: Number(exactly: 1), through: right, by: Number(exactly: 1) as Stride) {
-			newNumber += left
-		}
+//		for _ in stride(from: Number(exactly: 1), through: right, by: Number(exactly: 1) as Stride) {
+//			newNumber += left
+//		}
 
 		return newNumber
 	}
@@ -334,22 +327,22 @@ public struct Number: Comparable, Strideable, SignedNumeric {
 		left = left * right
 	}
 	public static func +(left: Number, right: Number) -> Number {
-		if left.isZero {
+		guard !left.isZero else {
 			return right
 		}
-		else if right.isZero {
+		guard !right.isZero else {
 			return left
+		}
+
+		// Looking for the form a + b or -a + -b, where a, b > 0.
+		guard left.sign == right.sign else {
+			return left.isPositive ? left - right : right - left
 		}
 
 		var newNumber = Number.zero
 
-		if left.sign == right.sign {
-			newNumber.sign = left.sign
-			newNumber.data = addPositiveDecimalStrings(left: left.data, right: right.data)
-		}
-		else {
-			return left.isPositive ? left - right : right - left
-		}
+		newNumber.sign = left.sign
+		newNumber.data = addPositiveDecimalStrings(left: left.data, right: right.data)
 
 		return newNumber
 	}
@@ -382,7 +375,7 @@ public struct Number: Comparable, Strideable, SignedNumeric {
 		var newNumber = Number.zero
 
 		newNumber.sign = left > right ? .positive : .negative
-		newNumber.data = subtractDecimalStrings(left: left.data, right: right.data)
+		newNumber.data = subtractPositiveDecimalStrings(left: left.data, right: right.data)
 
 		return newNumber
 	}

@@ -10,17 +10,11 @@ import XCTest
 
 class NumberTests: XCTestCase {
 
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-    override func tearDown() {
-		super.tearDown()
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
 	func testInit() {
-		XCTAssertEqual(Number().value, "0")
+		let number = Number()
+
+		XCTAssertEqual(number.value, "0")
+		XCTAssertEqual(number, Number.zero)
 	}
 
 	func testInitWithInt() {
@@ -31,6 +25,11 @@ class NumberTests: XCTestCase {
 		mynumber = Number(exactly: -5)
 
 		XCTAssertEqual(mynumber.value, "-5")
+
+		mynumber = Number(exactly: 0)
+
+		XCTAssertEqual(mynumber.value, "0")
+		XCTAssertEqual(mynumber, Number.zero)
 	}
 
 	func testInitFromString() {
@@ -142,6 +141,7 @@ class NumberTests: XCTestCase {
 
 		XCTAssertEqual(sum.value, result)
 	}
+
 	func testPositiveAdditionHugeNumbers() {
 		testAdditionFromStrings(left: "\(UInt.max)0", right: "1234567890987654321234567890", expecting: "1234568075455095058330084040")
 	}
@@ -229,6 +229,7 @@ class NumberTests: XCTestCase {
 
 		XCTAssertEqual(product.value, "\(left * right)")
 	}
+
 	func testMultiplication() {
 //		testMultiplicationWithInts(left: 0, right: 0)
 //		testMultiplicationWithInts(left: 0, right: 1)
