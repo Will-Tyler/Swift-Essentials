@@ -47,24 +47,24 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="swift" value="15223" />
-          <entry key="txt" value="864" />
+          <entry key="swift" value="16417" />
+          <entry key="txt" value="891" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="864" />
-          <entry key="Swift" value="15223" />
+          <entry key="PLAIN_TEXT" value="891" />
+          <entry key="Swift" value="16417" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.appcode.build">
         <counts>
-          <entry key="buildservice" value="187" />
+          <entry key="buildservice" value="203" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.cidr.testingFrameworks.usages">
         <counts>
-          <entry key="XCTest" value="152" />
+          <entry key="XCTest" value="167" />
         </counts>
       </usages-collector>
     </session>
@@ -76,8 +76,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Essentials/Number.swift">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="735">
-                  <caret line="267" column="50" selection-start-line="267" selection-start-column="50" selection-end-line="267" selection-end-column="50" />
+                <state relative-caret-position="298">
+                  <caret line="246" column="4" selection-start-line="246" selection-start-column="4" selection-end-line="246" selection-end-column="4" />
                 </state>
               </provider>
             </entry>
@@ -89,8 +89,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/EssentialsTests/NumberTests.swift">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="521">
-                  <caret line="231" selection-start-line="231" selection-end-line="231" />
+                <state relative-caret-position="4155">
+                  <caret line="273" column="114" selection-start-line="273" selection-start-column="114" selection-end-line="273" selection-end-column="114" />
                 </state>
               </provider>
             </entry>
@@ -126,8 +126,8 @@
         <option value="$PROJECT_DIR$/Essentials/Random.swift" />
         <option value="$PROJECT_DIR$/EssentialsiOS/UIView.swift" />
         <option value="$PROJECT_DIR$/EssentialsiOS/UIViewController.swift" />
-        <option value="$PROJECT_DIR$/EssentialsTests/NumberTests.swift" />
         <option value="$PROJECT_DIR$/Essentials/Number.swift" />
+        <option value="$PROJECT_DIR$/EssentialsTests/NumberTests.swift" />
       </list>
     </option>
   </component>
@@ -149,36 +149,7 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="Cidr.FilesView" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="" type="efc3779f:XcodeRootNode" />
-              <item name="Essentials" type="1d218c8b:XcodeProjectNode" />
-            </path>
-            <path>
-              <item name="" type="efc3779f:XcodeRootNode" />
-              <item name="Essentials" type="1d218c8b:XcodeProjectNode" />
-              <item name="Essentials" type="fcab9f18:XcodeViewNode" />
-            </path>
-            <path>
-              <item name="" type="efc3779f:XcodeRootNode" />
-              <item name="Essentials" type="1d218c8b:XcodeProjectNode" />
-              <item name="EssentialsTests" type="fcab9f18:XcodeViewNode" />
-            </path>
-            <path>
-              <item name="" type="efc3779f:XcodeRootNode" />
-              <item name="Essentials" type="1d218c8b:XcodeProjectNode" />
-              <item name="EssentialsiOS" type="fcab9f18:XcodeViewNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="OBJC.PRESERVED_TARGET_SELECTION" value="EssentialsiOS,,,EssentialsiOSTests" />
@@ -199,7 +170,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="XCTest.NumberTests.testPositiveRightSubtraction">
+  <component name="RunManager" selected="XCTest.NumberTests.testLargeSubtraction">
     <configuration name="EssentialsMacOS" type="AppleRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Essentials" TARGET_NAME="EssentialsMacOS" CONFIG_NAME="Debug" SCHEME_NAME="EssentialsMacOS" IS_LOCATION_SIMULATION_ALLOWED="true" MAKE_ACTIVE="TRUE">
       <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
         <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
@@ -216,12 +187,22 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NumberTests.testNegativeAddition" type="OCUnitRunConfiguration" factoryName="XCTest/Kiwi" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Essentials" TARGET_NAME="EssentialsTests" CONFIG_NAME="Debug" SCHEME_NAME="NumberTests.testNegativeAddition" IS_LOCATION_SIMULATION_ALLOWED="true" TEST_CLASS="NumberTests" TEST_METHOD="testNegativeAddition" TEST_MODE="SUITE_TEST">
+    <configuration name="NumberTests" type="OCUnitRunConfiguration" factoryName="XCTest/Kiwi" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Essentials" TARGET_NAME="EssentialsTests" CONFIG_NAME="Debug" SCHEME_NAME="NumberTests" IS_LOCATION_SIMULATION_ALLOWED="true" TEST_CLASS="NumberTests" TEST_MODE="SUITE_TEST">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NumberTests.testPositiveLeftSubtraction" type="OCUnitRunConfiguration" factoryName="XCTest/Kiwi" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Essentials" TARGET_NAME="EssentialsTests" CONFIG_NAME="Debug" SCHEME_NAME="NumberTests.testPositiveLeftSubtraction" IS_LOCATION_SIMULATION_ALLOWED="true" TEST_CLASS="NumberTests" TEST_METHOD="testPositiveLeftSubtraction" TEST_MODE="SUITE_TEST">
+    <configuration name="NumberTests.testLargeSubtraction" type="OCUnitRunConfiguration" factoryName="XCTest/Kiwi" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Essentials" TARGET_NAME="EssentialsTests" CONFIG_NAME="Debug" SCHEME_NAME="NumberTests.testLargeSubtraction" IS_LOCATION_SIMULATION_ALLOWED="true" TEST_CLASS="NumberTests" TEST_METHOD="testLargeSubtraction" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NumberTests.testNegativeLeftSubtraction" type="OCUnitRunConfiguration" factoryName="XCTest/Kiwi" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Essentials" TARGET_NAME="EssentialsTests" CONFIG_NAME="Debug" SCHEME_NAME="NumberTests.testNegativeLeftSubtraction" IS_LOCATION_SIMULATION_ALLOWED="true" TEST_CLASS="NumberTests" TEST_METHOD="testNegativeLeftSubtraction" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NumberTests.testNegativeRightSubtraction" type="OCUnitRunConfiguration" factoryName="XCTest/Kiwi" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Essentials" TARGET_NAME="EssentialsTests" CONFIG_NAME="Debug" SCHEME_NAME="NumberTests.testNegativeRightSubtraction" IS_LOCATION_SIMULATION_ALLOWED="true" TEST_CLASS="NumberTests" TEST_METHOD="testNegativeRightSubtraction" TEST_MODE="SUITE_TEST">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -231,32 +212,22 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NumberTests.testSubtractionEqual" type="OCUnitRunConfiguration" factoryName="XCTest/Kiwi" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Essentials" TARGET_NAME="EssentialsTests" CONFIG_NAME="Debug" SCHEME_NAME="NumberTests.testSubtractionEqual" IS_LOCATION_SIMULATION_ALLOWED="true" TEST_CLASS="NumberTests" TEST_METHOD="testSubtractionEqual" TEST_MODE="SUITE_TEST">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="NumberTests.testSubtractionWithZeros" type="OCUnitRunConfiguration" factoryName="XCTest/Kiwi" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Essentials" TARGET_NAME="EssentialsTests" CONFIG_NAME="Debug" SCHEME_NAME="NumberTests.testSubtractionWithZeros" IS_LOCATION_SIMULATION_ALLOWED="true" TEST_CLASS="NumberTests" TEST_METHOD="testSubtractionWithZeros" TEST_MODE="SUITE_TEST">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="Application.EssentialsiOS" />
       <item itemvalue="Application.EssentialsMacOS" />
-      <item itemvalue="XCTest.NumberTests.testNegativeAddition" />
-      <item itemvalue="XCTest.NumberTests.testSubtractionWithZeros" />
-      <item itemvalue="XCTest.NumberTests.testPositiveLeftSubtraction" />
-      <item itemvalue="XCTest.NumberTests.testSubtractionEqual" />
       <item itemvalue="XCTest.NumberTests.testPositiveRightSubtraction" />
+      <item itemvalue="XCTest.NumberTests" />
+      <item itemvalue="XCTest.NumberTests.testNegativeLeftSubtraction" />
+      <item itemvalue="XCTest.NumberTests.testNegativeRightSubtraction" />
+      <item itemvalue="XCTest.NumberTests.testLargeSubtraction" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="XCTest.NumberTests.testLargeSubtraction" />
+        <item itemvalue="XCTest.NumberTests" />
+        <item itemvalue="XCTest.NumberTests.testNegativeRightSubtraction" />
+        <item itemvalue="XCTest.NumberTests.testNegativeLeftSubtraction" />
         <item itemvalue="XCTest.NumberTests.testPositiveRightSubtraction" />
-        <item itemvalue="XCTest.NumberTests.testPositiveLeftSubtraction" />
-        <item itemvalue="XCTest.NumberTests.testSubtractionEqual" />
-        <item itemvalue="XCTest.NumberTests.testSubtractionWithZeros" />
-        <item itemvalue="XCTest.NumberTests.testNegativeAddition" />
       </list>
     </recent_temporary>
   </component>
@@ -282,7 +253,7 @@
       <workItem from="1535121918124" duration="161000" />
       <workItem from="1535297545693" duration="125000" />
       <workItem from="1535304211627" duration="4424000" />
-      <workItem from="1535328534142" duration="1696000" />
+      <workItem from="1535328534142" duration="5389000" />
     </task>
     <task id="LOCAL-00001" summary="Setup AppCode project, and improved source code docs">
       <created>1533911191790</created>
@@ -368,43 +339,59 @@
       <option name="project" value="LOCAL" />
       <updated>1535307136050</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Subtraction tests passing">
+      <created>1535377050169</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1535377050169</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="NumberTests_testSubtractionWithZeros - 2018.08.26 at 20h 21m 47s.xml">
-      <configuration name="NumberTests.testSubtractionWithZeros" configurationId="OCUnitRunConfiguration" />
+    <history-entry file="NumberTests_testNegativeLeftSubtraction - 2018.08.27 at 09h 51m 38s.xml">
+      <configuration name="NumberTests.testNegativeLeftSubtraction" configurationId="OCUnitRunConfiguration" />
     </history-entry>
-    <history-entry file="NumberTests_testSubtractionEqual - 2018.08.26 at 20h 21m 52s.xml">
-      <configuration name="NumberTests.testSubtractionEqual" configurationId="OCUnitRunConfiguration" />
+    <history-entry file="NumberTests_testNegativeLeftSubtraction - 2018.08.27 at 09h 55m 26s.xml">
+      <configuration name="NumberTests.testNegativeLeftSubtraction" configurationId="OCUnitRunConfiguration" />
     </history-entry>
-    <history-entry file="NumberTests_testPositiveLeftSubtraction - 2018.08.26 at 20h 22m 00s.xml">
-      <configuration name="NumberTests.testPositiveLeftSubtraction" configurationId="OCUnitRunConfiguration" />
+    <history-entry file="NumberTests_testNegativeLeftSubtraction - 2018.08.27 at 09h 57m 42s.xml">
+      <configuration name="NumberTests.testNegativeLeftSubtraction" configurationId="OCUnitRunConfiguration" />
     </history-entry>
-    <history-entry file="NumberTests_testPositiveLeftSubtraction - 2018.08.26 at 20h 25m 17s.xml">
-      <configuration name="NumberTests.testPositiveLeftSubtraction" configurationId="OCUnitRunConfiguration" />
+    <history-entry file="NumberTests_testNegativeLeftSubtraction - 2018.08.27 at 09h 57m 56s.xml">
+      <configuration name="NumberTests.testNegativeLeftSubtraction" configurationId="OCUnitRunConfiguration" />
     </history-entry>
-    <history-entry file="NumberTests_testSubtractionWithZeros - 2018.08.26 at 20h 30m 24s.xml">
-      <configuration name="NumberTests.testSubtractionWithZeros" configurationId="OCUnitRunConfiguration" />
+    <history-entry file="NumberTests - 2018.08.27 at 10h 01m 25s.xml">
+      <configuration name="NumberTests" configurationId="OCUnitRunConfiguration" />
     </history-entry>
-    <history-entry file="NumberTests_testSubtractionEqual - 2018.08.26 at 20h 30m 32s.xml">
-      <configuration name="NumberTests.testSubtractionEqual" configurationId="OCUnitRunConfiguration" />
+    <history-entry file="NumberTests_testNegativeRightSubtraction - 2018.08.27 at 10h 07m 31s.xml">
+      <configuration name="NumberTests.testNegativeRightSubtraction" configurationId="OCUnitRunConfiguration" />
     </history-entry>
-    <history-entry file="NumberTests_testPositiveLeftSubtraction - 2018.08.26 at 20h 30m 37s.xml">
-      <configuration name="NumberTests.testPositiveLeftSubtraction" configurationId="OCUnitRunConfiguration" />
+    <history-entry file="NumberTests - 2018.08.27 at 10h 10m 05s.xml">
+      <configuration name="NumberTests" configurationId="OCUnitRunConfiguration" />
     </history-entry>
-    <history-entry file="NumberTests_testPositiveLeftSubtraction - 2018.08.27 at 09h 33m 49s.xml">
-      <configuration name="NumberTests.testPositiveLeftSubtraction" configurationId="OCUnitRunConfiguration" />
+    <history-entry file="NumberTests_testLargeSubtraction - 2018.08.27 at 10h 27m 02s.xml">
+      <configuration name="NumberTests.testLargeSubtraction" configurationId="OCUnitRunConfiguration" />
     </history-entry>
-    <history-entry file="NumberTests_testPositiveLeftSubtraction - 2018.08.27 at 09h 34m 14s.xml">
-      <configuration name="NumberTests.testPositiveLeftSubtraction" configurationId="OCUnitRunConfiguration" />
+    <history-entry file="NumberTests_testLargeSubtraction - 2018.08.27 at 10h 38m 57s.xml">
+      <configuration name="NumberTests.testLargeSubtraction" configurationId="OCUnitRunConfiguration" />
     </history-entry>
-    <history-entry file="NumberTests_testPositiveRightSubtraction - 2018.08.27 at 09h 34m 21s.xml">
-      <configuration name="NumberTests.testPositiveRightSubtraction" configurationId="OCUnitRunConfiguration" />
+    <history-entry file="NumberTests_testLargeSubtraction - 2018.08.27 at 10h 39m 17s.xml">
+      <configuration name="NumberTests.testLargeSubtraction" configurationId="OCUnitRunConfiguration" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46142000" />
+    <option name="totallyTimeSpent" value="49835000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1920" height="1001" extended-state="6" />
@@ -420,7 +407,7 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39867842" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32893288" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" />
@@ -453,7 +440,8 @@
     <MESSAGE value="Add Strideable, SignedNumeric conformance, some multiplication tests, bug with multiplicaion and stride" />
     <MESSAGE value="Add essentials for UIView and UIViewController" />
     <MESSAGE value="Improve testing, work on Number" />
-    <option name="LAST_COMMIT_MESSAGE" value="Improve testing, work on Number" />
+    <MESSAGE value="Subtraction tests passing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Subtraction tests passing" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -601,15 +589,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Essentials/Number.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="267" column="50" selection-start-line="267" selection-start-column="50" selection-end-line="267" selection-end-column="50" />
+        <state relative-caret-position="298">
+          <caret line="246" column="4" selection-start-line="246" selection-start-column="4" selection-end-line="246" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/EssentialsTests/NumberTests.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="521">
-          <caret line="231" selection-start-line="231" selection-end-line="231" />
+        <state relative-caret-position="4155">
+          <caret line="273" column="114" selection-start-line="273" selection-start-column="114" selection-end-line="273" selection-end-column="114" />
         </state>
       </provider>
     </entry>

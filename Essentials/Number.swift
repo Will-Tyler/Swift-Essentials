@@ -244,7 +244,6 @@ public struct Number: Comparable, /*Strideable,*/ SignedNumeric {
 		return String(sums.reversed())
 	}
 
-	// TODO: Subtraction desperately needed
 	private static func subtractPositiveDecimalStrings(left: String, right: String) -> String {
 		precondition(left.isPositiveDecimalNumber && right.isPositiveDecimalNumber)
 
@@ -282,7 +281,7 @@ public struct Number: Comparable, /*Strideable,*/ SignedNumeric {
 		let bottom = preparedStrings.lesser
 		let totalCount = top.count + bottom.count
 
-		var products = [Character](repeating: "0" as Character, count: totalCount)
+		let products = [Character](repeating: "0" as Character, count: totalCount)
 		// Cannot use multiplication algorithm from CS 251 yet because modulus is not defined. Quick solution is to use addition.
 //		var carry = 0
 //		for i in 0..<top.count {
@@ -367,6 +366,10 @@ public struct Number: Comparable, /*Strideable,*/ SignedNumeric {
 		// If -a - b, return -a + -b (negative addition).
 		if left.sign != right.sign {
 			return left + -right
+		}
+		// If -a - -b, which equals -a + b, return b - a.
+		else if left.isNegative {
+			return -right - -left
 		}
 
 		// We should have a - b, where a, b > 0, now.

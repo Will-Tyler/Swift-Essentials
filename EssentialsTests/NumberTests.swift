@@ -92,6 +92,7 @@ class NumberTests: XCTestCase {
 
 		XCTAssertEqual(sum.value, "\(left + right)")
 	}
+
 	func testPositiveAddition() {
 		testAdditionWithUInts(left: 111, right: 111)
 		testAdditionWithUInts(left: 11111, right: 222)
@@ -117,6 +118,7 @@ class NumberTests: XCTestCase {
 
 		XCTAssertEqual(sum.value, "\(left + right)")
 	}
+
 	func testNegativeAddition() {
 		testAdditionWithInts(left: -111, right: -111)
 		testAdditionWithInts(left: -11111, right: -222)
@@ -209,6 +211,7 @@ class NumberTests: XCTestCase {
 		testSubtractionWithInts(left: -103, right: -103)
 	}
 
+	// Left > right
 	func testPositiveLeftSubtraction() {
 		testSubtractionWithInts(left: 9, right: 6)
 		testSubtractionWithInts(left: 132, right: 6)
@@ -217,9 +220,59 @@ class NumberTests: XCTestCase {
 		testSubtractionWithInts(left: 1000000000, right: 2)
 	}
 
+	// Left < right
 	func testPositiveRightSubtraction() {
+		testSubtractionWithInts(left: 1, right: 2)
 		testSubtractionWithInts(left: 8, right: 9)
 		testSubtractionWithInts(left: 8, right: 18)
+		testSubtractionWithInts(left: 9, right: 18)
+		testSubtractionWithInts(left: 34, right: 2983492)
+		testSubtractionWithInts(left: 1, right: 100000000)
+	}
+
+	// Left > right
+	func testNegativeLeftSubtraction() {
+		testSubtractionWithInts(left: 1, right: -1)
+		testSubtractionWithInts(left: 193891, right: -2989)
+		testSubtractionWithInts(left: 2, right: -91849)
+		testSubtractionWithInts(left: -1, right: -2)
+		testSubtractionWithInts(left: -1, right: -11)
+		testSubtractionWithInts(left: -10, right: -199)
+		testSubtractionWithInts(left: -1, right: -10000000000)
+		testSubtractionWithInts(left: -2442, right: -849278)
+		testSubtractionWithInts(left: -29, right: -92497)
+	}
+
+	// Right > left
+	func testNegativeRightSubtraction() {
+		testSubtractionWithInts(left: -2, right: -1)
+		testSubtractionWithInts(left: -9489, right: 1)
+		testSubtractionWithInts(left: -49028, right: -2094)
+		testSubtractionWithInts(left: -2894892894, right: 948240)
+	}
+
+	func testSubtractionRandom() {
+		for _ in 0..<100 {
+			let left = Int(Random.from(0...Int16.max))
+			let right = Int(Random.from(Int16.min...0))
+
+			testSubtractionWithInts(left: left, right: right)
+		}
+	}
+
+	private func testSubtractionWithStrings(_ left: String, minus right: String, shouldEqual expectedValue: String) {
+		precondition(left.isDecimalNumber && right.isDecimalNumber)
+
+		let leftNumber = Number(from: left)!
+		let rightNumber = Number(from: right)!
+
+		XCTAssertEqual((leftNumber - rightNumber).value, expectedValue)
+	}
+
+	func testLargeSubtraction() {
+		testSubtractionWithStrings("3892485972934582039840298023398534928739482938471928748716387648728", minus: "3892485972934582039840298023398534928739482938471928748716387648728", shouldEqual: "0")
+		testSubtractionWithStrings("058429875982704509284098502974087208014892365498", minus: "10", shouldEqual: "58429875982704509284098502974087208014892365488")
+		testSubtractionWithStrings("10", minus: "058429875982704509284098502974087208014892365498", shouldEqual: "-58429875982704509284098502974087208014892365488")
 	}
 
 	private func testMultiplicationWithInts(left: Int, right: Int) {
