@@ -11,16 +11,6 @@ import XCTest
 
 class RockPaperScissorsTests: XCTestCase {
 
-	override func setUp() {
-		super.setUp()
-		// Put setup code here. This method is called before the invocation of each test method in the class.
-	}
-
-	override func tearDown() {
-		// Put teardown code here. This method is called after the invocation of each test method in the class.
-		super.tearDown()
-	}
-
 	private func assertEqual(_ left: RockPaperScissors, _ right: RockPaperScissors) {
 		XCTAssertEqual(left, right)
 	}
@@ -46,7 +36,6 @@ class RockPaperScissorsTests: XCTestCase {
 	private func assertLessThan(_ left: RockPaperScissors, _ right: RockPaperScissors) {
 		XCTAssertLessThan(left, right)
 	}
-
 	private func assertNotLessThan(_ left: RockPaperScissors, _ right: RockPaperScissors) {
 		XCTAssertGreaterThanOrEqual(left, right)
 	}
@@ -66,7 +55,27 @@ class RockPaperScissorsTests: XCTestCase {
 		assertNotLessThan(.scissors, .paper)
 	}
 
+	private func assertGreaterThan(_ left: RockPaperScissors, _ right: RockPaperScissors) {
+		XCTAssertGreaterThan(left, right)
+	}
+	private func assertNotGreaterThan(_ left: RockPaperScissors, _ right: RockPaperScissors) {
+		XCTAssertLessThanOrEqual(left, right)
+	}
+
 	// TODO: Finish testing
-	func testGreaterThan() {}
+	func testGreaterThan() {
+		assertGreaterThan(.rock, .scissors)
+		assertGreaterThan(.paper, .rock)
+		assertGreaterThan(.scissors, .paper)
+
+		assertNotGreaterThan(.rock, .rock)
+		assertNotGreaterThan(.rock, .paper)
+
+		assertNotGreaterThan(.paper, .paper)
+		assertNotGreaterThan(.paper, .scissors)
+
+		assertNotGreaterThan(.scissors, .scissors)
+		assertNotGreaterThan(.scissors, .rock)
+	}
 
 }

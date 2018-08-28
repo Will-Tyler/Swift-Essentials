@@ -27,7 +27,7 @@ fileprivate enum Sign {
 
 }
 
-public struct Number: Comparable, Strideable, SignedNumeric {
+public struct Number: Strideable, SignedNumeric {
 
 	private var data: String {
 		didSet {
@@ -137,6 +137,10 @@ public struct Number: Comparable, Strideable, SignedNumeric {
 //	}
 
 	//MARK: Comparable
+	public static func ==(left: Number, right: Number) -> Bool {
+		// TODO: Handle radix
+		return left.sign == right.sign && left.data == right.data
+	}
 	public static func <(left: Number, right: Number) -> Bool {
 		if left.isPositive != right.isPositive {
 			return left.isNegative
