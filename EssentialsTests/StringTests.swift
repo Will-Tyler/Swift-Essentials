@@ -83,7 +83,6 @@ class StringTests: XCTestCase {
 		XCTAssertFalse("49842948928 ".isPositiveDecimalNumber)
 	}
 
-	// TODO: Finish testing this method
 	func testIsValidNumber() {
 		var string = ""
 

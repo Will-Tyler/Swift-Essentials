@@ -53,11 +53,6 @@ public struct Number: Comparable, Strideable, SignedNumeric {
 		get {
 			var result = data
 
-			// Remove leading zeroes if any
-			while result.count > 1, result.first! == "0" {
-				result.removeFirst()
-			}
-
 			if isNegative {
 				result.insert("-", at: result.startIndex)
 			}
@@ -92,31 +87,24 @@ public struct Number: Comparable, Strideable, SignedNumeric {
 		self.init(from: "\(value)")!
 	}
 	/// Initialize a Number from a String.
-	public init?(from: String) {
-		var copy = from
+	public init?(from string: String) {
+		if !string.isValidNumber() {
+			return nil
+		}
 
-		if copy.isEmpty {
-			copy = "0"
+		var copy = string
+
+		copy.removeLeadingZeroes()
+
+		if copy == "0" {
 			sign = .zero
 		}
 		else if copy.first! == "-" {
 			sign = .negative
 			copy.removeFirst()
-
-			if copy.isEmpty {
-				return nil
-			}
 		}
 		else {
-			sign = copy == "0" ? .zero : .positive
-		}
-
-		assert(!copy.isEmpty)
-
-		let digits: Set<Character> = Set("1234567890")
-
-		for char in copy {
-			if !digits.contains(char) { return nil }
+			sign = .positive
 		}
 
 		data = copy

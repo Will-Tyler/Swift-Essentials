@@ -39,8 +39,7 @@ class NumberTests: XCTestCase {
 
 		let zero = Number(from: "")
 
-		XCTAssertNotNil(zero)
-		XCTAssertEqual(zero?.value, "0")
+		XCTAssertNil(zero)
 
 		let hugeNumber = "\(Int.max)0"
 
