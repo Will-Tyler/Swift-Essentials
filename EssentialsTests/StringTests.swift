@@ -83,6 +83,27 @@ class StringTests: XCTestCase {
 		XCTAssertFalse("49842948928 ".isPositiveDecimalNumber)
 	}
 
+	// TODO: Finish testing this method
+	func testIsValidNumber() {
+		var string = ""
+
+		XCTAssertFalse(string.isValidNumber())
+
+		string = "-"
+		XCTAssertFalse(string.isValidNumber())
+
+		string = "1001"
+		XCTAssert(string.isValidNumber(forRadix: 2))
+		XCTAssert(string.isValidNumber(forRadix: 3))
+		XCTAssert(string.isValidNumber())
+
+		string = "102102102101201021021"
+		XCTAssert(string.isValidNumber(forRadix: 3))
+		XCTAssertFalse(string.isValidNumber(forRadix: 2))
+		XCTAssert(string.isValidNumber(forRadix: 4))
+		XCTAssert(string.isValidNumber())
+	}
+
 	func testRemoveLeadingZeroes() {
 		var string = ""
 

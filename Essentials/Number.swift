@@ -45,6 +45,8 @@ public struct Number: Comparable, /*Strideable,*/ SignedNumeric {
 		get { return sign == .zero }
 	}
 	private var radix: UInt = 10
+	static let minRadix = 2
+	static let maxRadix = 36
 
 	/// The numeric value of this Number returned as a String.
 	public var value: String {

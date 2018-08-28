@@ -57,6 +57,50 @@ public extension String {
 			return true
 		}
 	}
+
+	// TODO: Fix deprecations
+	/// Check if this String is a valid representation of a Number.
+	func isValidNumber(forRadix radix: UInt = 10) -> Bool {
+		precondition(radix >= Number.minRadix && radix <= Number.maxRadix, "The radix is limited inclusively to values between \(Number.minRadix) and \(Number.maxRadix)")
+
+		guard !isEmpty else {
+			return false
+		}
+
+		let start: String.Index
+		let minCount: Int
+
+		if first! == "-" {
+			start = index(startIndex, offsetBy: 1)
+			minCount = 2
+		}
+		else {
+			start = startIndex
+			minCount = 1
+		}
+
+		if count < minCount {
+			return false
+		}
+
+		let validTokens: Set<Character> = {
+			let possibleTokens = "0123456789abcdefghijklmnopqrstuvwxyz"
+			let cutIndex = possibleTokens.index(startIndex, offsetBy: Int(radix))
+			let tokensForRadix: String = possibleTokens.substring(to: cutIndex)
+			var tokens = Set(tokensForRadix)
+
+			return tokens
+		}()
+
+		for char in substring(from: start) {
+			if !validTokens.contains(char) {
+				return false
+			}
+		}
+
+		return true
+	}
+
 	/// Remove any leading zeroes in this String if the String is a decimal number.
 	mutating func removeLeadingZeroes() {
 		if isDecimalNumber {

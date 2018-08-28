@@ -26,28 +26,28 @@
 			<key>orderHint</key>
 			<integer>3</integer>
 		</dict>
-		<key>NumberTests.testLargeSubtraction.xcscheme</key>
+		<key>StringTests.testRemoveLeadingZeroes.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
 			<integer>4</integer>
 		</dict>
-		<key>StringTests.testRemoveLeadingZeroes.xcscheme</key>
+		<key>NumberTests.testStrideable.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
 			<integer>5</integer>
 		</dict>
-		<key>NumberTests.testStrideable.xcscheme</key>
+		<key>NumberTests.testMixedAddition.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
 			<integer>6</integer>
 		</dict>
-		<key>NumberTests.testMixedAddition.xcscheme</key>
+		<key>StringTests.testIsValidNumber.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
