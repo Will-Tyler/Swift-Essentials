@@ -27,7 +27,7 @@ fileprivate enum Sign {
 
 }
 
-public struct Number: Comparable, /*Strideable,*/ SignedNumeric {
+public struct Number: Comparable, Strideable, SignedNumeric {
 
 	private var data: String {
 		didSet {

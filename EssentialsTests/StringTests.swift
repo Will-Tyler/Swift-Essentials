@@ -102,6 +102,18 @@ class StringTests: XCTestCase {
 		XCTAssertFalse(string.isValidNumber(forRadix: 2))
 		XCTAssert(string.isValidNumber(forRadix: 4))
 		XCTAssert(string.isValidNumber())
+
+		string = "-10"
+		XCTAssert(string.isValidNumber(forRadix: 2))
+		XCTAssert(string.isValidNumber(forRadix: 3))
+		XCTAssert(string.isValidNumber())
+		XCTAssert(string.isValidNumber(forRadix: 36))
+
+		string = "-0000sadj4z"
+		XCTAssert(string.isValidNumber(forRadix: 36))
+		XCTAssertFalse(string.isValidNumber(forRadix: 35))
+		XCTAssertFalse(string.isValidNumber(forRadix: 10))
+		XCTAssertFalse(string.isValidNumber(forRadix: 2))
 	}
 
 	func testRemoveLeadingZeroes() {

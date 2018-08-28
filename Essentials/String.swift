@@ -11,6 +11,10 @@ import Foundation
 
 public extension String {
 
+	static let digits = "0123456789"
+	static let lowercaseLetters = "abcdefghijklmnopqrstuvwxyz"
+	static let uppercaseLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
 	/// Return the character at the specified index.
 	public subscript(i: Int) -> Character {
 		return self[index(startIndex, offsetBy: i)]
@@ -79,20 +83,20 @@ public extension String {
 			minCount = 1
 		}
 
-		if count < minCount {
+		guard count >= minCount else {
 			return false
 		}
 
 		let validTokens: Set<Character> = {
-			let possibleTokens = "0123456789abcdefghijklmnopqrstuvwxyz"
+			let possibleTokens = String.digits + String.lowercaseLetters
 			let cutIndex = possibleTokens.index(startIndex, offsetBy: Int(radix))
-			let tokensForRadix: String = possibleTokens.substring(to: cutIndex)
-			var tokens = Set(tokensForRadix)
+			let tokensRange = possibleTokens.startIndex..<cutIndex
+			let tokensForRadix = possibleTokens[tokensRange]
 
-			return tokens
+			return Set(tokensForRadix)
 		}()
 
-		for char in substring(from: start) {
+		for char in self[start...] {
 			if !validTokens.contains(char) {
 				return false
 			}
