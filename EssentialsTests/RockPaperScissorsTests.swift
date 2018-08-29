@@ -62,7 +62,6 @@ class RockPaperScissorsTests: XCTestCase {
 		XCTAssertLessThanOrEqual(left, right)
 	}
 
-	// TODO: Finish testing
 	func testGreaterThan() {
 		assertGreaterThan(.rock, .scissors)
 		assertGreaterThan(.paper, .rock)

@@ -19,35 +19,35 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
-		<key>RockPaperScissorsTests.testEquatable.xcscheme</key>
+		<key>RockPaperScissorsTests.testGreaterThan.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
 			<integer>3</integer>
 		</dict>
-		<key>RockPaperScissorsTests.testLessThan.xcscheme</key>
+		<key>RockPaperScissorsTests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
 			<integer>4</integer>
 		</dict>
-		<key>RockPaperScissorsTests.testGreaterThan.xcscheme</key>
+		<key>NumberTests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
 			<integer>5</integer>
 		</dict>
-		<key>RockPaperScissorsTests.xcscheme</key>
+		<key>NumberTests.testEquatable.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
 			<integer>6</integer>
 		</dict>
-		<key>NumberTests.xcscheme</key>
+		<key>NumberTests.testExpressibleByInteger.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />

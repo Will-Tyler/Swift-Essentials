@@ -50,10 +50,56 @@ class NumberTests: XCTestCase {
 		XCTAssertEqual(Number(from: hugeNegative)?.value, hugeNegative)
 	}
 
+	func testExpressibleByInteger() {
+		var mine: Number = 23
+
+		XCTAssertEqual(mine, Number(exactly: 23))
+
+		mine = 0
+
+		XCTAssertEqual(mine, Number.zero)
+
+		mine = -145
+
+		XCTAssertEqual(mine, Number(exactly: -145))
+		XCTAssertNotEqual(mine, Number(exactly: -143))
+	}
+
+	func testExpressibleByString() {
+		var mine: Number = "23"
+
+		XCTAssertEqual(mine, 23 as Number)
+
+		mine = "0"
+
+		XCTAssertEqual(mine, Number.zero)
+
+		let myCoercion = "-145" as Number
+
+		XCTAssertEqual(myCoercion, Number(from: -145))
+	}
+
 	func testMagnitude() {
 		let number = Number(from: "\(Int.min+1)")!
 
 		XCTAssertEqual(number.magnitude.value, "\(Int.max)")
+	}
+
+	func testEquatable() {
+		var left = Number(exactly: 123)
+		var right = Number(from: "123")
+
+		XCTAssertEqual(left, right)
+
+		left = Number(exactly: 0)
+		right = Number.zero
+
+		XCTAssertEqual(left, right)
+
+		left = Number(exactly: -321)
+		right = Number(from: "-00321")
+
+		XCTAssertEqual(left, right)
 	}
 
 	func testComparable() {

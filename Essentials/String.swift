@@ -62,7 +62,6 @@ public extension String {
 		}
 	}
 
-	// TODO: Fix deprecations
 	/// Check if this String is a valid representation of a Number.
 	func isValidNumber(forRadix radix: UInt = 10) -> Bool {
 		precondition(radix >= Number.minRadix && radix <= Number.maxRadix, "The radix is limited inclusively to values between \(Number.minRadix) and \(Number.maxRadix)")

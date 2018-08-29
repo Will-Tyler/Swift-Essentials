@@ -27,7 +27,7 @@ fileprivate enum Sign {
 
 }
 
-public struct Number: Strideable, SignedNumeric {
+public struct Number: Strideable, SignedNumeric, ExpressibleByStringLiteral {
 
 	private var data: String {
 		didSet {
@@ -114,6 +114,12 @@ public struct Number: Strideable, SignedNumeric {
 	public typealias IntegerLiteralType = Int
 	public init(integerLiteral value: IntegerLiteralType) {
 		self.init(exactly: value)
+	}
+
+	// MARK: ExpressibleByStringLiteral
+	public typealias StringLiteralType = String
+	public init(stringLiteral value: StringLiteralType) {
+		self.init(from: value)!
 	}
 
 	// Change the radix that this Number is stored as.
