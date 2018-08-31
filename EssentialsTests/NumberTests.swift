@@ -76,7 +76,7 @@ class NumberTests: XCTestCase {
 
 		let myCoercion = "-145" as Number
 
-		XCTAssertEqual(myCoercion, Number(from: -145))
+		XCTAssertEqual(myCoercion, Number(from: "-145"))
 	}
 
 	func testMagnitude() {
@@ -218,7 +218,7 @@ class NumberTests: XCTestCase {
 	}
 
 	func testAdditionAndAssignment() {
-		var myNumber = Number()
+		var myNumber = Number.zero
 
 		myNumber += Number(exactly: 5)
 
@@ -339,6 +339,32 @@ class NumberTests: XCTestCase {
 		testSubtractionWithStrings("058429875982704509284098502974087208014892365498", minus: "10", shouldEqual: "58429875982704509284098502974087208014892365488")
 		testSubtractionWithStrings("10", minus: "058429875982704509284098502974087208014892365498", shouldEqual: "-58429875982704509284098502974087208014892365488")
 	}
+	
+	func testSubtractionAndAssignment() {
+		var myNumber: Number = 0
+
+		myNumber -= 1
+
+		XCTAssertEqual(myNumber.value, "-1")
+
+		myNumber -= 10
+
+		XCTAssertEqual(myNumber.value, "-11")
+
+		myNumber -= 999
+
+		XCTAssertEqual(myNumber.value, "-1010")
+
+		myNumber = 1000
+		myNumber -= 999
+
+		XCTAssertEqual(myNumber.value, "1")
+
+		myNumber -= myNumber
+
+		XCTAssertEqual(myNumber.value, "0")
+		XCTAssertEqual(myNumber, Number.zero)
+	}
 
 	func testStrideable() {
 		let high = Number(exactly: 10)
@@ -347,6 +373,13 @@ class NumberTests: XCTestCase {
 
 		XCTAssertEqual(low.distance(to: high), diff)
 		XCTAssertEqual(low.advanced(by: diff), high)
+
+		var reference: Number = 0
+
+		for test in stride(from: Number.zero, through: 9, by: 1) {
+			defer { reference += 1 }
+			XCTAssertEqual(test, reference)
+		}
 	}
 
 	private func testMultiplicationWithInts(left: Int, right: Int) {
@@ -357,20 +390,33 @@ class NumberTests: XCTestCase {
 		XCTAssertEqual(product.value, "\(left * right)")
 	}
 
-	func testMultiplication() {
-//		testMultiplicationWithInts(left: 0, right: 0)
-//		testMultiplicationWithInts(left: 0, right: 1)
-//		testMultiplicationWithInts(left: 1, right: 0)
-//		testMultiplicationWithInts(left: 1, right: 1)
-//		testMultiplicationWithInts(left: -1, right: 1)
-//		testMultiplicationWithInts(left: 1, right: -1)
-//		testMultiplicationWithInts(left: -1, right: -1)
-//		testMultiplicationWithInts(left: 5, right: 5)
-//		testMultiplicationWithInts(left: 5, right: -5)
-//		testMultiplicationWithInts(left: -5, right: 5)
-//		testMultiplicationWithInts(left: -5, right: -5)
-//		testMultiplicationWithInts(left: 5, right: 6)
-//		testMultiplicationWithInts(left: 6, right: 5)
+	func testMultiplicationWithZeroes() {
+		testMultiplicationWithInts(left: 0, right: 0)
+		testMultiplicationWithInts(left: 0, right: 1)
+		testMultiplicationWithInts(left: 1, right: 0)
+		testMultiplicationWithInts(left: 98299, right: 0)
+		testMultiplicationWithInts(left: 0, right: 94829)
+		testMultiplicationWithInts(left: -928498, right: 0)
+		testMultiplicationWithInts(left: 0, right: -24892)
+	}
+
+	func testMultiplicationPositives() {
+		testMultiplicationWithInts(left: 1, right: 1)
+		testMultiplicationWithInts(left: 5, right: 5)
+		testMultiplicationWithInts(left: 5, right: 6)
+		testMultiplicationWithInts(left: 6, right: 5)
+	}
+
+	func testMultiplicationNegatives() {
+		testMultiplicationWithInts(left: -1, right: -1)
+		testMultiplicationWithInts(left: -5, right: -5)
+	}
+
+	func testMultiplicationMixed() {
+		testMultiplicationWithInts(left: -1, right: 1)
+		testMultiplicationWithInts(left: 1, right: -1)
+		testMultiplicationWithInts(left: 5, right: -5)
+		testMultiplicationWithInts(left: -5, right: 5)
 	}
 
 }

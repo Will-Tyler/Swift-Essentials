@@ -320,9 +320,9 @@ public struct Number: Strideable, SignedNumeric, ExpressibleByStringLiteral {
 		var newNumber = Number.zero
 
 		newNumber.sign = left.sign == right.sign ? .positive : .negative
-//		for _ in stride(from: Number(exactly: 1), through: right, by: Number(exactly: 1) as Stride) {
-//			newNumber += left
-//		}
+		for _ in stride(from: 1, through: right.magnitude, by: 1) {
+			newNumber += left.magnitude
+		}
 
 		return newNumber
 	}

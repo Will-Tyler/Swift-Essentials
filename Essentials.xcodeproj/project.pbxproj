@@ -111,9 +111,11 @@
 		9732A41EB734343083EBD77D /* RockPaperScissorsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RockPaperScissorsTests.swift; sourceTree = "<group>"; };
 		9732A45BEE4D29BE0222983B /* Characters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Characters.swift; sourceTree = "<group>"; };
 		9732A5D806E07A503969CCA6 /* NSScreenTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSScreenTests.swift; sourceTree = "<group>"; };
+		9732A781104E7B7D570565B0 /* Incrementable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Incrementable.swift; sourceTree = "<group>"; };
 		9732A967B65FE4925ED04BE9 /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		9732AD2C83C04C00537C8D8E /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		9732ADBBC528917CC86E9318 /* RockPaperScissors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RockPaperScissors.swift; sourceTree = "<group>"; };
+		9732AEB3B31E6A83F567E767 /* Decrementable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Decrementable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +185,8 @@
 				4CFB9D5520C048D40048BB16 /* String.swift */,
 				4C265A89212064EF00B5113B /* UnsafePointer.swift */,
 				9732ADBBC528917CC86E9318 /* RockPaperScissors.swift */,
+				9732A781104E7B7D570565B0 /* Incrementable.swift */,
+				9732AEB3B31E6A83F567E767 /* Decrementable.swift */,
 			);
 			path = Essentials;
 			sourceTree = "<group>";
