@@ -20,6 +20,7 @@
 		4C74BE6F20DD409A00F765C8 /* Bool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C74BE6C20DD406700F765C8 /* Bool.swift */; };
 		4C74BE7120DD411800F765C8 /* BoolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C74BE7020DD411800F765C8 /* BoolTests.swift */; };
 		4C8736A721013513007BAADF /* NSScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8736A621013513007BAADF /* NSScreen.swift */; };
+		4CDA5DE4213B73C1005D5F98 /* Sign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDA5DE3213B73C1005D5F98 /* Sign.swift */; };
 		4CDBB74620E8941300728A50 /* Number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDBB74520E8941300728A50 /* Number.swift */; };
 		4CDBB74720E8941300728A50 /* Number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDBB74520E8941300728A50 /* Number.swift */; };
 		4CDBB74820E8941300728A50 /* Number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDBB74520E8941300728A50 /* Number.swift */; };
@@ -54,6 +55,7 @@
 		9732AB29E36AFB189895AABB /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9732AD2C83C04C00537C8D8E /* UIView.swift */; };
 		9732AD0BD9092124467DE1C6 /* CharacterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9732A0FBD14DC657C34875A7 /* CharacterTests.swift */; };
 		9732ADD1FF48DD13D8FE03FF /* NSScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9732A5D806E07A503969CCA6 /* NSScreenTests.swift */; };
+		9732AF7C1B682B9350FFF308 /* SignTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9732A3E4FA21B95E29E203BA /* SignTests.swift */; };
 		9732AFFE7706D7A5E2CAF5F7 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9732A056F8D39589E806E0F0 /* UIViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +83,7 @@
 		4C74BE6C20DD406700F765C8 /* Bool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bool.swift; sourceTree = "<group>"; };
 		4C74BE7020DD411800F765C8 /* BoolTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoolTests.swift; sourceTree = "<group>"; };
 		4C8736A621013513007BAADF /* NSScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSScreen.swift; sourceTree = "<group>"; };
+		4CDA5DE3213B73C1005D5F98 /* Sign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sign.swift; sourceTree = "<group>"; };
 		4CDBB74520E8941300728A50 /* Number.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Number.swift; sourceTree = "<group>"; };
 		4CE04D49211F97C30058155D /* NSViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSViewTests.swift; sourceTree = "<group>"; };
 		4CFB9D5220C048D40048BB16 /* Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Random.swift; sourceTree = "<group>"; };
@@ -108,6 +111,7 @@
 		4CFB9D9F20C0499F0048BB16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9732A056F8D39589E806E0F0 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		9732A0FBD14DC657C34875A7 /* CharacterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterTests.swift; sourceTree = "<group>"; };
+		9732A3E4FA21B95E29E203BA /* SignTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignTests.swift; sourceTree = "<group>"; };
 		9732A41EB734343083EBD77D /* RockPaperScissorsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RockPaperScissorsTests.swift; sourceTree = "<group>"; };
 		9732A45BEE4D29BE0222983B /* Characters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Characters.swift; sourceTree = "<group>"; };
 		9732A5D806E07A503969CCA6 /* NSScreenTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSScreenTests.swift; sourceTree = "<group>"; };
@@ -179,14 +183,15 @@
 				4C74BE6C20DD406700F765C8 /* Bool.swift */,
 				9732A967B65FE4925ED04BE9 /* Character.swift */,
 				9732A45BEE4D29BE0222983B /* Characters.swift */,
+				9732AEB3B31E6A83F567E767 /* Decrementable.swift */,
+				9732A781104E7B7D570565B0 /* Incrementable.swift */,
 				4CDBB74520E8941300728A50 /* Number.swift */,
 				4CFB9D5220C048D40048BB16 /* Random.swift */,
+				9732ADBBC528917CC86E9318 /* RockPaperScissors.swift */,
+				4CDA5DE3213B73C1005D5F98 /* Sign.swift */,
 				4CFB9D5320C048D40048BB16 /* Stack.swift */,
 				4CFB9D5520C048D40048BB16 /* String.swift */,
 				4C265A89212064EF00B5113B /* UnsafePointer.swift */,
-				9732ADBBC528917CC86E9318 /* RockPaperScissors.swift */,
-				9732A781104E7B7D570565B0 /* Incrementable.swift */,
-				9732AEB3B31E6A83F567E767 /* Decrementable.swift */,
 			);
 			path = Essentials;
 			sourceTree = "<group>";
@@ -216,6 +221,7 @@
 				4CFB9D6520C0491D0048BB16 /* StringTests.swift */,
 				4CFB9D5F20C0490F0048BB16 /* Info.plist */,
 				9732A41EB734343083EBD77D /* RockPaperScissorsTests.swift */,
+				9732A3E4FA21B95E29E203BA /* SignTests.swift */,
 			);
 			path = EssentialsTests;
 			sourceTree = "<group>";
@@ -465,6 +471,7 @@
 			files = (
 				4CFB9D6A20C0491D0048BB16 /* RandomTests.swift in Sources */,
 				4CFB9D6720C0491D0048BB16 /* StackTests.swift in Sources */,
+				4CDA5DE4213B73C1005D5F98 /* Sign.swift in Sources */,
 				4C530C5B20EAA24B000636FB /* NumberTests.swift in Sources */,
 				4CFB9D6820C0491D0048BB16 /* BinaryIntegerTests.swift in Sources */,
 				4C74BE6D20DD406700F765C8 /* Bool.swift in Sources */,
@@ -483,6 +490,7 @@
 				9732A15D033A8A7B5A54A71C /* Characters.swift in Sources */,
 				9732A1D071423951CEAEC255 /* RockPaperScissors.swift in Sources */,
 				9732A7CE74EE3EEB0B0BE549 /* RockPaperScissorsTests.swift in Sources */,
+				9732AF7C1B682B9350FFF308 /* SignTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

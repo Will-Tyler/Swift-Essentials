@@ -19,35 +19,35 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
-		<key>NumberTests.testMultiplicationWithZeroes.xcscheme</key>
+		<key>NumberTests.testMultiplicationPositives.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
 			<integer>3</integer>
 		</dict>
-		<key>NumberTests.testMultiplicationPositives.xcscheme</key>
+		<key>NumberTests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
 			<integer>4</integer>
 		</dict>
-		<key>NumberTests.xcscheme</key>
+		<key>NumberTests.testSubtractionAndAssignment.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
 			<integer>5</integer>
 		</dict>
-		<key>NumberTests.testSubtractionAndAssignment.xcscheme</key>
+		<key>NumberTests.testStrideable.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
 			<integer>6</integer>
 		</dict>
-		<key>NumberTests.testStrideable.xcscheme</key>
+		<key>SignTests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />

@@ -375,11 +375,18 @@ class NumberTests: XCTestCase {
 		XCTAssertEqual(low.advanced(by: diff), high)
 
 		var reference: Number = 0
-
-		for test in stride(from: Number.zero, through: 9, by: 1) {
+		var ranStride = false
+		for test in stride(from: 0 as Number, through: 9, by: 1) {
 			defer { reference += 1 }
+
+			if !ranStride {
+				ranStride = true
+			}
+
 			XCTAssertEqual(test, reference)
 		}
+
+		XCTAssert(ranStride, "Never ran stride.")
 	}
 
 	private func testMultiplicationWithInts(left: Int, right: Int) {

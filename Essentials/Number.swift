@@ -8,25 +8,6 @@
 import Foundation
 
 
-fileprivate enum Sign {
-
-	case positive
-	case zero
-	case negative
-
-	mutating func toggle() {
-		switch self {
-		case .positive:
-			self = .negative
-		case .negative:
-			self = .positive
-		case.zero:
-			break
-		}
-	}
-
-}
-
 public struct Number: Strideable, SignedNumeric, ExpressibleByStringLiteral {
 
 	private var data: String {
@@ -312,16 +293,25 @@ public struct Number: Strideable, SignedNumeric, ExpressibleByStringLiteral {
 
 	// MARK: Operations
 	public static func *(left: Number, right: Number) -> Number {
-		if left.isZero || right.isZero {
-			return Number.zero
+		guard !left.isZero && !right.isZero else {
+			return 0
 		}
 		assert(left.sign != .zero && right.sign != .zero)
 
 		var newNumber = Number.zero
 
 		newNumber.sign = left.sign == right.sign ? .positive : .negative
-		for _ in stride(from: 1, through: right.magnitude, by: 1) {
-			newNumber += left.magnitude
+
+		let leftMag = left.magnitude
+		let rightMag = right.magnitude
+		var reference: Number = 0
+
+		while reference < rightMag {
+			defer {
+				reference += 1
+			}
+
+			newNumber += leftMag
 		}
 
 		return newNumber
