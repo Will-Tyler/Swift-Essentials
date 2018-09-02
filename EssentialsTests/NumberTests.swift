@@ -426,4 +426,52 @@ class NumberTests: XCTestCase {
 		testMultiplicationWithInts(left: -5, right: 5)
 	}
 
+	func testIncrementable() {
+		var number: Number = -1
+
+		XCTAssertEqual((number++).value, "-1")
+		XCTAssertEqual(number.value, "0")
+
+		XCTAssertEqual(number++.value, "0")
+		XCTAssertEqual(number.value, "1")
+
+		XCTAssertEqual(number++.value, "1")
+		XCTAssertEqual(number.value, "2")
+
+		number = -1
+
+		XCTAssertEqual((++number).value, "0")
+		XCTAssertEqual(number.value, "0")
+
+		XCTAssertEqual((++number).value, "1")
+		XCTAssertEqual(number.value, "1")
+
+		XCTAssertEqual((++number).value, "2")
+		XCTAssertEqual(number, 2)
+	}
+
+	func testDecrementable() {
+		var number: Number = 1
+
+		XCTAssertEqual(number--, 1)
+		XCTAssertEqual(number, 0)
+
+		XCTAssertEqual(number--, 0)
+		XCTAssertEqual(number, -1)
+
+		XCTAssertEqual(number--, -1)
+		XCTAssertEqual(number, -2)
+
+		number = 1
+
+		XCTAssertEqual(--number, 0)
+		XCTAssertEqual(number, 0)
+
+		XCTAssertEqual(--number, -1)
+		XCTAssertEqual(number, -1)
+
+		XCTAssertEqual(--number, -2)
+		XCTAssertEqual(number, -2)
+	}
+
 }

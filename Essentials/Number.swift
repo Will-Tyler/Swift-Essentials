@@ -292,33 +292,6 @@ public struct Number: Strideable, SignedNumeric, ExpressibleByStringLiteral {
 	}
 
 	// MARK: Operations
-	public static func *(left: Number, right: Number) -> Number {
-		guard !left.isZero && !right.isZero else {
-			return 0
-		}
-		assert(left.sign != .zero && right.sign != .zero)
-
-		var newNumber = Number.zero
-
-		newNumber.sign = left.sign == right.sign ? .positive : .negative
-
-		let leftMag = left.magnitude
-		let rightMag = right.magnitude
-		var reference: Number = 0
-
-		while reference < rightMag {
-			defer {
-				reference += 1
-			}
-
-			newNumber += leftMag
-		}
-
-		return newNumber
-	}
-	public static func *=(left: inout Number, right: Number) {
-		left = left * right
-	}
 	public static func +(left: Number, right: Number) -> Number {
 		guard !left.isZero else {
 			return right
@@ -384,8 +357,68 @@ public struct Number: Strideable, SignedNumeric, ExpressibleByStringLiteral {
 	public static func -=(left: inout Number, right: Number) {
 		left = left - right
 	}
+	public static func *(left: Number, right: Number) -> Number {
+		guard !left.isZero && !right.isZero else {
+			return 0
+		}
+		assert(left.sign != .zero && right.sign != .zero)
+
+		var newNumber: Number = 0
+
+		newNumber.sign = left.sign == right.sign ? .positive : .negative
+
+		let leftData = left.data
+		let rightData = right.data
+		let rightMag = right.magnitude
+		var reference: Number = 0
+
+		while reference < rightMag {
+			defer {
+				reference++
+			}
+
+			newNumber.data = addPositiveDecimalStrings(left: newNumber.data, right: leftData)
+		}
+
+		return newNumber
+	}
+	public static func *=(left: inout Number, right: Number) {
+		left = left * right
+	}
 	public static func %(left: Number, right: Number) -> Number {
 		return Number.zero
+	}
+
+	// MARK: Incrementable
+	@discardableResult
+	public static prefix func ++(number: inout Number) -> Number {
+		number += 1
+
+		return number
+	}
+	@discardableResult
+	public static postfix func ++(number: inout Number) -> Number {
+		defer {
+			number += 1
+		}
+
+		return number
+	}
+
+	// MARK: Decrementable
+	@discardableResult
+	public static prefix func --(number: inout Number) -> Number {
+		number -= 1
+
+		return number
+	}
+	@discardableResult
+	public static postfix func --(number: inout Number) -> Number {
+		defer {
+			number -= 1
+		}
+
+		return number
 	}
 
 }

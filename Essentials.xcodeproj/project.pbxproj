@@ -217,11 +217,11 @@
 				9732A0FBD14DC657C34875A7 /* CharacterTests.swift */,
 				4C530C5A20EAA24B000636FB /* NumberTests.swift */,
 				4CFB9D6620C0491D0048BB16 /* RandomTests.swift */,
+				9732A41EB734343083EBD77D /* RockPaperScissorsTests.swift */,
+				9732A3E4FA21B95E29E203BA /* SignTests.swift */,
 				4CFB9D6320C0491D0048BB16 /* StackTests.swift */,
 				4CFB9D6520C0491D0048BB16 /* StringTests.swift */,
 				4CFB9D5F20C0490F0048BB16 /* Info.plist */,
-				9732A41EB734343083EBD77D /* RockPaperScissorsTests.swift */,
-				9732A3E4FA21B95E29E203BA /* SignTests.swift */,
 			);
 			path = EssentialsTests;
 			sourceTree = "<group>";
