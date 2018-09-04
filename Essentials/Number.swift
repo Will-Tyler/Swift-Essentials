@@ -129,32 +129,20 @@ public struct Number: Strideable, SignedNumeric, ExpressibleByStringLiteral {
 		return left.sign == right.sign && left.data == right.data
 	}
 	public static func <(left: Number, right: Number) -> Bool {
-		if left.isPositive != right.isPositive {
-			return left.isNegative
+		guard left.sign == right.sign else {
+			return left.sign < right.sign
 		}
 
-		if left.isPositive { // signs are equal
-			if left.data.count != right.data.count {
-				return left.data.count < right.data.count
-			}
+		let smallerIsLesser = left.isPositive
 
-			for (offset, char) in left.data.enumerated() {
-				if char != right.data[offset] {
-					return char < right.data[offset]
-				}
-			}
-
-			return false // should be equal at this point
+		guard left.data.count == right.data.count else {
+			let leftIsSmaller = left.data.count < right.data.count
+			return smallerIsLesser ? leftIsSmaller : !leftIsSmaller
 		}
-		else {
-			if left.data.count != right.data.count { return left.data.count < right.data.count }
 
-			for (offset, char) in left.data.enumerated() {
-				if char != right.data[offset] { return char > right.data[offset] }
-			}
+		let leftIsSmaller = left.data < right.data
 
-			return false // equal
-		}
+		return smallerIsLesser ? leftIsSmaller : !leftIsSmaller
 	}
 
 	// MARK: Strideable

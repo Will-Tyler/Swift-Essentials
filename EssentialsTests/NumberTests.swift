@@ -102,6 +102,22 @@ class NumberTests: XCTestCase {
 		XCTAssertEqual(left, right)
 	}
 
+	private func assertLessThanWithInts(_ left: Int, lessThan right: Int) {
+		let expected = left < right
+		let actual = Number(integerLiteral: left) < Number(integerLiteral: right)
+
+		XCTAssertEqual(actual, expected)
+	}
+
+	func testLessThan() {
+		for _ in 0..<100 {
+			let first = Int(Random.from(Int16.min...Int16.max))
+			let second = Int(Random.from(Int16.min...Int16.max))
+
+			assertLessThanWithInts(first, lessThan: second)
+		}
+	}
+
 	func testComparable() {
 		var numbers = (first: Number(exactly: -123), second: Number(exactly: 123))
 
