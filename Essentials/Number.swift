@@ -373,6 +373,7 @@ public struct Number: Strideable, SignedNumeric, ExpressibleByStringLiteral {
 	public static func *=(left: inout Number, right: Number) {
 		left = left * right
 	}
+	// TODO: Implement modulus
 	public static func %(left: Number, right: Number) -> Number {
 		return Number.zero
 	}
