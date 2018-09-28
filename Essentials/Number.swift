@@ -123,7 +123,7 @@ public struct Number: Strideable, SignedNumeric, ExpressibleByStringLiteral {
 //		}
 //	}
 
-	//MARK: Comparable
+	// MARK: Comparable
 	public static func ==(left: Number, right: Number) -> Bool {
 		// TODO: Handle radix
 		return left.sign == right.sign && left.data == right.data
@@ -246,29 +246,6 @@ public struct Number: Strideable, SignedNumeric, ExpressibleByStringLiteral {
 
 		return String(diffs.reversed())
 	}
-	private static func multiplyDecimalStrings(left: String, right: String) -> String {
-		precondition(left.isPositiveDecimalNumber && right.isPositiveDecimalNumber)
-
-		let preparedStrings = prepareStringsForArithmetic(left, right)
-		let top = preparedStrings.greater
-		let bottom = preparedStrings.lesser
-		let totalCount = top.count + bottom.count
-
-		let products = [Character](repeating: "0" as Character, count: totalCount)
-		// Cannot use multiplication algorithm from CS 251 yet because modulus is not defined. Quick solution is to use addition.
-//		var carry = 0
-//		for i in 0..<top.count {
-//			carry = 0
-//
-//			for j in 0..<bottom.count {
-//				let result = Int(String(top[i])) * Int(String(bottom[j])) + Int(String(products[i+j])) + carry
-//
-//				products[i+j] = result
-//			}
-//		}
-
-		return String(products.reversed())
-	}
 
 	// MARK: Negation
 	public static prefix func -(number: Number) -> Number {
@@ -355,9 +332,8 @@ public struct Number: Strideable, SignedNumeric, ExpressibleByStringLiteral {
 
 		newNumber.sign = left.sign == right.sign ? .positive : .negative
 
-		let leftData = left.data
-		let rightData = right.data
 		let rightMag = right.magnitude
+		let leftData = left.data
 		var reference: Number = 0
 
 		while reference < rightMag {

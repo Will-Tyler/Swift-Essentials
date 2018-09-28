@@ -25,11 +25,11 @@ class NSScreenTests: XCTestCase {
 		super.tearDown()
 	}
 
-	func testSize() {
-		let frame = screen.frame
-		let expectedSize = NSSize(width: frame.width, height: frame.height)
-
-		XCTAssertEqual(screen.size, expectedSize)
-	}
+//	func testSize() {
+//		let frame = screen.frame
+//		let expectedSize = NSSize(width: frame.width, height: frame.height)
+//
+//		XCTAssertEqual(screen.size, expectedSize)
+//	}
 
 }

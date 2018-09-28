@@ -18,22 +18,24 @@ public enum Sign: Comparable {
 		switch self {
 		case .positive:
 			self = .negative
+
 		case .negative:
 			self = .positive
-		case.zero:
+
+		case .zero:
 			break
 		}
 	}
 
 	public static func <(left: Sign, right: Sign) -> Bool {
 		switch left {
-		case positive:
+		case .positive:
 			return false
 
-		case negative:
+		case .negative:
 			return left != right
 
-		case zero:
+		case .zero:
 			return right == positive
 		}
 	}

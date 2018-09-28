@@ -15,6 +15,7 @@ class NumberTests: XCTestCase {
 
 		XCTAssertEqual(number.value, "0")
 		XCTAssertEqual(number, Number.zero)
+		XCTAssertEqual(number, 0)
 	}
 
 	func testInitWithInt() {
