@@ -117,7 +117,7 @@ public class Random {
 			return collection.first!
 		}
 
-		let offset = int(lower: 0, upper: collection.count-1)
+		let offset = Int.random(in: 0..<collection.count)
 		let index = collection.index(collection.startIndex, offsetBy: offset)
 
 		return collection[index]
