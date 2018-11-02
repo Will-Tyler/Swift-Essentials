@@ -382,7 +382,12 @@ public struct Number: Strideable, SignedNumeric, ExpressibleByStringLiteral, Exp
 	}
 	// TODO: Implement modulus
 	public static func %(left: Number, right: Number) -> Number {
-		return Number.zero
+		precondition(!right.isZero, "Cannot perform mod 0.")
+
+		let q = (left / right)!
+		let r = left - right * q
+
+		return r
 	}
 
 	// MARK: Incrementable

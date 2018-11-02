@@ -511,6 +511,26 @@ class NumberTests: XCTestCase {
 		}
 	}
 
+	private func testRemainderWithInts(_ left: Number, mod right: Number) {
+		// TODO
+	}
+
+	func testRemainderPositives() {
+		// TODO
+	}
+
+	func testRemainderNegatives() {
+		// TODO
+	}
+
+	func testRemainderMixed() {
+		// TODO
+	}
+
+	func testRemainderRandom() {
+		// TODO
+	}
+
 	func testIncrementable() {
 		var number: Number = -1
 
