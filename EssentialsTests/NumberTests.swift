@@ -457,6 +457,60 @@ class NumberTests: XCTestCase {
 		}
 	}
 
+	private func testDivisionWithInts(_ dividend: Int, dividedBy divisor: Int) {
+		precondition(divisor != 0)
+
+		let dividendNumber = Number(exactly: dividend)
+		let divisorNumber = Number(exactly: divisor)
+		let quotientNumber = (dividendNumber / divisorNumber)!;
+
+		XCTAssertEqual(quotientNumber.value, "\(dividend / divisor)")
+	}
+
+	func testDivisionByZero() {
+		let randomNumber = Number(exactly: Random.int)
+
+		XCTAssertNil(randomNumber / 0)
+	}
+
+	func testDivisionByNonZeroPositives() {
+		testDivisionWithInts(0, dividedBy: 1)
+		testDivisionWithInts(4, dividedBy: 2)
+		testDivisionWithInts(5, dividedBy: 2)
+		testDivisionWithInts(15, dividedBy: 3)
+		testDivisionWithInts(3, dividedBy: 15)
+		testDivisionWithInts(99, dividedBy: 100)
+		testDivisionWithInts(100, dividedBy: 100)
+		testDivisionWithInts(492897, dividedBy: 948)
+	}
+
+	func testDivisionByNonZeroNegatives() {
+		testDivisionWithInts(0, dividedBy: -1)
+		testDivisionWithInts(-4, dividedBy: -2)
+		testDivisionWithInts(-5, dividedBy: -2)
+		testDivisionWithInts(-15, dividedBy: -3)
+		testDivisionWithInts(-3, dividedBy: -15)
+		testDivisionWithInts(-99, dividedBy: -100)
+		testDivisionWithInts(-100, dividedBy: -100)
+		testDivisionWithInts(-4294729, dividedBy: -4829)
+		testDivisionWithInts(-654, dividedBy: -42894581)
+	}
+
+	func testDivisionByNonZeroMixed() {
+		testDivisionWithInts(0, dividedBy: 48792847)
+		testDivisionWithInts(-15, dividedBy: 3)
+		testDivisionWithInts(25, dividedBy: -5)
+		testDivisionWithInts(-5, dividedBy: 30)
+		testDivisionWithInts(-289489533, dividedBy: 5465461)
+		testDivisionWithInts(928974, dividedBy: -5949274)
+	}
+
+	func testDivisionByNonZeroRandoms() {
+		for _ in 0..<100 {
+			testDivisionWithInts(Int.random(in: Int(Int8.min)...Int(Int8.max)), dividedBy: Int.random(in: 1...Int(Int8.max)))
+		}
+	}
+
 	func testIncrementable() {
 		var number: Number = -1
 

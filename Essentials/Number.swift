@@ -8,7 +8,7 @@
 import Foundation
 
 
-public struct Number: Strideable, SignedNumeric, ExpressibleByStringLiteral {
+public struct Number: Strideable, SignedNumeric, ExpressibleByStringLiteral, ExpressibleByIntegerLiteral {
 
 	private var data: String {
 		didSet {
@@ -348,6 +348,37 @@ public struct Number: Strideable, SignedNumeric, ExpressibleByStringLiteral {
 	}
 	public static func *=(left: inout Number, right: Number) {
 		left = left * right
+	}
+	public static func /(dividend: Number, divisor: Number) -> Number? {
+		guard !divisor.isZero else {
+			return nil
+		}
+		guard !dividend.isZero else {
+			return 0
+		}
+
+		var dividendMag = dividend.magnitude
+		let divisorMag = divisor.magnitude
+		var subtractCount: Number = 0;
+
+		while (dividendMag >= divisorMag) {
+			defer {
+				subtractCount += 1
+			}
+
+			dividendMag -= divisorMag
+		}
+
+		if !subtractCount.isZero {
+			subtractCount.sign = dividend.sign == divisor.sign ? .positive : .negative
+		}
+
+		return subtractCount
+	}
+	public static func /=(left: inout Number?, right: Number) {
+		if let unwrap = left {
+			left = unwrap / right
+		}
 	}
 	// TODO: Implement modulus
 	public static func %(left: Number, right: Number) -> Number {
