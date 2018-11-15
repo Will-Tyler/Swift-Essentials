@@ -24,6 +24,7 @@
 		4C74BE6F20DD409A00F765C8 /* Bool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C74BE6C20DD406700F765C8 /* Bool.swift */; };
 		4C74BE7120DD411800F765C8 /* BoolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C74BE7020DD411800F765C8 /* BoolTests.swift */; };
 		4C8736A721013513007BAADF /* NSScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8736A621013513007BAADF /* NSScreen.swift */; };
+		4CCB612D219E35B000F889E6 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCB612C219E35B000F889E6 /* UIColor.swift */; };
 		4CDA5DE4213B73C1005D5F98 /* Sign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDA5DE3213B73C1005D5F98 /* Sign.swift */; };
 		4CDBB74620E8941300728A50 /* Number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDBB74520E8941300728A50 /* Number.swift */; };
 		4CDBB74720E8941300728A50 /* Number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDBB74520E8941300728A50 /* Number.swift */; };
@@ -87,6 +88,7 @@
 		4C74BE6C20DD406700F765C8 /* Bool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bool.swift; sourceTree = "<group>"; };
 		4C74BE7020DD411800F765C8 /* BoolTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoolTests.swift; sourceTree = "<group>"; };
 		4C8736A621013513007BAADF /* NSScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSScreen.swift; sourceTree = "<group>"; };
+		4CCB612C219E35B000F889E6 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		4CDA5DE3213B73C1005D5F98 /* Sign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sign.swift; sourceTree = "<group>"; };
 		4CDBB74520E8941300728A50 /* Number.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Number.swift; sourceTree = "<group>"; };
 		4CE04D49211F97C30058155D /* NSViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSViewTests.swift; sourceTree = "<group>"; };
@@ -259,6 +261,7 @@
 				4CFB9D9320C0499F0048BB16 /* Info.plist */,
 				9732AD2C83C04C00537C8D8E /* UIView.swift */,
 				9732A056F8D39589E806E0F0 /* UIViewController.swift */,
+				4CCB612C219E35B000F889E6 /* UIColor.swift */,
 			);
 			path = EssentialsiOS;
 			sourceTree = "<group>";
@@ -541,6 +544,7 @@
 				4CFB9E0320C063090048BB16 /* BinaryInteger.swift in Sources */,
 				4CFB9E0220C063050048BB16 /* String.swift in Sources */,
 				4C74BE6F20DD409A00F765C8 /* Bool.swift in Sources */,
+				4CCB612D219E35B000F889E6 /* UIColor.swift in Sources */,
 				4C6391D6215EE34E00B2E923 /* Character.swift in Sources */,
 				9732A8229F19EE320867CAA4 /* UIView.swift in Sources */,
 				9732AFFE7706D7A5E2CAF5F7 /* UIViewController.swift in Sources */,
