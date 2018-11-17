@@ -126,4 +126,13 @@ public extension String {
 		}
 	}
 
+	var isValidEmail: Bool {
+		get {
+			let pattern = "\\A[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\z"
+			let regex = try! NSRegularExpression(pattern: pattern, options: .caseInsensitive)
+
+			return regex.numberOfMatches(in: self, range: NSRange(location: 0, length: count)) > 0
+		}
+	}
+
 }

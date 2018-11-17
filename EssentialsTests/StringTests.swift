@@ -146,4 +146,15 @@ class StringTests: XCTestCase {
 		XCTAssertEqual(string, "2839844982139830")
 	}
 
+	func testIsValidEmail() {
+		var string = "will.tyler11@gmail.com"
+		XCTAssertTrue(string.isValidEmail)
+
+		string = "willtyler98@purdue.edu"
+		XCTAssertTrue(string.isValidEmail)
+
+		string = "willtylergmail.com"
+		XCTAssertFalse(string.isValidEmail)
+	}
+
 }
