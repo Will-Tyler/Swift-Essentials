@@ -155,6 +155,12 @@ class StringTests: XCTestCase {
 
 		string = "willtylergmail.com"
 		XCTAssertFalse(string.isValidEmail)
+
+		string = " will.tyler11@gmail.com"
+		XCTAssertFalse(string.isValidEmail)
+
+		string = "will.tyler11@gmail.com "
+		XCTAssertFalse(string.isValidEmail)
 	}
 
 }

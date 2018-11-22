@@ -129,7 +129,7 @@ public extension String {
 	var isValidEmail: Bool {
 		get {
 			let pattern = "\\A(?=[a-z0-9@.!#$%&'*+/=?^_`{|}~-]{6,254}\\z)(?=[a-z0-9.!#$%&'*+/=?^_`{|}~-]{1,64}@)[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:(?=[a-z0-9-]{1,63}\\.)[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+(?=[a-z0-9-]{1,63}\\z)[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\z"
-			let regex = try! NSRegularExpression(pattern: pattern, options: .caseInsensitive)
+			let regex = try! NSRegularExpression(pattern: pattern, options: [])
 
 			return regex.numberOfMatches(in: self, range: NSRange(location: 0, length: count)) > 0
 		}
