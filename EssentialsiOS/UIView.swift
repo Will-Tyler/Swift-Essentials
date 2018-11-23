@@ -11,4 +11,18 @@ public extension UIView {
 		subviews.forEach({ $0.removeFromSuperview() })
 	}
 
+	public var controller: UIViewController? {
+		get {
+			if let controller = next as? UIViewController {
+				return controller
+			}
+			else if let view = next as? UIView {
+				return view.controller
+			}
+			else {
+				return nil
+			}
+		}
+	}
+
 }
