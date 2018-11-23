@@ -16,6 +16,7 @@
 		4C334D3320F8DE1100DC48E9 /* NSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C334D3120F8DE1100DC48E9 /* NSView.swift */; };
 		4C35095821A72D3C00B7500D /* NSLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C35095721A72D3C00B7500D /* NSLayoutConstraint.swift */; };
 		4C35095A21A72D4F00B7500D /* NSLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C35095921A72D4F00B7500D /* NSLayoutConstraint.swift */; };
+		4C35096021A79A3100B7500D /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C35095F21A79A3100B7500D /* Array.swift */; };
 		4C530C5B20EAA24B000636FB /* NumberTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C530C5A20EAA24B000636FB /* NumberTests.swift */; };
 		4C6391D3215EE33700B2E923 /* Sign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDA5DE3213B73C1005D5F98 /* Sign.swift */; };
 		4C6391D4215EE33800B2E923 /* Sign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDA5DE3213B73C1005D5F98 /* Sign.swift */; };
@@ -88,6 +89,7 @@
 		4C334D3120F8DE1100DC48E9 /* NSView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSView.swift; sourceTree = "<group>"; };
 		4C35095721A72D3C00B7500D /* NSLayoutConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSLayoutConstraint.swift; sourceTree = "<group>"; };
 		4C35095921A72D4F00B7500D /* NSLayoutConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSLayoutConstraint.swift; sourceTree = "<group>"; };
+		4C35095F21A79A3100B7500D /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		4C530C5A20EAA24B000636FB /* NumberTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberTests.swift; sourceTree = "<group>"; };
 		4C74BE6C20DD406700F765C8 /* Bool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bool.swift; sourceTree = "<group>"; };
 		4C74BE7020DD411800F765C8 /* BoolTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoolTests.swift; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 		4CFB9D5120C048BD0048BB16 /* Essentials */ = {
 			isa = PBXGroup;
 			children = (
+				4C35095F21A79A3100B7500D /* Array.swift */,
 				4CFB9D5420C048D40048BB16 /* BinaryInteger.swift */,
 				4C74BE6C20DD406700F765C8 /* Bool.swift */,
 				9732A967B65FE4925ED04BE9 /* Character.swift */,
@@ -491,6 +494,7 @@
 				4C530C5B20EAA24B000636FB /* NumberTests.swift in Sources */,
 				4CFB9D6820C0491D0048BB16 /* BinaryIntegerTests.swift in Sources */,
 				4C74BE6D20DD406700F765C8 /* Bool.swift in Sources */,
+				4C35096021A79A3100B7500D /* Array.swift in Sources */,
 				4C74BE7120DD411800F765C8 /* BoolTests.swift in Sources */,
 				4C15B73020CF09CD0082851A /* BinaryInteger.swift in Sources */,
 				4C15B73320CF09D90082851A /* String.swift in Sources */,
