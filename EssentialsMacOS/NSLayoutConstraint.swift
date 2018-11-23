@@ -9,6 +9,7 @@
 import AppKit
 
 
+@available(OSXApplicationExtension 10.10, *)
 public extension NSLayoutConstraint {
 
 	func activate() {

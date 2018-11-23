@@ -10,7 +10,7 @@ public extension UIViewController {
 
 	public func alertUser(title: String, message: String) {
 		let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-		let dismiss = UIAlertAction(title: "Dismiss", style: .default)
+		let dismiss = UIAlertAction(title: "OK", style: .default)
 
 		alert.addAction(dismiss)
 		present(alert, animated: true)

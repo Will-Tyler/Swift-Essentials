@@ -11,20 +11,17 @@ import XCTest
 
 class CharacterTests: XCTestCase {
 
-	override func setUp() {
-		super.setUp()
-		// Put setup code here. This method is called before the invocation of each test method in the class.
-	}
-
-	override func tearDown() {
-		// Put teardown code here. This method is called after the invocation of each test method in the class.
-		super.tearDown()
-	}
-
 	func testIsDigit() {
-//		for i in 0...9 {
-//			XCTAssert(("\(i)" as! Character).isDigit)
-//		}
+		XCTAssertTrue(("0" as Character).isDigit)
+		XCTAssertTrue(("1" as Character).isDigit)
+		XCTAssertTrue(("2" as Character).isDigit)
+		XCTAssertTrue(("3" as Character).isDigit)
+		XCTAssertTrue(("4" as Character).isDigit)
+		XCTAssertTrue(("5" as Character).isDigit)
+		XCTAssertTrue(("6" as Character).isDigit)
+		XCTAssertTrue(("7" as Character).isDigit)
+		XCTAssertTrue(("8" as Character).isDigit)
+		XCTAssertTrue(("9" as Character).isDigit)
 
 		XCTAssertFalse((" " as Character).isDigit)
 		XCTAssertFalse(("a" as Character).isDigit)

@@ -7,6 +7,7 @@ import Foundation
 
 public struct Characters {
 
+	public static let bits = Set("01")
 	public static let digits = Set("0123456789")
 	public static let lowercaseLetters = Set("abcdefghijklmnopqrstuvwxyz")
 	public static let uppercaseLetters = Set("ABCDEFGHIJKLMNOPQRSTUVWXYZ")

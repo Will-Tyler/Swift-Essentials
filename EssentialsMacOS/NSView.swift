@@ -11,16 +11,13 @@ import Cocoa
 
 public extension NSView {
 
-	/// The background color of this view. Some views may already have a backgroundColor property. It is better to use that one, if available.
+	/// The background color of this view. It is better to use backgroundColor, if available.
 	public var backColor: CGColor? {
 		get {
 			return layer?.backgroundColor
 		}
 		set {
-			if !wantsLayer {
-				wantsLayer = true
-			}
-
+			wantsLayer = true
 			layer!.backgroundColor = newValue
 		}
 	}
@@ -39,8 +36,7 @@ public extension NSView {
 	@available(OSX 10.10, *)
 	@available(OSXApplicationExtension 10.10, *)
 	public func deactivateAndRemoveConstraints() {
-		constraints.forEach({ $0.isActive = false })
-
+		constraints.forEach({ $0.deactivate() })
 		removeConstraints()
 	}
 
