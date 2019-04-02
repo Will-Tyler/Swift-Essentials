@@ -18,7 +18,7 @@ infix operator **: ExponentialPrecedence
 
 public extension BinaryInteger {
 
-	@discardableResult
+	@discardableResult @inlinable
 	static postfix func ++(number: inout Self) -> Self {
 		defer {
 			number += 1
@@ -27,14 +27,14 @@ public extension BinaryInteger {
 		return number
 	}
 
-	@discardableResult
+	@discardableResult @inlinable
 	static prefix func ++(number: inout Self) -> Self {
 		number += 1
 
 		return number
 	}
 
-	@discardableResult
+	@discardableResult @inlinable
 	static postfix func --(number: inout Self) -> Self {
 		defer {
 			number -= 1
@@ -43,7 +43,7 @@ public extension BinaryInteger {
 		return number
 	}
 
-	@discardableResult
+	@discardableResult @inlinable
 	static prefix func --(number: inout Self) -> Self {
 		number -= 1
 
