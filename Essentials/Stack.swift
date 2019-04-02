@@ -52,9 +52,7 @@ class Stack<Element> {
 				}
 			}
 			else {
-				defer {
-					height += 1
-				}
+				height += 1
 			}
 
 			if isFlipped {

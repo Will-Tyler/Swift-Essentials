@@ -8,7 +8,7 @@ import UIKit
 
 public extension UIViewController {
 
-	public func alertUser(title: String, message: String) {
+	func alertUser(title: String, message: String) {
 		let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
 		let dismiss = UIAlertAction(title: "OK", style: .default)
 

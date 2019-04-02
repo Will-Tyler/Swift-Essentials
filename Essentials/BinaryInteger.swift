@@ -19,7 +19,7 @@ infix operator **: ExponentialPrecedence
 public extension BinaryInteger {
 
 	@discardableResult
-	public static postfix func ++(number: inout Self) -> Self {
+	static postfix func ++(number: inout Self) -> Self {
 		defer {
 			number += 1
 		}
@@ -28,14 +28,14 @@ public extension BinaryInteger {
 	}
 
 	@discardableResult
-	public static prefix func ++(number: inout Self) -> Self {
+	static prefix func ++(number: inout Self) -> Self {
 		number += 1
 
 		return number
 	}
 
 	@discardableResult
-	public static postfix func --(number: inout Self) -> Self {
+	static postfix func --(number: inout Self) -> Self {
 		defer {
 			number -= 1
 		}
@@ -44,13 +44,13 @@ public extension BinaryInteger {
 	}
 
 	@discardableResult
-	public static prefix func --(number: inout Self) -> Self {
+	static prefix func --(number: inout Self) -> Self {
 		number -= 1
 
 		return number
 	}
 
-	public static func **(base: Self, power: Self) -> Self {
+	static func **(base: Self, power: Self) -> Self {
 		precondition(power >= 0)
 
 		switch power {

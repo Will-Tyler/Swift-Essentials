@@ -12,7 +12,7 @@ prefix operator *
 
 public extension UnsafePointer {
 
-	public static prefix func *(pointer: UnsafePointer) -> Pointee {
+	static prefix func *(pointer: UnsafePointer) -> Pointee {
 		return pointer.pointee
 	}
 

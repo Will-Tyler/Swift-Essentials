@@ -16,7 +16,7 @@ public extension String {
 	static let uppercaseLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 	/// Return the character at the specified index.
-	public subscript(i: Int) -> Character {
+	subscript(i: Int) -> Character {
 		return self[index(startIndex, offsetBy: i)]
 	}
 

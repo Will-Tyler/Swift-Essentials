@@ -7,13 +7,13 @@ import Foundation
 
 public extension Character {
 
-	public var isDigit: Bool {
+	var isDigit: Bool {
 		get {
 			return Characters.digits.contains(self)
 		}
 	}
 
-	public var isBit: Bool {
+	var isBit: Bool {
 		get {
 			return Characters.bits.contains(self)
 		}

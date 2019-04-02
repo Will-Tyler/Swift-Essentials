@@ -7,11 +7,11 @@ import UIKit
 
 public extension UIView {
 
-	public func removeSubviews() {
+	func removeSubviews() {
 		subviews.forEach({ $0.removeFromSuperview() })
 	}
 
-	public var controller: UIViewController? {
+	var controller: UIViewController? {
 		get {
 			if let controller = next as? UIViewController {
 				return controller

@@ -11,7 +11,7 @@ import Foundation
 
 public extension Array {
 
-	public mutating func replace(at index: Int, with new: Element) {
+	mutating func replace(at index: Int, with new: Element) {
 		replaceSubrange(index..<index+1, with: [new])
 	}
 
